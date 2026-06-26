@@ -1,0 +1,22 @@
+.section {
+    scroll-margin-top: 4.5rem;
+    padding-block: var(--space-20);
+    border-top: 1px solid var(--color-border);
+}
+
+.content {
+    max-width: var(--text-width);
+}
+
+.paragraphs {
+    display: grid;
+    gap: var(--space-5);
+    margin-top: var(--space-5);
+    color: var(--color-text-secondary);
+}
+
+@media (max-width: 48rem) {
+    .section {
+        padding-block: var(--space-16);
+    }
+}

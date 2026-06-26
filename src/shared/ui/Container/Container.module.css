@@ -1,0 +1,12 @@
+.container {
+    width: min(calc(100% - (var(--space-6) * 2)),
+            var(--content-width));
+    margin-inline: auto;
+}
+
+@media (max-width: 30rem) {
+    .container {
+        width: min(calc(100% - (var(--space-4) * 2)),
+                var(--content-width));
+    }
+}
