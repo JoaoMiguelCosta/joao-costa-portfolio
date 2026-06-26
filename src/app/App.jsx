@@ -9,8 +9,8 @@ export default function App() {
         <h1 className={styles.title}>João Costa</h1>
 
         <p className={styles.description}>
-          Programador web focado na criação de aplicações modernas,
-          acessíveis e bem estruturadas.
+          Programador web focado na criação de aplicações modernas, acessíveis e
+          bem estruturadas.
         </p>
       </section>
     </main>
