@@ -19,8 +19,8 @@ export default function AboutSection({ content }) {
           />
 
           <div className={styles.paragraphs}>
-            {content.paragraphs.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
+            {content.paragraphs.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
             ))}
           </div>
         </div>

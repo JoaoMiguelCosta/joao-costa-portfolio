@@ -2,11 +2,11 @@ import Container from "../../ui/Container/Container.jsx";
 
 import styles from "./SiteHeader.module.css";
 
-export default function SiteHeader({ brand, navigationItems }) {
+export default function SiteHeader({ brand, navigationItems, accessibility }) {
   return (
     <>
       <a className={styles.skipLink} href="#main-content">
-        Saltar para o conteúdo principal
+        {accessibility.skipLink}
       </a>
 
       <header className={styles.header}>
@@ -20,7 +20,7 @@ export default function SiteHeader({ brand, navigationItems }) {
               {brand.name}
             </a>
 
-            <nav aria-label="Navegação principal">
+            <nav aria-label={accessibility.navigationAriaLabel}>
               <ul className={styles.navigationList}>
                 {navigationItems.map((item) => (
                   <li key={item.href}>

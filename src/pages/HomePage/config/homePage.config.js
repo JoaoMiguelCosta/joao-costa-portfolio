@@ -1,80 +1,86 @@
 import { personalData } from "../../../data/personal.data.js";
 import { projectsData } from "../../../data/projects.data.js";
 import { skillsData } from "../../../data/skills.data.js";
+import { getTranslations } from "../../../i18n/translations/index.js";
 
-export const homePageConfig = {
-  brand: {
-    name: personalData.name,
-    href: "#inicio",
-    ariaLabel: "Ir para o início",
-  },
+function getLocalizedProjects(translations) {
+  return projectsData.map((project) => {
+    const translatedProject = translations.projects.items[project.id];
 
-  navigationItems: [
-    {
-      label: "Projetos",
-      href: "#projetos",
-    },
-    {
-      label: "Sobre",
-      href: "#sobre",
-    },
-    {
-      label: "Competências",
-      href: "#competencias",
-    },
-    {
-      label: "Contacto",
-      href: "#contacto",
-    },
-  ],
+    return {
+      ...project,
+      ...translatedProject,
 
-  hero: {
-    ...personalData.hero,
-    actions: [
-      {
-        label: "Ver projetos",
-        href: "#projetos",
-        variant: "primary",
+      image: {
+        ...project.image,
+        alt: translatedProject.imageAlt,
       },
-      {
-        label: "Entrar em contacto",
-        href: "#contacto",
-        variant: "secondary",
+
+      technologiesAriaLabel: `${translations.projects.technologiesAriaLabel} ${project.title}`,
+    };
+  });
+}
+
+function getLocalizedSkills(translations) {
+  return skillsData.map((skill) => {
+    const translatedSkill = translations.skills.items[skill.id];
+
+    return {
+      ...skill,
+      ...translatedSkill,
+
+      technologiesAriaLabel: `${translations.skills.technologiesAriaLabel} ${translatedSkill.title}`,
+    };
+  });
+}
+
+export function getHomePageConfig(language) {
+  const translations = getTranslations(language);
+
+  return {
+    header: {
+      brand: {
+        name: personalData.name,
+        href: "#inicio",
+        ariaLabel: translations.header.brandAriaLabel,
       },
-    ],
-  },
 
-  projects: {
-    eyebrow: "Trabalho desenvolvido",
-    title: "Projetos selecionados",
-    description:
-      "Uma seleção de trabalhos reais que acompanhei desde o levantamento de necessidades até ao desenvolvimento, publicação e suporte.",
-    items: projectsData,
-  },
+      navigationItems: translations.header.navigationItems,
 
-  about: {
-    eyebrow: "Percurso profissional",
-    title: "Sobre mim",
-    paragraphs: personalData.about,
-  },
+      accessibility: {
+        skipLink: translations.header.skipLink,
+        navigationAriaLabel: translations.header.navigationAriaLabel,
+      },
+    },
 
-  skills: {
-    eyebrow: "Conhecimentos técnicos",
-    title: "Competências",
-    description:
-      "Tecnologias e práticas aplicadas no desenvolvimento, validação e publicação de projetos reais.",
-    items: skillsData,
-  },
+    hero: translations.hero,
 
-  contact: {
-    eyebrow: "Contacto",
-    title: "Vamos conversar",
-    description: personalData.availability,
-    note: `Email: ${personalData.email}`,
-  },
+    projects: {
+      eyebrow: translations.projects.eyebrow,
+      title: translations.projects.title,
+      description: translations.projects.description,
+      items: getLocalizedProjects(translations),
+    },
 
-  footer: {
-    owner: personalData.name,
-    rights: "Todos os direitos reservados.",
-  },
-};
+    about: translations.about,
+
+    skills: {
+      eyebrow: translations.skills.eyebrow,
+      title: translations.skills.title,
+      description: translations.skills.description,
+      items: getLocalizedSkills(translations),
+    },
+
+    contact: {
+      eyebrow: translations.contact.eyebrow,
+      title: translations.contact.title,
+      description: translations.contact.description,
+      note: `${translations.contact.emailLabel}: ${personalData.email}`,
+    },
+
+    footer: {
+      owner: personalData.name,
+      rights: translations.footer.rights,
+    },
+  };
+}

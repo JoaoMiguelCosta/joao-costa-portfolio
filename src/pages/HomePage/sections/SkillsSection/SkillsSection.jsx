@@ -22,14 +22,17 @@ export default function SkillsSection({ content }) {
 
         <div className={styles.skillsGrid}>
           {content.items.map((skill) => (
-            <article className={styles.skillGroup} key={skill.id}>
+            <article
+              className={styles.skillGroup}
+              key={skill.id}
+            >
               <h3>{skill.title}</h3>
 
               <p>{skill.description}</p>
 
               <ul
                 className={styles.technologyList}
-                aria-label={`Tecnologias de ${skill.title}`}
+                aria-label={skill.technologiesAriaLabel}
               >
                 {skill.technologies.map((technology) => (
                   <li key={technology}>{technology}</li>

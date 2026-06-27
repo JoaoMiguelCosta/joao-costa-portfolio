@@ -1,3 +1,6 @@
+import { useMemo } from "react";
+
+import useLanguage from "../../i18n/useLanguage.js";
 import SiteFooter from "../../shared/layouts/SiteFooter/SiteFooter.jsx";
 import SiteHeader from "../../shared/layouts/SiteHeader/SiteHeader.jsx";
 
@@ -7,15 +10,16 @@ import HeroSection from "./sections/HeroSection/HeroSection.jsx";
 import ProjectsSection from "./sections/ProjectsSection/ProjectsSection.jsx";
 import SkillsSection from "./sections/SkillsSection/SkillsSection.jsx";
 
-import { homePageConfig } from "./config/homePage.config.js";
+import { getHomePageConfig } from "./config/homePage.config.js";
 
 export default function HomePage() {
+  const { language } = useLanguage();
+
+  const homePageConfig = useMemo(() => getHomePageConfig(language), [language]);
+
   return (
     <>
-      <SiteHeader
-        brand={homePageConfig.brand}
-        navigationItems={homePageConfig.navigationItems}
-      />
+      <SiteHeader {...homePageConfig.header} />
 
       <main id="main-content">
         <HeroSection content={homePageConfig.hero} />

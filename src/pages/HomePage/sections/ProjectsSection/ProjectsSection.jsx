@@ -22,9 +22,10 @@ export default function ProjectsSection({ content }) {
 
         <div className={styles.projectGrid}>
           {content.items.map((project) => (
-            <article className={styles.projectCard} key={project.title}>
+            <article className={styles.projectCard} key={project.id}>
               <div>
                 <p className={styles.projectType}>{project.type}</p>
+
                 <h3 className={styles.projectTitle}>{project.title}</h3>
               </div>
 
@@ -32,7 +33,7 @@ export default function ProjectsSection({ content }) {
 
               <ul
                 className={styles.tagList}
-                aria-label={`Tecnologias utilizadas no projeto ${project.title}`}
+                aria-label={project.technologiesAriaLabel}
               >
                 {project.technologies.map((technology) => (
                   <li key={technology}>{technology}</li>
