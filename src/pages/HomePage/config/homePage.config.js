@@ -1,6 +1,10 @@
+import { personalData } from "../../../data/personal.data.js";
+import { projectsData } from "../../../data/projects.data.js";
+import { skillsData } from "../../../data/skills.data.js";
+
 export const homePageConfig = {
   brand: {
-    name: "João Costa",
+    name: personalData.name,
     href: "#inicio",
     ariaLabel: "Ir para o início",
   },
@@ -25,10 +29,7 @@ export const homePageConfig = {
   ],
 
   hero: {
-    eyebrow: "Programador Web Full Stack",
-    title: "Desenvolvo aplicações web claras, funcionais e bem estruturadas.",
-    description:
-      "Trabalho principalmente com JavaScript, React, Node.js, Prisma e PostgreSQL, com foco em código limpo, usabilidade e organização.",
+    ...personalData.hero,
     actions: [
       {
         label: "Ver projetos",
@@ -45,67 +46,35 @@ export const homePageConfig = {
 
   projects: {
     eyebrow: "Trabalho desenvolvido",
-    title: "Projetos",
+    title: "Projetos selecionados",
     description:
-      "Projetos construídos para consolidar competências de frontend, backend, arquitetura e integração entre sistemas.",
-
-    items: [
-      {
-        type: "Aplicação Full Stack",
-        title: "Farmácia Santa Casa",
-        description:
-          "Plataforma de gestão de utentes, receitas, pedidos, regularizações e utilizadores, com diferentes áreas e permissões.",
-        technologies: ["React", "Node.js", "Express", "Prisma", "PostgreSQL"],
-      },
-      {
-        type: "Website institucional",
-        title: "Sunlive Group",
-        description:
-          "Website corporativo multimarcas, com diferentes identidades visuais, conteúdos, estruturas e experiências de navegação.",
-        technologies: ["React", "Vite", "JavaScript", "CSS Modules"],
-      },
-    ],
+      "Uma seleção de trabalhos reais que acompanhei desde o levantamento de necessidades até ao desenvolvimento, publicação e suporte.",
+    items: projectsData,
   },
 
   about: {
-    eyebrow: "Percurso",
+    eyebrow: "Percurso profissional",
     title: "Sobre mim",
-    paragraphs: [
-      "Estou em transição de carreira para o desenvolvimento web, depois de vários anos de experiência profissional noutra área.",
-      "Tenho desenvolvido projetos completos para aprofundar conhecimentos de frontend, backend, bases de dados, segurança, testes, Git e deploy.",
-      "Procuro construir soluções simples de compreender, fáceis de manter e adequadas às necessidades reais de cada projeto.",
-    ],
+    paragraphs: personalData.about,
   },
 
   skills: {
     eyebrow: "Conhecimentos técnicos",
     title: "Competências",
-    items: [
-      {
-        title: "Frontend",
-        description: "HTML, CSS, JavaScript, React, Vite e CSS Modules.",
-      },
-      {
-        title: "Backend e dados",
-        description: "Node.js, Express, Prisma, PostgreSQL e APIs REST.",
-      },
-      {
-        title: "Ferramentas",
-        description: "Git, GitHub, VS Code, Vercel, Render e Postman.",
-      },
-    ],
+    description:
+      "Tecnologias e práticas aplicadas no desenvolvimento, validação e publicação de projetos reais.",
+    items: skillsData,
   },
 
   contact: {
     eyebrow: "Contacto",
     title: "Vamos conversar",
-    description:
-      "Estou disponível para oportunidades de desenvolvimento web, colaboração em projetos e contacto profissional.",
-    note: "Os canais de contacto e os perfis profissionais serão adicionados no próximo lote.",
+    description: personalData.availability,
+    note: `Email: ${personalData.email}`,
   },
 
   footer: {
-    owner: "João Costa",
+    owner: personalData.name,
     rights: "Todos os direitos reservados.",
   },
 };
