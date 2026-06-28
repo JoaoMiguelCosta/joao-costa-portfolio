@@ -47,6 +47,8 @@ export function getHomePageConfig(language) {
 
       navigationItems: translations.header.navigationItems,
 
+      languageSwitcher: translations.header.languageSwitcher,
+
       accessibility: {
         skipLink: translations.header.skipLink,
         navigationAriaLabel: translations.header.navigationAriaLabel,

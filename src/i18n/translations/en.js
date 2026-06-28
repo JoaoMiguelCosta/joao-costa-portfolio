@@ -4,6 +4,12 @@ const englishTranslations = {
     navigationAriaLabel: "Primary navigation",
     brandAriaLabel: "Go to the homepage",
 
+    languageSwitcher: {
+      ariaLabel: "Select language",
+      portugueseLabel: "Portuguese",
+      englishLabel: "English",
+    },
+
     navigationItems: [
       {
         label: "Projects",
