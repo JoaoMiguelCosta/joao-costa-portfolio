@@ -1,5 +1,11 @@
 html {
+  background-color: var(--color-background);
+  color-scheme: light;
   scroll-behavior: smooth;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
 }
 
 body {
@@ -15,10 +21,18 @@ body {
 }
 
 :focus-visible {
-  outline: 3px solid var(--color-accent);
+  outline: 3px solid var(--color-focus);
   outline-offset: 3px;
 }
 
 #root {
   min-height: 100vh;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body {
+    transition:
+      background-color 180ms ease,
+      color 180ms ease;
+  }
 }

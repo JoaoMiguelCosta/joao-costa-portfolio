@@ -56,7 +56,7 @@
 
 .primaryAction {
     background-color: var(--color-accent);
-    color: var(--color-surface);
+    color: var(--color-on-accent);
 }
 
 .primaryAction:hover {
@@ -89,3 +89,4 @@
         width: 100%;
     }
 }
+
