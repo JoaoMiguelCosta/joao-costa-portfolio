@@ -51,6 +51,8 @@ export function getHomePageConfig(language) {
 
       themeToggle: translations.header.themeToggle,
 
+      mobileMenu: translations.header.mobileMenu,
+
       accessibility: {
         skipLink: translations.header.skipLink,
         navigationAriaLabel: translations.header.navigationAriaLabel,

@@ -15,6 +15,11 @@ const portugueseTranslations = {
       enableDarkThemeLabel: "Ativar modo escuro",
     },
 
+    mobileMenu: {
+      openLabel: "Abrir menu de navegação",
+      closeLabel: "Fechar menu de navegação",
+    },
+
     navigationItems: [
       {
         label: "Projetos",

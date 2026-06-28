@@ -15,6 +15,11 @@ const englishTranslations = {
       enableDarkThemeLabel: "Enable dark mode",
     },
 
+    mobileMenu: {
+      openLabel: "Open navigation menu",
+      closeLabel: "Close navigation menu",
+    },
+
     navigationItems: [
       {
         label: "Projects",
