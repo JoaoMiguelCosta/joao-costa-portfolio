@@ -10,6 +10,11 @@ const portugueseTranslations = {
       englishLabel: "Inglês",
     },
 
+    themeToggle: {
+      enableLightThemeLabel: "Ativar modo claro",
+      enableDarkThemeLabel: "Ativar modo escuro",
+    },
+
     navigationItems: [
       {
         label: "Projetos",

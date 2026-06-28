@@ -1,5 +1,6 @@
-import LanguageSwitcher from "../../ui/LanguageSwitcher/LanguageSwitcher.jsx";
 import Container from "../../ui/Container/Container.jsx";
+import LanguageSwitcher from "../../ui/LanguageSwitcher/LanguageSwitcher.jsx";
+import ThemeToggle from "../../ui/ThemeToggle/ThemeToggle.jsx";
 
 import styles from "./SiteHeader.module.css";
 
@@ -7,6 +8,7 @@ export default function SiteHeader({
   brand,
   navigationItems,
   languageSwitcher,
+  themeToggle,
   accessibility,
 }) {
   return (
@@ -37,11 +39,18 @@ export default function SiteHeader({
                 </ul>
               </nav>
 
-              <LanguageSwitcher
-                ariaLabel={languageSwitcher.ariaLabel}
-                portugueseLabel={languageSwitcher.portugueseLabel}
-                englishLabel={languageSwitcher.englishLabel}
-              />
+              <div className={styles.utilityControls}>
+                <LanguageSwitcher
+                  ariaLabel={languageSwitcher.ariaLabel}
+                  portugueseLabel={languageSwitcher.portugueseLabel}
+                  englishLabel={languageSwitcher.englishLabel}
+                />
+
+                <ThemeToggle
+                  enableLightThemeLabel={themeToggle.enableLightThemeLabel}
+                  enableDarkThemeLabel={themeToggle.enableDarkThemeLabel}
+                />
+              </div>
             </div>
           </div>
         </Container>

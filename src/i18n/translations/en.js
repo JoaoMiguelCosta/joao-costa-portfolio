@@ -10,6 +10,11 @@ const englishTranslations = {
       englishLabel: "English",
     },
 
+    themeToggle: {
+      enableLightThemeLabel: "Enable light mode",
+      enableDarkThemeLabel: "Enable dark mode",
+    },
+
     navigationItems: [
       {
         label: "Projects",
