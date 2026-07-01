@@ -140,16 +140,24 @@ const portugueseTranslations = {
   about: {
     eyebrow: "Percurso profissional",
     title: "Sobre mim",
+    description:
+      "Transformo necessidades reais em soluções web claras, organizadas e preparadas para crescer.",
+
+    imageAlt: "Retrato de João Costa, programador web full stack",
 
     paragraphs: [
-      "Sou programador web full stack e trabalho como freelancer no desenvolvimento de websites e aplicações adaptados às necessidades reais de empresas e organizações.",
+      "Desde 2025, trabalho como freelancer e acompanho projetos de ponta a ponta: pesquisa, levantamento de requisitos, definição da solução, desenvolvimento, publicação e suporte.",
 
-      "Acompanho cada projeto desde a pesquisa e levantamento de requisitos até à definição da solução, desenvolvimento, publicação e suporte. Trabalho principalmente com JavaScript, React, Node.js, Express, Prisma e PostgreSQL.",
-
-      "Antes de iniciar o meu percurso no desenvolvimento web, servi durante seis anos na Marinha Portuguesa. Essa experiência consolidou competências como disciplina, responsabilidade, resiliência, trabalho em equipa e capacidade de trabalhar sob pressão.",
-
-      "Atualmente, procuro continuar a desenvolver projetos para clientes e integrar uma equipa onde possa contribuir com experiência prática, aprofundar conhecimentos técnicos e participar na construção de soluções com impacto real.",
+      "Antes de iniciar o meu percurso no desenvolvimento web, servi durante seis anos na Marinha Portuguesa. Essa experiência reforçou competências como disciplina, responsabilidade, resiliência, trabalho em equipa e capacidade de atuar sob pressão.",
     ],
+
+    facts: {
+      locationLabel: "Localização",
+      freelanceLabel: "Freelance",
+      freelanceValuePrefix: "Desde",
+      navyLabel: "Marinha Portuguesa",
+      navyValueSuffix: "anos de serviço",
+    },
   },
 
   skills: {

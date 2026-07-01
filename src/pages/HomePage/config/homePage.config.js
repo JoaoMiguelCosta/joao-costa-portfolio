@@ -33,6 +33,42 @@ function groupProjects(projects) {
   };
 }
 
+function getAboutConfig(translations) {
+  return {
+    eyebrow: translations.about.eyebrow,
+    title: translations.about.title,
+    description: translations.about.description,
+    paragraphs: translations.about.paragraphs,
+
+    profileImage: {
+      ...personalData.profileImage,
+      alt: translations.about.imageAlt,
+    },
+
+    facts: [
+      {
+        id: "location",
+        label: translations.about.facts.locationLabel,
+        value: personalData.location,
+      },
+      {
+        id: "freelance",
+        label: translations.about.facts.freelanceLabel,
+        value:
+          `${translations.about.facts.freelanceValuePrefix} ` +
+          personalData.freelancerSince,
+      },
+      {
+        id: "navy",
+        label: translations.about.facts.navyLabel,
+        value:
+          `${personalData.navyServiceYears} ` +
+          translations.about.facts.navyValueSuffix,
+      },
+    ],
+  };
+}
+
 function getLocalizedSkills(translations) {
   return skillsData.map((skill) => {
     const translatedSkill = translations.skills.items[skill.id];
@@ -88,7 +124,7 @@ export function getHomePageConfig(language) {
       ...groupedProjects,
     },
 
-    about: translations.about,
+    about: getAboutConfig(translations),
 
     skills: {
       eyebrow: translations.skills.eyebrow,
@@ -101,7 +137,7 @@ export function getHomePageConfig(language) {
       eyebrow: translations.contact.eyebrow,
       title: translations.contact.title,
       description: translations.contact.description,
-      note: `${translations.contact.emailLabel}: ${personalData.email}`,
+      note: `${translations.contact.emailLabel}: ` + personalData.email,
     },
 
     footer: {

@@ -138,16 +138,24 @@ const englishTranslations = {
   about: {
     eyebrow: "Professional background",
     title: "About me",
+    description:
+      "I turn real needs into clear, organised web solutions designed to grow.",
+
+    imageAlt: "Portrait of João Costa, full-stack web developer",
 
     paragraphs: [
-      "I am a full-stack web developer working as a freelancer, building websites and applications adapted to the real needs of companies and organisations.",
-
-      "I follow each project from research and requirements gathering through solution definition, development, deployment and support. I mainly work with JavaScript, React, Node.js, Express, Prisma and PostgreSQL.",
+      "Since 2025, I have worked as a freelance developer, following projects from research and requirements gathering through solution definition, development, deployment and ongoing support.",
 
       "Before starting my career in web development, I served for six years in the Portuguese Navy. That experience strengthened skills such as discipline, responsibility, resilience, teamwork and the ability to perform under pressure.",
-
-      "I currently aim to continue developing projects for clients and join a team where I can contribute practical experience, deepen my technical knowledge and help build solutions with real impact.",
     ],
+
+    facts: {
+      locationLabel: "Location",
+      freelanceLabel: "Freelance",
+      freelanceValuePrefix: "Since",
+      navyLabel: "Portuguese Navy",
+      navyValueSuffix: "years of service",
+    },
   },
 
   skills: {
