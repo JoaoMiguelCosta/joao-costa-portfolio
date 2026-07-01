@@ -11,7 +11,7 @@ function ProjectLink({ href, label, projectTitle, variant, external = false }) {
       href={href}
       aria-label={`${label}: ${projectTitle}`}
       target={external ? "_blank" : undefined}
-      rel={external ? "noreferrer" : undefined}
+      rel={external ? "noopener noreferrer" : undefined}
     >
       {label}
     </a>
