@@ -69,15 +69,19 @@ function getAboutConfig(translations) {
   };
 }
 
-function getLocalizedSkills(translations) {
-  return skillsData.map((skill) => {
+function getLocalizedSkillGroups(skillGroups, translations) {
+  return skillGroups.map((skill) => {
     const translatedSkill = translations.skills.items[skill.id];
 
     return {
       ...skill,
       ...translatedSkill,
 
-      technologiesAriaLabel: `${translations.skills.technologiesAriaLabel} ${translatedSkill.title}`,
+      toolsAriaLabel:
+        `${translations.skills.toolsAriaLabel} ` + translatedSkill.title,
+
+      conceptsAriaLabel:
+        `${translations.skills.conceptsAriaLabel} ` + translatedSkill.title,
     };
   });
 }
@@ -130,7 +134,20 @@ export function getHomePageConfig(language) {
       eyebrow: translations.skills.eyebrow,
       title: translations.skills.title,
       description: translations.skills.description,
-      items: getLocalizedSkills(translations),
+
+      appliedTitle: translations.skills.appliedTitle,
+
+      learningTitle: translations.skills.learningTitle,
+      learningDescription: translations.skills.learningDescription,
+
+      labels: {
+        tools: translations.skills.toolsLabel,
+        concepts: translations.skills.conceptsLabel,
+      },
+
+      appliedItems: getLocalizedSkillGroups(skillsData.applied, translations),
+
+      learningItems: getLocalizedSkillGroups(skillsData.learning, translations),
     },
 
     contact: {

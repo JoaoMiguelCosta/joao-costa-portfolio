@@ -1,6 +1,8 @@
 import Container from "../../../../shared/ui/Container/Container.jsx";
 import SectionHeader from "../../components/SectionHeader/SectionHeader.jsx";
 
+import SkillCard from "./components/SkillCard/SkillCard.jsx";
+
 import styles from "./SkillsSection.module.css";
 
 export default function SkillsSection({ content }) {
@@ -20,26 +22,51 @@ export default function SkillsSection({ content }) {
           />
         </div>
 
-        <div className={styles.skillsGrid}>
-          {content.items.map((skill) => (
-            <article
-              className={styles.skillGroup}
-              key={skill.id}
-            >
-              <h3>{skill.title}</h3>
+        <div className={styles.groups}>
+          <section
+            className={styles.group}
+            aria-labelledby="applied-skills-title"
+          >
+            <h3 className={styles.groupTitle} id="applied-skills-title">
+              {content.appliedTitle}
+            </h3>
 
-              <p>{skill.description}</p>
+            <div className={styles.appliedGrid}>
+              {content.appliedItems.map((skill) => (
+                <SkillCard
+                  key={skill.id}
+                  skill={skill}
+                  labels={content.labels}
+                />
+              ))}
+            </div>
+          </section>
 
-              <ul
-                className={styles.technologyList}
-                aria-label={skill.technologiesAriaLabel}
-              >
-                {skill.technologies.map((technology) => (
-                  <li key={technology}>{technology}</li>
-                ))}
-              </ul>
-            </article>
-          ))}
+          <section
+            className={styles.learningSection}
+            aria-labelledby="learning-skills-title"
+          >
+            <div className={styles.learningHeader}>
+              <h3 className={styles.groupTitle} id="learning-skills-title">
+                {content.learningTitle}
+              </h3>
+
+              <p className={styles.learningDescription}>
+                {content.learningDescription}
+              </p>
+            </div>
+
+            <div className={styles.learningGrid}>
+              {content.learningItems.map((skill) => (
+                <SkillCard
+                  key={skill.id}
+                  skill={skill}
+                  labels={content.labels}
+                  variant="learning"
+                />
+              ))}
+            </div>
+          </section>
         </div>
       </Container>
     </section>
