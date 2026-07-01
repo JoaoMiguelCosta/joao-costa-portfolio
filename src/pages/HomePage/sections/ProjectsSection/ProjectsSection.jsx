@@ -1,6 +1,8 @@
 import Container from "../../../../shared/ui/Container/Container.jsx";
 import SectionHeader from "../../components/SectionHeader/SectionHeader.jsx";
 
+import ProjectCard from "./components/ProjectCard/ProjectCard.jsx";
+
 import styles from "./ProjectsSection.module.css";
 
 export default function ProjectsSection({ content }) {
@@ -20,27 +22,46 @@ export default function ProjectsSection({ content }) {
           />
         </div>
 
-        <div className={styles.projectGrid}>
-          {content.items.map((project) => (
-            <article className={styles.projectCard} key={project.id}>
-              <div>
-                <p className={styles.projectType}>{project.type}</p>
+        <div className={styles.groups}>
+          <section
+            className={styles.projectGroup}
+            aria-labelledby="featured-projects-title"
+          >
+            <h3 className={styles.groupTitle} id="featured-projects-title">
+              {content.featuredTitle}
+            </h3>
 
-                <h3 className={styles.projectTitle}>{project.title}</h3>
-              </div>
+            <div className={`${styles.projectGrid} ${styles.featuredGrid}`}>
+              {content.featuredItems.map((project) => (
+                <ProjectCard
+                  key={project.id}
+                  project={project}
+                  variant="featured"
+                  labels={content.cardLabels}
+                />
+              ))}
+            </div>
+          </section>
 
-              <p className={styles.projectDescription}>{project.description}</p>
+          <section
+            className={styles.projectGroup}
+            aria-labelledby="other-projects-title"
+          >
+            <h3 className={styles.groupTitle} id="other-projects-title">
+              {content.otherTitle}
+            </h3>
 
-              <ul
-                className={styles.tagList}
-                aria-label={project.technologiesAriaLabel}
-              >
-                {project.technologies.map((technology) => (
-                  <li key={technology}>{technology}</li>
-                ))}
-              </ul>
-            </article>
-          ))}
+            <div className={`${styles.projectGrid} ${styles.otherGrid}`}>
+              {content.otherItems.map((project) => (
+                <ProjectCard
+                  key={project.id}
+                  project={project}
+                  variant="compact"
+                  labels={content.cardLabels}
+                />
+              ))}
+            </div>
+          </section>
         </div>
       </Container>
     </section>

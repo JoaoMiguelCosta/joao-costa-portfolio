@@ -4,21 +4,33 @@ import { skillsData } from "../../../data/skills.data.js";
 import { getTranslations } from "../../../i18n/translations/index.js";
 
 function getLocalizedProjects(translations) {
-  return projectsData.map((project) => {
-    const translatedProject = translations.projects.items[project.id];
+  return projectsData
+    .map((project) => {
+      const translatedProject = translations.projects.items[project.id];
 
-    return {
-      ...project,
-      ...translatedProject,
+      return {
+        ...project,
+        ...translatedProject,
 
-      image: {
-        ...project.image,
-        alt: translatedProject.imageAlt,
-      },
+        image: {
+          ...project.image,
+          alt: translatedProject.imageAlt,
+        },
 
-      technologiesAriaLabel: `${translations.projects.technologiesAriaLabel} ${project.title}`,
-    };
-  });
+        technologiesAriaLabel: `${translations.projects.technologiesAriaLabel} ${project.title}`,
+      };
+    })
+    .sort(
+      (firstProject, secondProject) =>
+        firstProject.priority - secondProject.priority,
+    );
+}
+
+function groupProjects(projects) {
+  return {
+    featuredItems: projects.filter((project) => project.featured),
+    otherItems: projects.filter((project) => !project.featured),
+  };
 }
 
 function getLocalizedSkills(translations) {
@@ -36,6 +48,8 @@ function getLocalizedSkills(translations) {
 
 export function getHomePageConfig(language) {
   const translations = getTranslations(language);
+  const localizedProjects = getLocalizedProjects(translations);
+  const groupedProjects = groupProjects(localizedProjects);
 
   return {
     header: {
@@ -46,11 +60,8 @@ export function getHomePageConfig(language) {
       },
 
       navigationItems: translations.header.navigationItems,
-
       languageSwitcher: translations.header.languageSwitcher,
-
       themeToggle: translations.header.themeToggle,
-
       mobileMenu: translations.header.mobileMenu,
 
       accessibility: {
@@ -65,7 +76,16 @@ export function getHomePageConfig(language) {
       eyebrow: translations.projects.eyebrow,
       title: translations.projects.title,
       description: translations.projects.description,
-      items: getLocalizedProjects(translations),
+
+      featuredTitle: translations.projects.featuredTitle,
+      otherTitle: translations.projects.otherTitle,
+
+      cardLabels: {
+        responsibility: translations.projects.responsibilityLabel,
+        links: translations.projects.links,
+      },
+
+      ...groupedProjects,
     },
 
     about: translations.about,
