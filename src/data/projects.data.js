@@ -19,11 +19,13 @@ export const projectsData = [
     links: {
       website: "https://farmacia-santacasa-frontend-staging.onrender.com/",
       repository: "https://github.com/JoaoMiguelCosta/farmacia-santa-casa-app",
-      caseStudy: "/projetos/farmacia-santa-casa",
+      caseStudy: null,
     },
 
     image: {
-      src: null,
+      src: "/images/projects/farmacia-santacasa.webp",
+      width: 1672,
+      height: 941,
     },
   },
 
@@ -45,11 +47,13 @@ export const projectsData = [
     links: {
       website: "https://sunlive-group.vercel.app/sunlive-group",
       repository: "https://github.com/JoaoMiguelCosta/Sunlive-Group",
-      caseStudy: "/projetos/sunlive-group",
+      caseStudy: null,
     },
 
     image: {
-      src: null,
+      src: "/images/projects/sunlive-group.webp",
+      width: 1672,
+      height: 941,
     },
   },
 
@@ -69,7 +73,9 @@ export const projectsData = [
     },
 
     image: {
-      src: null,
+      src: "/images/projects/ria-canal.webp",
+      width: 1672,
+      height: 941,
     },
   },
 
@@ -90,14 +96,16 @@ export const projectsData = [
     },
 
     image: {
-      src: null,
+      src: "/images/projects/sunlive-wag.webp",
+      width: 1672,
+      height: 941,
     },
   },
 
   {
     id: "continental-cup",
     slug: "continental-cup",
-    title: "Continental Cup",
+    title: "International Continental Cup",
     featured: false,
     priority: 5,
 
@@ -110,7 +118,9 @@ export const projectsData = [
     },
 
     image: {
-      src: null,
+      src: "/images/projects/sunlive-continental.webp",
+      width: 1672,
+      height: 941,
     },
   },
 ];
