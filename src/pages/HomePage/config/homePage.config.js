@@ -236,7 +236,32 @@ export function getHomePageConfig(language) {
 
     footer: {
       owner: personalData.name,
+      role: translations.footer.role,
       rights: translations.footer.rights,
+      navigationAriaLabel: translations.footer.navigationAriaLabel,
+      links: [
+        {
+          id: "github",
+          label: translations.footer.githubLabel,
+          ariaLabel: translations.footer.githubAriaLabel,
+          href: personalData.socialLinks.github,
+          external: true,
+        },
+        {
+          id: "linkedin",
+          label: translations.footer.linkedinLabel,
+          ariaLabel: translations.footer.linkedinAriaLabel,
+          href: personalData.socialLinks.linkedin,
+          external: true,
+        },
+        {
+          id: "back-to-top",
+          label: translations.footer.backToTopLabel,
+          ariaLabel: translations.footer.backToTopAriaLabel,
+          href: "#inicio",
+          external: false,
+        },
+      ],
     },
   };
 }
