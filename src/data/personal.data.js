@@ -1,10 +1,23 @@
 export const personalData = {
   name: "João Costa",
+
+  role: {
+    portuguese: "Programador Web Full Stack",
+    english: "Full Stack Web Developer",
+  },
+
   location: "Aveiro, Portugal",
   freelancerSince: 2025,
   navyServiceYears: 6,
 
   email: "joaoxxmiguel@hotmail.com",
+
+  availability: {
+    portuguese:
+      "Disponível para projetos freelance e oportunidades em equipas de desenvolvimento.",
+    english:
+      "Available for freelance projects and opportunities within development teams.",
+  },
 
   profileImage: {
     src: "/images/profile/joao-costa.webp",
@@ -14,7 +27,24 @@ export const personalData = {
 
   cv: {
     portuguese: "/documents/joao-costa-cv-pt.pdf",
-    english: null,
+    english: "/documents/joao-costa-cv-en.pdf",
+  },
+
+  certificates: {
+    editFullStackBootcamp: {
+      title: {
+        portuguese: "Certificado de conclusão",
+        english: "Completion certificate",
+      },
+      course: {
+        portuguese: "Full Stack Development",
+        english: "Full Stack Development",
+      },
+      institution: "EDIT - Disruptive Digital Education",
+      location: "Porto, Portugal",
+      period: "03/2024 - 11/2024",
+      href: "/documents/edit-full-stack-bootcamp-certificate.pdf",
+    },
   },
 
   socialLinks: {
