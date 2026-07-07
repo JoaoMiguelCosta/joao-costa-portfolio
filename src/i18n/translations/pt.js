@@ -284,10 +284,36 @@ const portugueseTranslations = {
 
   contact: {
     eyebrow: "Contacto",
-    title: "Vamos conversar",
+    title: "Tens um projeto ou oportunidade em mente?",
     description:
-      "Disponível para novos projetos freelance e para oportunidades de integração em equipas de desenvolvimento web.",
+      "Estou disponível para desenvolver websites, aplicações web e soluções digitais orientadas a necessidades reais de negócio.",
+    availability:
+      "Projetos freelance, colaboração com equipas e oportunidades de desenvolvimento web.",
+
+    detailsAriaLabel: "Informações de contacto e documentos profissionais",
+
     emailLabel: "Email",
+    emailActionLabel: "Enviar email",
+
+    locationLabel: "Localização",
+    availabilityLabel: "Disponibilidade",
+    availabilityValue: "Freelance e equipas de desenvolvimento",
+
+    documents: {
+      title: "Documentos",
+      cvPortugueseLabel: "Descarregar CV em português",
+      cvPortugueseAriaLabel: "Descarregar currículo de João Costa em português",
+      cvEnglishLabel: "Descarregar CV em inglês",
+      cvEnglishAriaLabel: "Descarregar currículo de João Costa em inglês",
+    },
+
+    profiles: {
+      title: "Perfis profissionais",
+      githubLabel: "GitHub",
+      githubAriaLabel: "Abrir perfil de GitHub de João Costa",
+      linkedinLabel: "LinkedIn",
+      linkedinAriaLabel: "Abrir perfil de LinkedIn de João Costa",
+    },
   },
 
   footer: {

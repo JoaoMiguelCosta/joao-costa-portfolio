@@ -81,6 +81,76 @@ function getAboutConfig(translations) {
   };
 }
 
+function getContactConfig(translations) {
+  const cvLinks = [
+    {
+      id: "cv-pt",
+      label: translations.contact.documents.cvPortugueseLabel,
+      ariaLabel: translations.contact.documents.cvPortugueseAriaLabel,
+      href: personalData.cv.portuguese,
+      download: "joao-costa-cv-pt.pdf",
+    },
+    {
+      id: "cv-en",
+      label: translations.contact.documents.cvEnglishLabel,
+      ariaLabel: translations.contact.documents.cvEnglishAriaLabel,
+      href: personalData.cv.english,
+      download: "joao-costa-cv-en.pdf",
+    },
+  ].filter((link) => Boolean(link.href));
+
+  return {
+    eyebrow: translations.contact.eyebrow,
+    title: translations.contact.title,
+    description: translations.contact.description,
+    availability: translations.contact.availability,
+    detailsAriaLabel: translations.contact.detailsAriaLabel,
+
+    email: {
+      label: translations.contact.emailLabel,
+      actionLabel: translations.contact.emailActionLabel,
+      value: personalData.email,
+      href: `mailto:${personalData.email}`,
+    },
+
+    details: [
+      {
+        id: "location",
+        label: translations.contact.locationLabel,
+        value: personalData.location,
+      },
+      {
+        id: "availability",
+        label: translations.contact.availabilityLabel,
+        value: translations.contact.availabilityValue,
+      },
+    ],
+
+    documents: {
+      title: translations.contact.documents.title,
+      links: cvLinks,
+    },
+
+    profiles: {
+      title: translations.contact.profiles.title,
+      links: [
+        {
+          id: "github",
+          label: translations.contact.profiles.githubLabel,
+          ariaLabel: translations.contact.profiles.githubAriaLabel,
+          href: personalData.socialLinks.github,
+        },
+        {
+          id: "linkedin",
+          label: translations.contact.profiles.linkedinLabel,
+          ariaLabel: translations.contact.profiles.linkedinAriaLabel,
+          href: personalData.socialLinks.linkedin,
+        },
+      ],
+    },
+  };
+}
+
 function getLocalizedSkillGroups(skillGroups, translations) {
   return skillGroups.map((skill) => {
     const translatedSkill = translations.skills.items[skill.id];
@@ -162,12 +232,7 @@ export function getHomePageConfig(language) {
       learningItems: getLocalizedSkillGroups(skillsData.learning, translations),
     },
 
-    contact: {
-      eyebrow: translations.contact.eyebrow,
-      title: translations.contact.title,
-      description: translations.contact.description,
-      note: `${translations.contact.emailLabel}: ` + personalData.email,
-    },
+    contact: getContactConfig(translations),
 
     footer: {
       owner: personalData.name,
