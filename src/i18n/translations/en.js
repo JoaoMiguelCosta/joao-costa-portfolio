@@ -143,17 +143,29 @@ const englishTranslations = {
     imageAlt: "Portrait of João Costa, full-stack web developer",
 
     paragraphs: [
-      "Since 2025, I have worked as a freelance developer, following projects from research and requirements gathering through solution definition, development, deployment and ongoing support.",
+      "Since 2025, I have worked as a freelance developer building websites and web applications, following each project from end to end: requirements gathering, solution definition, frontend and backend development, testing, deployment, maintenance and support.",
 
-      "Before starting my career in web development, I served for six years in the Portuguese Navy. That experience strengthened skills such as discipline, responsibility, resilience, teamwork and the ability to perform under pressure.",
+      "I have hands-on experience in projects shaped by real business needs, from corporate websites to web platforms with operational rules, authentication, permissions, data management and multiple functional areas. My goal is to create clear, reliable solutions that deliver real value to businesses and users.",
     ],
 
     facts: {
       locationLabel: "Location",
-      freelanceLabel: "Freelance",
-      freelanceValuePrefix: "Since",
-      navyLabel: "Portuguese Navy",
-      navyValueSuffix: "years of service",
+      experienceLabel: "Hands-on experience",
+      experienceValue: "Real projects",
+      processLabel: "Project involvement",
+      processValue: "From planning to support",
+    },
+
+    education: {
+      eyebrow: "Education",
+      title: "Full Stack Development",
+      description:
+        "Intensive training in frontend and backend web development, with practical application of modern technologies and project development.",
+      certificate: {
+        label: "View completion certificate",
+        ariaLabel:
+          "Open the Full Stack Development completion certificate from EDIT",
+      },
     },
   },
 

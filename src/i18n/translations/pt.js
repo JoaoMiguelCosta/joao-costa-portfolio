@@ -146,17 +146,29 @@ const portugueseTranslations = {
     imageAlt: "Retrato de João Costa, programador web full stack",
 
     paragraphs: [
-      "Desde 2025, trabalho como freelancer e acompanho projetos de ponta a ponta: pesquisa, levantamento de requisitos, definição da solução, desenvolvimento, publicação e suporte.",
+      "Desde 2025, trabalho como freelancer no desenvolvimento de websites e aplicações web, acompanhando os projetos de ponta a ponta: levantamento de requisitos, definição da solução, desenvolvimento frontend e backend, testes, publicação, manutenção e suporte.",
 
-      "Antes de iniciar o meu percurso no desenvolvimento web, servi durante seis anos na Marinha Portuguesa. Essa experiência reforçou competências como disciplina, responsabilidade, resiliência, trabalho em equipa e capacidade de atuar sob pressão.",
+      "Tenho experiência prática em projetos orientados a necessidades reais de negócio, desde websites institucionais até plataformas web com regras operacionais, autenticação, permissões, gestão de dados e diferentes áreas funcionais. Procuro criar soluções claras, fiáveis e preparadas para gerar valor real para empresas e utilizadores.",
     ],
 
     facts: {
       locationLabel: "Localização",
-      freelanceLabel: "Freelance",
-      freelanceValuePrefix: "Desde",
-      navyLabel: "Marinha Portuguesa",
-      navyValueSuffix: "anos de serviço",
+      experienceLabel: "Experiência prática",
+      experienceValue: "Projetos reais",
+      processLabel: "Acompanhamento",
+      processValue: "Do planeamento ao suporte",
+    },
+
+    education: {
+      eyebrow: "Formação",
+      title: "Full Stack Development",
+      description:
+        "Formação intensiva em desenvolvimento web frontend e backend, com aplicação prática de tecnologias modernas e desenvolvimento de projetos.",
+      certificate: {
+        label: "Ver certificado de conclusão",
+        ariaLabel:
+          "Abrir certificado de conclusão do curso Full Stack Development da EDIT",
+      },
     },
   },
 

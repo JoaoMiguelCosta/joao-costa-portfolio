@@ -34,6 +34,8 @@ function groupProjects(projects) {
 }
 
 function getAboutConfig(translations) {
+  const editCertificate = personalData.certificates.editFullStackBootcamp;
+
   return {
     eyebrow: translations.about.eyebrow,
     title: translations.about.title,
@@ -52,20 +54,30 @@ function getAboutConfig(translations) {
         value: personalData.location,
       },
       {
-        id: "freelance",
-        label: translations.about.facts.freelanceLabel,
-        value:
-          `${translations.about.facts.freelanceValuePrefix} ` +
-          personalData.freelancerSince,
+        id: "experience",
+        label: translations.about.facts.experienceLabel,
+        value: translations.about.facts.experienceValue,
       },
       {
-        id: "navy",
-        label: translations.about.facts.navyLabel,
-        value:
-          `${personalData.navyServiceYears} ` +
-          translations.about.facts.navyValueSuffix,
+        id: "process",
+        label: translations.about.facts.processLabel,
+        value: translations.about.facts.processValue,
       },
     ],
+
+    education: {
+      eyebrow: translations.about.education.eyebrow,
+      title: translations.about.education.title,
+      institution:
+        `${editCertificate.institution} · ` + editCertificate.location,
+      period: editCertificate.period,
+      description: translations.about.education.description,
+      certificate: {
+        label: translations.about.education.certificate.label,
+        ariaLabel: translations.about.education.certificate.ariaLabel,
+        href: editCertificate.href,
+      },
+    },
   };
 }
 

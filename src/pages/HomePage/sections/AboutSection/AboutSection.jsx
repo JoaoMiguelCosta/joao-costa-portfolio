@@ -4,6 +4,8 @@ import SectionHeader from "../../components/SectionHeader/SectionHeader.jsx";
 import styles from "./AboutSection.module.css";
 
 export default function AboutSection({ content }) {
+  const education = content.education;
+
   return (
     <section
       className={styles.section}
@@ -22,6 +24,15 @@ export default function AboutSection({ content }) {
               loading="lazy"
               decoding="async"
             />
+
+            <dl className={styles.facts}>
+              {content.facts.map((fact) => (
+                <div className={styles.fact} key={fact.id}>
+                  <dt className={styles.factLabel}>{fact.label}</dt>
+                  <dd className={styles.factValue}>{fact.value}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
 
           <div className={styles.content}>
@@ -38,15 +49,47 @@ export default function AboutSection({ content }) {
               ))}
             </div>
 
-            <dl className={styles.facts}>
-              {content.facts.map((fact) => (
-                <div className={styles.fact} key={fact.id}>
-                  <dt className={styles.factLabel}>{fact.label}</dt>
+            {education ? (
+              <article
+                className={styles.education}
+                aria-labelledby="about-education-title"
+              >
+                <p className={styles.educationEyebrow}>{education.eyebrow}</p>
 
-                  <dd className={styles.factValue}>{fact.value}</dd>
+                <div className={styles.educationHeader}>
+                  <div>
+                    <h3
+                      className={styles.educationTitle}
+                      id="about-education-title"
+                    >
+                      {education.title}
+                    </h3>
+
+                    <p className={styles.educationMeta}>
+                      {education.institution}
+                    </p>
+                  </div>
+
+                  <span className={styles.educationPeriod}>
+                    {education.period}
+                  </span>
                 </div>
-              ))}
-            </dl>
+
+                <p className={styles.educationDescription}>
+                  {education.description}
+                </p>
+
+                <a
+                  className={styles.educationLink}
+                  href={education.certificate.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={education.certificate.ariaLabel}
+                >
+                  {education.certificate.label}
+                </a>
+              </article>
+            ) : null}
           </div>
         </div>
       </Container>
