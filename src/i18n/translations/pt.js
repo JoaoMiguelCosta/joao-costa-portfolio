@@ -41,11 +41,11 @@ const portugueseTranslations = {
   },
 
   hero: {
-    eyebrow: "Programador Web Full Stack",
+    eyebrow: "João Costa · Programador Web Full Stack",
     title:
-      "Desenvolvo websites e aplicações web orientados às necessidades reais de cada negócio.",
+      "Desenvolvo soluções web pensadas para resolver necessidades reais de negócio.",
     description:
-      "Trabalho como freelancer no desenvolvimento completo de soluções web, desde o levantamento de necessidades até à publicação e suporte.",
+      "Crio websites e aplicações web que ajudam empresas a apresentar melhor os seus serviços, organizar processos, reduzir trabalho manual e melhorar a experiência dos utilizadores. Acompanho o projeto desde o planeamento até à publicação, suporte e evolução.",
 
     actions: [
       {

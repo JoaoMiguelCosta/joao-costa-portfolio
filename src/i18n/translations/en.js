@@ -41,11 +41,10 @@ const englishTranslations = {
   },
 
   hero: {
-    eyebrow: "Full-Stack Web Developer",
-    title:
-      "I build websites and web applications around the real needs of each business.",
+    eyebrow: "João Costa · Full Stack Web Developer",
+    title: "I build web solutions designed to solve real business needs.",
     description:
-      "I work as a freelance developer, delivering complete web solutions from requirements gathering to deployment and ongoing support.",
+      "I create websites and web applications that help businesses present their services, organise processes, reduce manual work and improve the user experience. I follow each project from planning to deployment, support and future improvements.",
 
     actions: [
       {
