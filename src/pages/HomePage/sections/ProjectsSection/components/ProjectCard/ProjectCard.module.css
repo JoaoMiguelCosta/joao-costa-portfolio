@@ -1,10 +1,9 @@
 .card {
     --card-padding: var(--space-5);
-    --meta-min-height: 3.25rem;
-    --title-min-height: 3.75rem;
-    --description-min-height: 7.5rem;
-    --responsibility-min-height: 6.75rem;
-    --tags-min-height: 4.75rem;
+    --title-min-block-size: auto;
+    --description-min-block-size: auto;
+    --responsibility-min-block-size: auto;
+    --tags-min-block-size: auto;
 
     display: flex;
     width: 100%;
@@ -19,20 +18,23 @@
 
 .featured {
     --card-padding: var(--space-6);
-    --meta-min-height: 3rem;
-    --title-min-height: 3rem;
-    --description-min-height: 5.5rem;
-    --responsibility-min-height: 6rem;
-    --tags-min-height: 4.75rem;
+    --title-min-block-size: 2lh;
+    --description-min-block-size: 3lh;
+    --responsibility-min-block-size: 2lh;
+    --tags-min-block-size: 5rem;
 }
 
 .compact {
     --card-padding: var(--space-5);
+    --title-min-block-size: 2lh;
+    --description-min-block-size: 4lh;
+    --responsibility-min-block-size: 2lh;
+    --tags-min-block-size: 2.75rem;
 }
 
 .media {
     flex-shrink: 0;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 2 / 1;
     overflow: hidden;
     border-bottom: 1px solid var(--color-border);
     background-color: var(--color-surface-secondary);
@@ -43,6 +45,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top center;
     transition: transform 180ms ease;
 }
 
@@ -51,12 +54,11 @@
 }
 
 .content {
-    display: grid;
+    display: flex;
     min-width: 0;
     flex: 1;
-    grid-template-rows:
-        minmax(var(--meta-min-height), auto) minmax(var(--title-min-height), auto) minmax(var(--description-min-height), auto) minmax(var(--responsibility-min-height), auto) minmax(var(--tags-min-height), 1fr) auto;
-    row-gap: var(--space-3);
+    flex-direction: column;
+    gap: var(--space-3);
     padding: var(--card-padding);
 }
 
@@ -88,6 +90,7 @@
 
 .title {
     margin: 0;
+    min-height: var(--title-min-block-size);
     font-size: var(--font-size-xl);
     line-height: var(--line-height-tight);
 }
@@ -98,12 +101,13 @@
 
 .description {
     margin: 0;
+    min-height: var(--description-min-block-size);
     color: var(--color-text-secondary);
 }
 
 .responsibility {
     min-width: 0;
-    padding-top: var(--space-4);
+    padding-top: var(--space-3);
     border-top: 1px solid var(--color-border);
 }
 
@@ -115,6 +119,7 @@
 
 .responsibilityText {
     margin-top: var(--space-2);
+    min-height: var(--responsibility-min-block-size);
     color: var(--color-text-secondary);
     font-size: var(--font-size-sm);
 }
@@ -122,11 +127,12 @@
 .tagList {
     display: flex;
     min-width: 0;
+    min-height: var(--tags-min-block-size);
     align-content: flex-start;
     flex-wrap: wrap;
     gap: var(--space-2);
     margin: 0;
-    padding: var(--space-2) 0 0;
+    padding: 0;
     list-style: none;
 }
 
@@ -143,9 +149,9 @@
     display: grid;
     grid-template-columns:
         repeat(auto-fit,
-            minmax(min(100%, 10rem), 1fr));
+            minmax(min(100%, 12rem), 1fr));
     gap: var(--space-3);
-    padding-top: var(--space-2);
+    margin-top: auto;
 }
 
 .link {
@@ -180,56 +186,24 @@
     border-color: var(--color-text-secondary);
 }
 
-/*
- * Entre tablet horizontal e desktop pequeno,
- * os cartões continuam lado a lado, mas têm menos
- * largura. Reservamos espaço adicional para textos
- * que passam a ocupar mais linhas.
- */
-@media (max-width: 64rem) {
+@media (min-width: 52rem) and (max-width: 57rem) {
     .featured {
-        --meta-min-height: 4rem;
-        --title-min-height: 4.5rem;
-        --description-min-height: 8rem;
-        --responsibility-min-height: 7.5rem;
-        --tags-min-height: 7rem;
-    }
-
-    .compact {
-        --meta-min-height: 4rem;
-        --title-min-height: 4rem;
-        --description-min-height: 8rem;
-        --responsibility-min-height: 7rem;
-        --tags-min-height: 5.5rem;
+        --description-min-block-size: 4lh;
+        --responsibility-min-block-size: 3lh;
     }
 }
 
-/*
- * Quando existe apenas um cartão por linha,
- * deixa de ser necessário reservar alturas iguais.
- * Cada bloco passa a ocupar apenas o espaço real.
- */
 @media (max-width: 48rem) {
-    .card {
-        --meta-min-height: 0rem;
-        --title-min-height: 0rem;
-        --description-min-height: 0rem;
-        --responsibility-min-height: 0rem;
-        --tags-min-height: 0rem;
-
-        height: auto;
-    }
-
-    .content {
-        grid-template-rows: repeat(6, auto);
+    .featured,
+    .compact {
+        --title-min-block-size: auto;
+        --description-min-block-size: auto;
+        --responsibility-min-block-size: auto;
+        --tags-min-block-size: auto;
     }
 
     .meta {
         align-items: center;
-    }
-
-    .tagList {
-        padding-top: 0;
     }
 }
 

@@ -1,7 +1,12 @@
 import { personalData } from "../../../data/personal.data.js";
 import { projectsData } from "../../../data/projects.data.js";
 import { skillsData } from "../../../data/skills.data.js";
+import { LANGUAGE_CODES } from "../../../i18n/language.constants.js";
 import { getTranslations } from "../../../i18n/translations/index.js";
+
+const GITHUB_ICON = "/icons/technologies/github.svg";
+const LINKEDIN_ICON = "/icons/social/linkedin.svg";
+const PDF_ICON = "/icons/documents/pdf.svg";
 
 function getLocalizedProjects(translations) {
   return projectsData
@@ -76,27 +81,51 @@ function getAboutConfig(translations) {
         label: translations.about.education.certificate.label,
         ariaLabel: translations.about.education.certificate.ariaLabel,
         href: editCertificate.href,
+        icon: PDF_ICON,
       },
     },
   };
 }
 
-function getContactConfig(translations) {
-  const cvLinks = [
-    {
-      id: "cv-pt",
-      label: translations.contact.documents.cvPortugueseLabel,
-      ariaLabel: translations.contact.documents.cvPortugueseAriaLabel,
-      href: personalData.cv.portuguese,
-      download: "joao-costa-cv-pt.pdf",
-    },
-    {
-      id: "cv-en",
-      label: translations.contact.documents.cvEnglishLabel,
-      ariaLabel: translations.contact.documents.cvEnglishAriaLabel,
-      href: personalData.cv.english,
-      download: "joao-costa-cv-en.pdf",
-    },
+function getActiveCvLink(translations, language) {
+  const isPortuguese = language === LANGUAGE_CODES.PORTUGUESE;
+
+  return isPortuguese
+    ? {
+        id: "cv-pt",
+        label: translations.contact.documents.cvPortugueseLabel,
+        ariaLabel: translations.contact.documents.cvPortugueseAriaLabel,
+        href: personalData.cv.portuguese,
+        download: "joao-costa-cv-pt.pdf",
+        icon: PDF_ICON,
+      }
+    : {
+        id: "cv-en",
+        label: translations.contact.documents.cvEnglishLabel,
+        ariaLabel: translations.contact.documents.cvEnglishAriaLabel,
+        href: personalData.cv.english,
+        download: "joao-costa-cv-en.pdf",
+        icon: PDF_ICON,
+      };
+}
+
+function getCertificateLink(translations) {
+  const editCertificate = personalData.certificates.editFullStackBootcamp;
+
+  return {
+    id: "certificate",
+    label: translations.about.education.certificate.label,
+    ariaLabel: translations.about.education.certificate.ariaLabel,
+    href: editCertificate.href,
+    download: "joao-costa-certificado-full-stack.pdf",
+    icon: PDF_ICON,
+  };
+}
+
+function getContactConfig(translations, language) {
+  const documentLinks = [
+    getActiveCvLink(translations, language),
+    getCertificateLink(translations),
   ].filter((link) => Boolean(link.href));
 
   return {
@@ -128,7 +157,7 @@ function getContactConfig(translations) {
 
     documents: {
       title: translations.contact.documents.title,
-      links: cvLinks,
+      links: documentLinks,
     },
 
     profiles: {
@@ -139,12 +168,14 @@ function getContactConfig(translations) {
           label: translations.contact.profiles.githubLabel,
           ariaLabel: translations.contact.profiles.githubAriaLabel,
           href: personalData.socialLinks.github,
+          icon: GITHUB_ICON,
         },
         {
           id: "linkedin",
           label: translations.contact.profiles.linkedinLabel,
           ariaLabel: translations.contact.profiles.linkedinAriaLabel,
           href: personalData.socialLinks.linkedin,
+          icon: LINKEDIN_ICON,
         },
       ],
     },
@@ -218,6 +249,7 @@ export function getHomePageConfig(language) {
       description: translations.skills.description,
 
       appliedTitle: translations.skills.appliedTitle,
+      appliedDescription: translations.skills.appliedDescription,
 
       learningTitle: translations.skills.learningTitle,
       learningDescription: translations.skills.learningDescription,
@@ -232,7 +264,7 @@ export function getHomePageConfig(language) {
       learningItems: getLocalizedSkillGroups(skillsData.learning, translations),
     },
 
-    contact: getContactConfig(translations),
+    contact: getContactConfig(translations, language),
 
     footer: {
       owner: personalData.name,
@@ -245,6 +277,7 @@ export function getHomePageConfig(language) {
           label: translations.footer.githubLabel,
           ariaLabel: translations.footer.githubAriaLabel,
           href: personalData.socialLinks.github,
+          icon: GITHUB_ICON,
           external: true,
         },
         {
@@ -252,6 +285,7 @@ export function getHomePageConfig(language) {
           label: translations.footer.linkedinLabel,
           ariaLabel: translations.footer.linkedinAriaLabel,
           href: personalData.socialLinks.linkedin,
+          icon: LINKEDIN_ICON,
           external: true,
         },
         {

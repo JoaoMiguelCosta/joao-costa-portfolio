@@ -17,7 +17,8 @@ export default function SiteHeader({
   mobileMenu,
   accessibility,
 }) {
-  const { isMenuOpen, closeMenu, toggleMenu, triggerRef } = useMobileMenu();
+  const { isMenuOpen, closeMenu, toggleMenu, triggerRef, panelRef } =
+    useMobileMenu();
 
   const menuPanelClassName = [
     styles.menuPanel,
@@ -53,7 +54,11 @@ export default function SiteHeader({
               triggerRef={triggerRef}
             />
 
-            <div className={menuPanelClassName} id={NAVIGATION_ID}>
+            <div
+              className={menuPanelClassName}
+              id={NAVIGATION_ID}
+              ref={panelRef}
+            >
               <nav aria-label={accessibility.navigationAriaLabel}>
                 <ul className={styles.navigationList}>
                   {navigationItems.map((item) => (

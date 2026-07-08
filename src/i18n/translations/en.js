@@ -162,9 +162,8 @@ const englishTranslations = {
       description:
         "Intensive training in frontend and backend web development, with practical application of modern technologies and project development.",
       certificate: {
-        label: "View completion certificate",
-        ariaLabel:
-          "Open the Full Stack Development completion certificate from EDIT",
+        label: "Download Full Stack certificate",
+        ariaLabel: "Download Full Stack Development certificate as PDF",
       },
     },
   },
@@ -173,13 +172,15 @@ const englishTranslations = {
     eyebrow: "Technical knowledge",
     title: "Skills",
     description:
-      "Technologies, practices and tools applied to the development, validation and deployment of real projects.",
+      "Technologies, practices and tools I use to build organized, accessible and scalable web interfaces, APIs and applications.",
 
     appliedTitle: "Applied skills",
+    appliedDescription:
+      "Skills applied in real projects, from React interfaces and APIs to databases, testing, deployment and maintenance.",
 
     learningTitle: "Currently learning",
     learningDescription:
-      "Technologies and practices I am currently developing through study and application in new projects.",
+      "Technologies and practices I am deepening to build more modern, typed, scalable and AI-assisted applications.",
 
     toolsLabel: "Technologies and tools",
     conceptsLabel: "Practices and knowledge",
@@ -281,7 +282,7 @@ const englishTranslations = {
 
   contact: {
     eyebrow: "Contact",
-    title: "Do you have a project or opportunity in mind?",
+    title: "Do you have a project or opportunity in mind ?",
     description:
       "I am available to build websites, web applications and digital solutions shaped by real business needs.",
     availability:
@@ -289,7 +290,7 @@ const englishTranslations = {
 
     detailsAriaLabel: "Contact information and professional documents",
 
-    emailLabel: "Email",
+    emailLabel: "Email:",
     emailActionLabel: "Send email",
 
     locationLabel: "Location",
@@ -300,7 +301,7 @@ const englishTranslations = {
       title: "Documents",
       cvPortugueseLabel: "Download CV in Portuguese",
       cvPortugueseAriaLabel: "Download João Costa's CV in Portuguese",
-      cvEnglishLabel: "Download CV in English",
+      cvEnglishLabel: "Download CV",
       cvEnglishAriaLabel: "Download João Costa's CV in English",
     },
 
@@ -321,7 +322,7 @@ const englishTranslations = {
     githubAriaLabel: "Open João Costa's GitHub profile",
     linkedinLabel: "LinkedIn",
     linkedinAriaLabel: "Open João Costa's LinkedIn profile",
-    backToTopLabel: "Back to top",
+    backToTopLabel: "Back to top ↑",
     backToTopAriaLabel: "Back to the top of the page",
   },
 };

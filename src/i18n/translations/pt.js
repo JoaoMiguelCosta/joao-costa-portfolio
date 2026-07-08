@@ -165,9 +165,8 @@ const portugueseTranslations = {
       description:
         "Formação intensiva em desenvolvimento web frontend e backend, com aplicação prática de tecnologias modernas e desenvolvimento de projetos.",
       certificate: {
-        label: "Ver certificado de conclusão",
-        ariaLabel:
-          "Abrir certificado de conclusão do curso Full Stack Development da EDIT",
+        label: "Descarregar certificado Full Stack",
+        ariaLabel: "Descarregar certificado de Desenvolvimento Full Stack em PDF",
       },
     },
   },
@@ -176,13 +175,15 @@ const portugueseTranslations = {
     eyebrow: "Conhecimentos técnicos",
     title: "Competências",
     description:
-      "Tecnologias, práticas e ferramentas aplicadas no desenvolvimento, validação e publicação de projetos reais.",
+      "Tecnologias, práticas e ferramentas que utilizo para desenvolver interfaces, APIs e aplicações web organizadas, acessíveis e preparadas para evoluir.",
 
     appliedTitle: "Competências aplicadas",
+    appliedDescription:
+      "Competências usadas em projetos reais, desde interfaces React e APIs até bases de dados, testes, publicação e manutenção.",
 
     learningTitle: "Em aprendizagem e evolução",
     learningDescription:
-      "Tecnologias e práticas que estou atualmente a aprofundar através de estudo e aplicação em novos projetos.",
+      "Tecnologias e práticas que estou a aprofundar para construir aplicações mais modernas, tipadas, escaláveis e apoiadas por IA.",
 
     toolsLabel: "Tecnologias e ferramentas",
     conceptsLabel: "Práticas e conhecimentos",
@@ -284,7 +285,7 @@ const portugueseTranslations = {
 
   contact: {
     eyebrow: "Contacto",
-    title: "Tens um projeto ou oportunidade em mente?",
+    title: "Tens um projeto ou oportunidade em mente ?",
     description:
       "Estou disponível para desenvolver websites, aplicações web e soluções digitais orientadas a necessidades reais de negócio.",
     availability:
@@ -292,7 +293,7 @@ const portugueseTranslations = {
 
     detailsAriaLabel: "Informações de contacto e documentos profissionais",
 
-    emailLabel: "Email",
+    emailLabel: "Email:",
     emailActionLabel: "Enviar email",
 
     locationLabel: "Localização",
@@ -301,7 +302,7 @@ const portugueseTranslations = {
 
     documents: {
       title: "Documentos",
-      cvPortugueseLabel: "Descarregar CV em português",
+      cvPortugueseLabel: "Descarregar CV",
       cvPortugueseAriaLabel: "Descarregar currículo de João Costa em português",
       cvEnglishLabel: "Descarregar CV em inglês",
       cvEnglishAriaLabel: "Descarregar currículo de João Costa em inglês",
@@ -324,7 +325,7 @@ const portugueseTranslations = {
     githubAriaLabel: "Abrir perfil de GitHub de João Costa",
     linkedinLabel: "LinkedIn",
     linkedinAriaLabel: "Abrir perfil de LinkedIn de João Costa",
-    backToTopLabel: "Voltar ao topo",
+    backToTopLabel: "Voltar ao topo ↑",
     backToTopAriaLabel: "Voltar ao início da página",
   },
 };

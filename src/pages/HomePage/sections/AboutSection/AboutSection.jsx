@@ -14,7 +14,7 @@ export default function AboutSection({ content }) {
     >
       <Container>
         <div className={styles.layout}>
-          <div className={styles.media}>
+          <div className={styles.imageFrame}>
             <img
               className={styles.image}
               src={content.profileImage.src}
@@ -24,73 +24,87 @@ export default function AboutSection({ content }) {
               loading="lazy"
               decoding="async"
             />
-
-            <dl className={styles.facts}>
-              {content.facts.map((fact) => (
-                <div className={styles.fact} key={fact.id}>
-                  <dt className={styles.factLabel}>{fact.label}</dt>
-                  <dd className={styles.factValue}>{fact.value}</dd>
-                </div>
-              ))}
-            </dl>
           </div>
 
-          <div className={styles.content}>
-            <SectionHeader
-              eyebrow={content.eyebrow}
-              title={content.title}
-              titleId="about-title"
-              description={content.description}
-            />
+          <div className={styles.intro}>
+            <div className={styles.sectionHeader}>
+              <SectionHeader
+                eyebrow={content.eyebrow}
+                title={content.title}
+                titleId="about-title"
+                description={content.description}
+              />
+            </div>
 
             <div className={styles.paragraphs}>
               {content.paragraphs.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
             </div>
+          </div>
 
-            {education ? (
-              <article
-                className={styles.education}
-                aria-labelledby="about-education-title"
-              >
-                <p className={styles.educationEyebrow}>{education.eyebrow}</p>
+          <dl className={styles.facts}>
+            {content.facts.map((fact) => (
+              <div className={styles.fact} key={fact.id}>
+                <dt className={styles.factLabel}>{fact.label}</dt>
+                <dd className={styles.factValue}>{fact.value}</dd>
+              </div>
+            ))}
+          </dl>
 
-                <div className={styles.educationHeader}>
-                  <div>
-                    <h3
-                      className={styles.educationTitle}
-                      id="about-education-title"
-                    >
-                      {education.title}
-                    </h3>
+          {education ? (
+            <article
+              className={styles.education}
+              aria-labelledby="about-education-title"
+            >
+              <p className={styles.educationEyebrow}>{education.eyebrow}</p>
 
-                    <p className={styles.educationMeta}>
-                      {education.institution}
-                    </p>
-                  </div>
+              <div className={styles.educationHeader}>
+                <div>
+                  <h3
+                    className={styles.educationTitle}
+                    id="about-education-title"
+                  >
+                    {education.title}
+                  </h3>
 
-                  <span className={styles.educationPeriod}>
-                    {education.period}
-                  </span>
+                  <p className={styles.educationMeta}>
+                    {education.institution}
+                  </p>
                 </div>
 
-                <p className={styles.educationDescription}>
-                  {education.description}
-                </p>
+                <span className={styles.educationPeriod}>
+                  {education.period}
+                </span>
+              </div>
 
-                <a
-                  className={styles.educationLink}
-                  href={education.certificate.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={education.certificate.ariaLabel}
-                >
-                  {education.certificate.label}
-                </a>
-              </article>
-            ) : null}
-          </div>
+              <p className={styles.educationDescription}>
+                {education.description}
+              </p>
+
+              <a
+                className={styles.educationLink}
+                href={education.certificate.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={education.certificate.ariaLabel}
+              >
+                <span className={styles.educationLinkIconFrame} aria-hidden="true">
+                  <img
+                    className={styles.educationLinkIcon}
+                    src={education.certificate.icon}
+                    alt=""
+                    width="20"
+                    height="20"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </span>
+
+                <span>{education.certificate.label}</span>
+              </a>
+            </article>
+          ) : null}
         </div>
       </Container>
     </section>

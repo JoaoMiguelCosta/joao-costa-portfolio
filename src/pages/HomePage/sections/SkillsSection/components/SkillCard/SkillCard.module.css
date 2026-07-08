@@ -8,6 +8,7 @@
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius-md);
     background-color: var(--color-surface);
+    
 }
 
 .learning {
@@ -44,14 +45,11 @@
     list-style: none;
 }
 
-.singleColumnToolList {
-    grid-template-columns: 1fr;
-}
-
 .learningToolList {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.singleColumnToolList,
 .singleToolList {
     grid-template-columns: 1fr;
 }
@@ -167,10 +165,6 @@
 }
 
 @media (max-width: 36rem) {
-    .card {
-        padding: var(--space-5);
-    }
-
     .toolList,
     .singleColumnToolList,
     .learningToolList,
