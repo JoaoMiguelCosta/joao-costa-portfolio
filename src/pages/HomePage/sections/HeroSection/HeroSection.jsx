@@ -7,6 +7,10 @@ const actionClassByVariant = {
   secondary: styles.secondaryAction,
 };
 
+function getActionClassName(variant) {
+  return actionClassByVariant[variant] ?? styles.secondaryAction;
+}
+
 export default function HeroSection({ content }) {
   return (
     <section className={styles.hero} id="inicio" aria-labelledby="hero-title">
@@ -23,7 +27,7 @@ export default function HeroSection({ content }) {
           <div className={styles.actions}>
             {content.actions.map((action) => (
               <a
-                className={actionClassByVariant[action.variant]}
+                className={getActionClassName(action.variant)}
                 href={action.href}
                 key={action.href}
               >
