@@ -35,8 +35,7 @@
 .contactRow,
 .details,
 .detail,
-.resourceGrid,
-.resourceGroup {
+.resourceGrid {
     min-width: 0;
 }
 
@@ -161,52 +160,6 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--space-5);
-}
-
-.resourceGroup {
-    display: grid;
-    gap: var(--space-3);
-    padding: 0;
-    border: 0;
-    background-color: transparent;
-}
-
-.resourceTitle {
-    margin: 0;
-    color: var(--color-text-primary);
-    font-size: var(--font-size-base);
-    line-height: var(--line-height-tight);
-}
-
-.resourceLinks {
-    display: grid;
-    gap: var(--space-3);
-}
-
-.resourceLink {
-    display: inline-flex;
-    min-width: 0;
-    min-height: 4.25rem;
-    align-items: center;
-    gap: var(--space-3);
-    padding: var(--space-3) var(--space-4);
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius-sm);
-    background-color: var(--color-surface);
-    color: var(--color-text-primary);
-    font-weight: var(--font-weight-semibold);
-    line-height: 1.35;
-    text-align: left;
-}
-
-.resourceLink:hover {
-    border-color: var(--color-text-secondary);
-}
-
-.resourceLinkLabel {
-    min-width: 0;
-    flex: 1;
-    overflow-wrap: anywhere;
 }
 
 /* 481px+ */
@@ -381,10 +334,6 @@
     .resourceGrid {
         grid-template-columns: 1fr;
     }
-
-    .resourceLink {
-        min-height: 4.25rem;
-    }
 }
 
 /* até 480px */
@@ -418,10 +367,5 @@
 
     .detail {
         padding: var(--space-4);
-    }
-
-    .resourceLink {
-        min-height: 4.25rem;
-        padding-inline: var(--space-3);
     }
 }
