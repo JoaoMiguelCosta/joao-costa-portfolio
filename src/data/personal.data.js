@@ -10,13 +10,6 @@ export const personalData = {
 
   email: "joaoxxmiguel@hotmail.com",
 
-  availability: {
-    portuguese:
-      "Disponível para projetos freelance e oportunidades em equipas de desenvolvimento.",
-    english:
-      "Available for freelance projects and opportunities within development teams.",
-  },
-
   profileImage: {
     src: "/images/profile/joao-costa.webp",
     width: 800,
