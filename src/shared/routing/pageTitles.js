@@ -1,15 +1,16 @@
+import { personalData } from "../../data/personal.data.js";
 import { DEFAULT_LANGUAGE, LANGUAGE_CODES } from "../../i18n/language.constants.js";
 import { ROUTE_KEYS, getAllRoutePaths } from "../../i18n/routes.js";
 
 const PAGE_TITLES_BY_LANGUAGE = {
   [LANGUAGE_CODES.PORTUGUESE]: {
-    home: "João Costa | Programador Web Full Stack",
+    home: `${personalData.name} | ${personalData.role.portuguese}`,
     projects: "Projetos | João Costa",
     notFound: "Página não encontrada | João Costa",
     error: "Erro | João Costa",
   },
   [LANGUAGE_CODES.ENGLISH]: {
-    home: "João Costa | Full Stack Web Developer",
+    home: `${personalData.name} | ${personalData.role.english}`,
     projects: "Projects | João Costa",
     notFound: "Page not found | João Costa",
     error: "Error | João Costa",

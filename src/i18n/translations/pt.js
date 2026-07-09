@@ -41,7 +41,6 @@ const portugueseTranslations = {
   },
 
   hero: {
-    eyebrow: "João Costa · Programador Web Full Stack",
     title:
       "Desenvolvo soluções web pensadas para resolver necessidades reais de negócio.",
     description:
@@ -500,7 +499,6 @@ const portugueseTranslations = {
   },
 
   footer: {
-    role: "Programador Web Full Stack",
     rights: "Todos os direitos reservados.",
     navigationAriaLabel: "Links do rodapé",
     githubLabel: "GitHub",

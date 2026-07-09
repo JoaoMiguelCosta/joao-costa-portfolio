@@ -54,9 +54,12 @@ function groupProjects(projects) {
 
 function getHeroConfig(translations, language) {
   const hero = translations.hero;
+  const isPortuguese = language === LANGUAGE_CODES.PORTUGUESE;
+  const role = isPortuguese ? personalData.role.portuguese : personalData.role.english;
 
   return {
     ...hero,
+    eyebrow: `${personalData.name} · ${role}`,
     actions: hero.actions.map((action) => ({
       label: action.label,
       href: getAnchorHref(action.anchorKey, language),

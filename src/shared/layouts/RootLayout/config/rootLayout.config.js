@@ -1,4 +1,5 @@
 import { personalData } from "../../../../data/personal.data.js";
+import { LANGUAGE_CODES } from "../../../../i18n/language.constants.js";
 import {
   ANCHOR_KEYS,
   ROUTE_KEYS,
@@ -9,6 +10,12 @@ import { getTranslations } from "../../../../i18n/translations/index.js";
 
 const GITHUB_ICON = "/icons/technologies/github.svg";
 const LINKEDIN_ICON = "/icons/social/linkedin.svg";
+
+function getRoleLabel(language) {
+  const isPortuguese = language === LANGUAGE_CODES.PORTUGUESE;
+
+  return isPortuguese ? personalData.role.portuguese : personalData.role.english;
+}
 
 function getNavigationItems(translations, pathname, language) {
   const projectsPagePaths = getAllRoutePaths(ROUTE_KEYS.PROJECTS_PAGE);
@@ -48,7 +55,7 @@ function getFooterConfig(translations, language) {
   return {
     owner: personalData.name,
     ownerHref: getHomeAnchorHref(ANCHOR_KEYS.START, language),
-    role: translations.footer.role,
+    role: getRoleLabel(language),
     rights: translations.footer.rights,
     navigationAriaLabel: translations.footer.navigationAriaLabel,
     links: [
