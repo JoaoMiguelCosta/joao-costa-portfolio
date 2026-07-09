@@ -75,7 +75,6 @@ export function getProjectsPageConfig(language) {
   const hero = getHeroConfig(translations);
 
   return {
-    ...hero,
     hero,
     intro: getIntroConfig(translations),
     navigation: getNavigation(translations),
