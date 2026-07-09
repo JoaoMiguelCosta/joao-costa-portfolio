@@ -8,7 +8,9 @@ export default function SectionHeader({
 }) {
   return (
     <header className={styles.header}>
-      {eyebrow ? <p className={styles.eyebrow}>{eyebrow}</p> : null}
+      {eyebrow ? (
+        <p className={`${styles.eyebrow} u-eyebrow`}>{eyebrow}</p>
+      ) : null}
 
       <h2 className={styles.title} id={titleId}>
         {title}

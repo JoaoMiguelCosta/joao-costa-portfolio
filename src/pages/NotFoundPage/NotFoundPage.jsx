@@ -13,7 +13,7 @@ export default function NotFoundPage() {
     <section className={styles.section} aria-labelledby="not-found-title">
       <Container>
         <div className={styles.content}>
-          <p className={styles.eyebrow}>{eyebrow}</p>
+          <p className="u-eyebrow">{eyebrow}</p>
 
           <h1 className={styles.title} id="not-found-title">
             {title}

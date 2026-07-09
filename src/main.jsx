@@ -8,6 +8,7 @@ import ThemeProvider from "./theme/ThemeProvider.jsx";
 import "./styles/tokens.css";
 import "./styles/reset.css";
 import "./styles/globals.css";
+import "./styles/utilities.css";
 
 const rootElement = document.getElementById("root");
 

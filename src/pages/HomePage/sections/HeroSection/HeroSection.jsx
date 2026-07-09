@@ -16,7 +16,7 @@ export default function HeroSection({ content }) {
     <section className={styles.hero} id="inicio" aria-labelledby="hero-title">
       <Container>
         <div className={styles.content}>
-          <p className={styles.eyebrow}>{content.eyebrow}</p>
+          <p className={`${styles.eyebrow} u-eyebrow`}>{content.eyebrow}</p>
 
           <h1 className={styles.title} id="hero-title">
             {content.title}

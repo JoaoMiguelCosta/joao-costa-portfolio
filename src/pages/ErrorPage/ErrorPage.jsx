@@ -28,7 +28,7 @@ export default function ErrorPage() {
     <div className={styles.page}>
       <Container>
         <div className={styles.content}>
-          <p className={styles.eyebrow}>{statusCode ?? eyebrow}</p>
+          <p className="u-eyebrow">{statusCode ?? eyebrow}</p>
 
           <h1 className={styles.title}>{title}</h1>
 

@@ -38,7 +38,7 @@ export default function ContactSection({ content }) {
     >
       <Container>
         <div className={styles.inner}>
-          <p className={styles.eyebrow}>{content.eyebrow}</p>
+          <p className={`${styles.eyebrow} u-eyebrow`}>{content.eyebrow}</p>
 
           <div className={styles.panel}>
             <div className={styles.intro}>
