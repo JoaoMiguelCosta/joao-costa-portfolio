@@ -1,7 +1,7 @@
 import { DEFAULT_LANGUAGE, LANGUAGE_CODES } from "../language.constants.js";
 
-import englishTranslations from "./en.js";
-import portugueseTranslations from "./pt.js";
+import englishTranslations from "./en/index.js";
+import portugueseTranslations from "./pt/index.js";
 
 const translationsByLanguage = Object.freeze({
   [LANGUAGE_CODES.PORTUGUESE]: portugueseTranslations,
