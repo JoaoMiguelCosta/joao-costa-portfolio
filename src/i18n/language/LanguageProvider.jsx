@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 
 import { LanguageContext } from "./LanguageContext.js";
-import { getHtmlLanguage, isSupportedLanguage } from "./language.helpers.js";
-import { getInitialLanguage, storeLanguage } from "./language.storage.js";
+import { getHtmlLanguage, isSupportedLanguage } from "./helpers.js";
+import { getInitialLanguage, storeLanguage } from "./storage.js";
 
 export default function LanguageProvider({ children }) {
   const [language, setCurrentLanguage] = useState(getInitialLanguage);

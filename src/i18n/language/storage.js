@@ -1,5 +1,5 @@
-import { DEFAULT_LANGUAGE, LANGUAGE_STORAGE_KEY } from "./language.constants.js";
-import { isSupportedLanguage } from "./language.helpers.js";
+import { DEFAULT_LANGUAGE, LANGUAGE_STORAGE_KEY } from "./constants.js";
+import { isSupportedLanguage } from "./helpers.js";
 
 function getStoredLanguage() {
   if (typeof window === "undefined") {

@@ -1,4 +1,4 @@
-import { DEFAULT_LANGUAGE, LANGUAGE_CODES } from "../language.constants.js";
+import { DEFAULT_LANGUAGE, LANGUAGE_CODES } from "../language/constants.js";
 
 import englishTranslations from "./en/index.js";
 import portugueseTranslations from "./pt/index.js";

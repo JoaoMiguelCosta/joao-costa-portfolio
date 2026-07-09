@@ -1,4 +1,4 @@
-import { DEFAULT_LANGUAGE, LANGUAGE_CODES } from "../language.constants.js";
+import { DEFAULT_LANGUAGE, LANGUAGE_CODES } from "../language/constants.js";
 
 export const ANCHOR_KEYS = Object.freeze({
   START: "start",

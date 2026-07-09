@@ -2,7 +2,7 @@ import {
   DEFAULT_LANGUAGE,
   LANGUAGE_CODES,
   SUPPORTED_LANGUAGE_CODES,
-} from "./language.constants.js";
+} from "./constants.js";
 
 const HTML_LANGUAGE_BY_CODE = Object.freeze({
   [LANGUAGE_CODES.PORTUGUESE]: "pt-PT",
