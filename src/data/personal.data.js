@@ -7,8 +7,6 @@ export const personalData = {
   },
 
   location: "Aveiro, Portugal",
-  freelancerSince: 2025,
-  navyServiceYears: 6,
 
   email: "joaoxxmiguel@hotmail.com",
 
@@ -32,14 +30,6 @@ export const personalData = {
 
   certificates: {
     editFullStackBootcamp: {
-      title: {
-        portuguese: "Certificado de conclusão",
-        english: "Completion certificate",
-      },
-      course: {
-        portuguese: "Full Stack Development",
-        english: "Full Stack Development",
-      },
       institution: "EDIT - Disruptive Digital Education",
       location: "Porto, Portugal",
       period: "03/2024 - 11/2024",
