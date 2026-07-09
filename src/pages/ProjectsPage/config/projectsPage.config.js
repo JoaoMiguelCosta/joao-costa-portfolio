@@ -1,4 +1,5 @@
 import { projectsData } from "../../../data/projects.data.js";
+import { ANCHOR_KEYS, getHomeAnchorHref } from "../../../i18n/routes.js";
 import { getTranslations } from "../../../i18n/translations/index.js";
 
 const CASE_STUDY_ORDER = ["farmacia-santa-casa", "sunlive-group"];
@@ -25,11 +26,6 @@ function getNavigation(translations) {
       label: navigation.sunliveGroupLabel,
       href: "#sunlive-group",
     },
-    {
-      id: "comparacao-tecnica",
-      label: navigation.technicalComparisonLabel,
-      href: "#comparacao-tecnica",
-    },
   ];
 }
 
@@ -41,7 +37,9 @@ function getCaseStudy(id, translations) {
     id: project.id,
     title: project.title,
     technologies: project.technologies,
+    technologiesAriaLabel: `${translations.projects.technologiesAriaLabel} ${project.title}`,
     links: project.links,
+    linkLabels: translations.projects.links,
     image: project.image,
     ...content,
   };
@@ -51,22 +49,23 @@ function getCaseStudies(translations) {
   return CASE_STUDY_ORDER.map((id) => getCaseStudy(id, translations));
 }
 
-function getTechnicalComparison(translations) {
-  return {
-    id: "comparacao-tecnica",
-    ...translations.projectsPage.technicalComparison,
-  };
-}
-
-function getCtaConfig(translations) {
+function getCtaConfig(translations, language) {
   const cta = translations.projectsPage.cta;
 
   return {
     title: cta.title,
     description: cta.description,
     actions: [
-      { id: "contact", label: cta.contactLabel, href: "/#contacto" },
-      { id: "home", label: cta.homeLabel, href: "/#inicio" },
+      {
+        id: "contact",
+        label: cta.contactLabel,
+        href: getHomeAnchorHref(ANCHOR_KEYS.CONTACT, language),
+      },
+      {
+        id: "home",
+        label: cta.homeLabel,
+        href: getHomeAnchorHref(ANCHOR_KEYS.START, language),
+      },
     ],
   };
 }
@@ -81,7 +80,6 @@ export function getProjectsPageConfig(language) {
     intro: getIntroConfig(translations),
     navigation: getNavigation(translations),
     caseStudies: getCaseStudies(translations),
-    technicalComparison: getTechnicalComparison(translations),
-    cta: getCtaConfig(translations),
+    cta: getCtaConfig(translations, language),
   };
 }

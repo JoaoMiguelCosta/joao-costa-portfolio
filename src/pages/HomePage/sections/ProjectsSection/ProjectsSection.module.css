@@ -43,6 +43,29 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.ctaRow {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--space-12);
+}
+
+.ctaLink {
+    display: inline-flex;
+    min-height: 3rem;
+    align-items: center;
+    justify-content: center;
+    padding-inline: var(--space-5);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-sm);
+    background-color: var(--color-surface);
+    color: var(--color-text-primary);
+    font-weight: var(--font-weight-semibold);
+}
+
+.ctaLink:hover {
+    border-color: var(--color-text-secondary);
+}
+
 @media (max-width: 64rem) {
     .groups {
         gap: var(--space-12);
@@ -78,5 +101,15 @@
     .otherGrid {
         grid-template-columns: 1fr;
         grid-auto-rows: auto;
+    }
+
+    .ctaRow {
+        margin-top: var(--space-10);
+    }
+}
+
+@media (max-width: 30rem) {
+    .ctaLink {
+        width: 100%;
     }
 }

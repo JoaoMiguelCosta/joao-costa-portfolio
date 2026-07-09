@@ -1,31 +1,31 @@
 import { useMemo } from "react";
 
 import useLanguage from "../../i18n/useLanguage.js";
-import Container from "../../shared/ui/Container/Container.jsx";
+
+import ProjectsNavigation from "./components/ProjectsNavigation/ProjectsNavigation.jsx";
+import CaseStudySection from "./sections/CaseStudySection/CaseStudySection.jsx";
+import ProjectsCtaSection from "./sections/ProjectsCtaSection/ProjectsCtaSection.jsx";
+import ProjectsHeroSection from "./sections/ProjectsHeroSection/ProjectsHeroSection.jsx";
+import ProjectsIntroSection from "./sections/ProjectsIntroSection/ProjectsIntroSection.jsx";
 
 import { getProjectsPageConfig } from "./config/projectsPage.config.js";
-
-import styles from "./ProjectsPage.module.css";
 
 export default function ProjectsPage() {
   const { language } = useLanguage();
 
-  const projectsPageConfig = useMemo(
-    () => getProjectsPageConfig(language),
-    [language],
-  );
+  const page = useMemo(() => getProjectsPageConfig(language), [language]);
 
   return (
-    <section className={styles.section} aria-labelledby="projects-page-title">
-      <Container>
-        <p className={styles.eyebrow}>{projectsPageConfig.eyebrow}</p>
+    <>
+      <ProjectsHeroSection content={page.hero} />
+      <ProjectsIntroSection content={page.intro} />
+      <ProjectsNavigation items={page.navigation} />
 
-        <h1 className={styles.title} id="projects-page-title">
-          {projectsPageConfig.title}
-        </h1>
+      {page.caseStudies.map((caseStudy) => (
+        <CaseStudySection key={caseStudy.id} data={caseStudy} />
+      ))}
 
-        <p className={styles.description}>{projectsPageConfig.description}</p>
-      </Container>
-    </section>
+      <ProjectsCtaSection content={page.cta} />
+    </>
   );
 }
