@@ -1,11 +1,3 @@
-.educationEyebrow {
-    color: var(--color-accent);
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-semibold);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-}
-
 .educationHeader {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;

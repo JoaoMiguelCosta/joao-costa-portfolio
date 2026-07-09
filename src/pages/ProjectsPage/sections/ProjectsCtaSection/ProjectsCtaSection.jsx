@@ -16,7 +16,7 @@ export default function ProjectsCtaSection({ content }) {
           <div className={styles.actions}>
             {content.actions.map((action, index) => (
               <a
-                className={index === 0 ? styles.primaryAction : styles.secondaryAction}
+                className={`${index === 0 ? styles.primaryAction : styles.secondaryAction} u-action-link`}
                 href={action.href}
                 key={action.id}
               >

@@ -5,7 +5,7 @@ import styles from "./AboutEducation.module.css";
 export default function AboutEducation({ education, className }) {
   return (
     <article className={className} aria-labelledby="about-education-title">
-      <p className={styles.educationEyebrow}>{education.eyebrow}</p>
+      <p className="u-eyebrow">{education.eyebrow}</p>
 
       <div className={styles.educationHeader}>
         <div>

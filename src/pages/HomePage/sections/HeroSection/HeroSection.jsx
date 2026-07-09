@@ -27,7 +27,7 @@ export default function HeroSection({ content }) {
           <div className={styles.actions}>
             {content.actions.map((action) => (
               <a
-                className={getActionClassName(action.variant)}
+                className={`${getActionClassName(action.variant)} u-action-link`}
                 href={action.href}
                 key={action.href}
               >

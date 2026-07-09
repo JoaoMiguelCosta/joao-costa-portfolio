@@ -5,3 +5,15 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
 }
+
+.u-action-link {
+    display: inline-flex;
+    min-height: 3rem;
+    align-items: center;
+    justify-content: center;
+    padding-inline: var(--space-5);
+    border: 1px solid transparent;
+    border-radius: var(--border-radius-sm);
+    font-weight: var(--font-weight-semibold);
+    text-align: center;
+}

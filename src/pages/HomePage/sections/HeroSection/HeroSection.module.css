@@ -40,19 +40,6 @@
     margin-top: var(--space-8);
 }
 
-.primaryAction,
-.secondaryAction {
-    display: inline-flex;
-    min-height: 3rem;
-    align-items: center;
-    justify-content: center;
-    padding-inline: var(--space-5);
-    border: 1px solid transparent;
-    border-radius: var(--border-radius-sm);
-    font-weight: var(--font-weight-semibold);
-    text-align: center;
-}
-
 .primaryAction {
     background-color: var(--color-accent);
     color: var(--color-on-accent);
