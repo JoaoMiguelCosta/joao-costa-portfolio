@@ -1,5 +1,5 @@
 import { getTranslations } from "../../i18n/translations/index.js";
-import useLanguage from "../../i18n/useLanguage.js";
+import useLanguage from "../../i18n/language/useLanguage.js";
 import Container from "../../shared/ui/Container/Container.jsx";
 
 import styles from "./NotFoundPage.module.css";

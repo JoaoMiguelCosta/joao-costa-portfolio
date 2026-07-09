@@ -1,5 +1,5 @@
-import { LANGUAGE_CODES } from "../../../i18n/language.constants.js";
-import useLanguage from "../../../i18n/useLanguage.js";
+import { LANGUAGE_CODES } from "../../../i18n/language/constants.js";
+import useLanguage from "../../../i18n/language/useLanguage.js";
 
 import styles from "./LanguageSwitcher.module.css";
 

@@ -1,4 +1,4 @@
-import useLanguage from "../../../i18n/useLanguage.js";
+import useLanguage from "../../../i18n/language/useLanguage.js";
 import { getTranslations } from "../../../i18n/translations/index.js";
 
 import styles from "./Loading.module.css";

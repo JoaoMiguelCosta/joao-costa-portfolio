@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 
-import useLanguage from "../../i18n/useLanguage.js";
+import useLanguage from "../../i18n/language/useLanguage.js";
 
 import AboutSection from "./sections/AboutSection/AboutSection.jsx";
 import ContactSection from "./sections/ContactSection/ContactSection.jsx";

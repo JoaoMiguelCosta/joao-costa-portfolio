@@ -1,5 +1,5 @@
 import { personalData } from "../../../../data/personal.data.js";
-import { LANGUAGE_CODES } from "../../../../i18n/language.constants.js";
+import { LANGUAGE_CODES } from "../../../../i18n/language/constants.js";
 import {
   ANCHOR_KEYS,
   ROUTE_KEYS,

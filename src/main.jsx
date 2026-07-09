@@ -2,7 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
 import App from "./app/App.jsx";
-import LanguageProvider from "./i18n/LanguageProvider.jsx";
+import LanguageProvider from "./i18n/language/LanguageProvider.jsx";
 import ThemeProvider from "./theme/ThemeProvider.jsx";
 
 import "./styles/tokens.css";

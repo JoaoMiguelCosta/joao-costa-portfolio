@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-import useLanguage from "../../i18n/useLanguage.js";
+import useLanguage from "../../i18n/language/useLanguage.js";
 import { getPageKeyFromPathname, getPageTitle } from "./pageTitles.js";
 
 export default function DocumentTitleHandler() {

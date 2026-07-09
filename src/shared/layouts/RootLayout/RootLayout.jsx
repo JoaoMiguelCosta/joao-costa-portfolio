@@ -1,7 +1,7 @@
 import { Suspense, useMemo } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 
-import useLanguage from "../../../i18n/useLanguage.js";
+import useLanguage from "../../../i18n/language/useLanguage.js";
 
 import SiteFooter from "../SiteFooter/SiteFooter.jsx";
 import SiteHeader from "../SiteHeader/SiteHeader.jsx";

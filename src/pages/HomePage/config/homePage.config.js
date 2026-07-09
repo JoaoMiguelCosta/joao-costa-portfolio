@@ -1,7 +1,7 @@
 import { personalData } from "../../../data/personal.data.js";
 import { projectsData } from "../../../data/projects.data.js";
 import { skillsData } from "../../../data/skills.data.js";
-import { LANGUAGE_CODES } from "../../../i18n/language.constants.js";
+import { LANGUAGE_CODES } from "../../../i18n/language/constants.js";
 import {
   ANCHOR_KEYS,
   ROUTE_KEYS,

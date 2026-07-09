@@ -1,5 +1,5 @@
 import { personalData } from "../../data/personal.data.js";
-import { DEFAULT_LANGUAGE, LANGUAGE_CODES } from "../../i18n/language.constants.js";
+import { DEFAULT_LANGUAGE, LANGUAGE_CODES } from "../../i18n/language/constants.js";
 import { ROUTE_KEYS, getAllRoutePaths } from "../../i18n/routing/index.js";
 
 const PAGE_TITLES_BY_LANGUAGE = {
