@@ -22,7 +22,7 @@ export default function AboutEducation({ education, className }) {
       <p className={styles.educationDescription}>{education.description}</p>
 
       <a
-        className={styles.educationLink}
+        className={`${styles.educationLink} u-surface-link`}
         href={education.certificate.href}
         target="_blank"
         rel="noopener noreferrer"

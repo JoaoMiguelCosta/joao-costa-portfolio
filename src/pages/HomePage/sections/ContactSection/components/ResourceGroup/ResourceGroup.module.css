@@ -20,23 +20,12 @@
 }
 
 .resourceLink {
-    display: inline-flex;
     min-width: 0;
     min-height: 4.25rem;
-    align-items: center;
     gap: var(--space-3);
     padding: var(--space-3) var(--space-4);
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius-sm);
-    background-color: var(--color-surface);
-    color: var(--color-text-primary);
-    font-weight: var(--font-weight-semibold);
     line-height: 1.35;
     text-align: left;
-}
-
-.resourceLink:hover {
-    border-color: var(--color-text-secondary);
 }
 
 .resourceLinkLabel {

@@ -17,3 +17,17 @@
     font-weight: var(--font-weight-semibold);
     text-align: center;
 }
+
+.u-surface-link {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-sm);
+    background-color: var(--color-surface);
+    color: var(--color-text-primary);
+    font-weight: var(--font-weight-semibold);
+}
+
+.u-surface-link:hover {
+    border-color: var(--color-text-secondary);
+}

@@ -10,7 +10,7 @@ export default function ResourceGroup({ title, links, isExternal = false }) {
       <div className={styles.resourceLinks}>
         {links.map((link) => (
           <a
-            className={styles.resourceLink}
+            className={`${styles.resourceLink} u-surface-link`}
             href={link.href}
             download={link.download || undefined}
             target={isExternal ? "_blank" : undefined}

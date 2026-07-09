@@ -32,7 +32,7 @@ function CaseStudyLink({ href, label }) {
 
   return (
     <a
-      className={styles.link}
+      className={`${styles.link} u-surface-link`}
       href={href}
       target="_blank"
       rel="noopener noreferrer"

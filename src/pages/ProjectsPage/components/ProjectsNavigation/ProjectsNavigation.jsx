@@ -9,7 +9,7 @@ export default function ProjectsNavigation({ items }) {
         <ul className={styles.list}>
           {items.map((item) => (
             <li key={item.id}>
-              <a className={styles.link} href={item.href}>
+              <a className={`${styles.link} u-surface-link`} href={item.href}>
                 {item.label}
               </a>
             </li>
