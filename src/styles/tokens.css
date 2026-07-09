@@ -15,6 +15,11 @@
     --color-on-accent: #ffffff;
     --color-focus: #2563eb;
 
+    /* Ícones de marca (GitHub, LinkedIn, PDF) são desenhados para fundo
+       claro — este token mantém-se igual em light e dark, por isso não é
+       redefinido no bloco de dark mode. */
+    --color-icon-frame-background: #ffffff;
+
     /* Typography */
     --font-family-sans:
         Inter,
