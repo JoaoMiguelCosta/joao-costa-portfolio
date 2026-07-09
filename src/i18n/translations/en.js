@@ -23,19 +23,19 @@ const englishTranslations = {
     navigationItems: [
       {
         label: "Projects",
-        href: "/#projetos",
+        anchorKey: "projects",
       },
       {
         label: "About",
-        href: "/#sobre",
+        anchorKey: "about",
       },
       {
         label: "Skills",
-        href: "/#competencias",
+        anchorKey: "skills",
       },
       {
         label: "Contact",
-        href: "/#contacto",
+        anchorKey: "contact",
       },
     ],
   },
@@ -49,12 +49,12 @@ const englishTranslations = {
     actions: [
       {
         label: "View projects",
-        href: "#projetos",
+        anchorKey: "projects",
         variant: "primary",
       },
       {
         label: "Get in touch",
-        href: "#contacto",
+        anchorKey: "contact",
         variant: "secondary",
       },
     ],
@@ -68,6 +68,8 @@ const englishTranslations = {
 
     featuredTitle: "Featured projects",
     otherTitle: "Other projects",
+
+    caseStudiesCtaLabel: "View full case studies",
 
     responsibilityLabel: "Responsibility",
 
@@ -337,7 +339,6 @@ const englishTranslations = {
     navigation: {
       farmaciaSantaCasaLabel: "Farmácia Santa Casa",
       sunliveGroupLabel: "Sunlive Group",
-      technicalComparisonLabel: "Technical comparison",
     },
 
     caseStudies: {
@@ -486,64 +487,6 @@ const englishTranslations = {
       },
     },
 
-    technicalComparison: {
-      title: "Technical overview compared",
-      description:
-        "The two projects highlight different skills: one goes deep into full-stack logic and internal processes; the other focuses on frontend architecture, visual consistency and multi-brand organisation.",
-
-      rows: [
-        {
-          label: "Project type",
-          farmaciaSantaCasa: "Operational full-stack application",
-          sunliveGroup: "Multi-brand institutional SPA",
-        },
-        {
-          label: "Main focus",
-          farmaciaSantaCasa:
-            "Internal processes, business rules and permissions",
-          sunliveGroup: "Communication, navigation and visual consistency",
-        },
-        {
-          label: "Frontend",
-          farmaciaSantaCasa: "React, Vite and CSS Modules",
-          sunliveGroup: "React, Vite and CSS Modules",
-        },
-        {
-          label: "Backend",
-          farmaciaSantaCasa: "Node.js, Express, Prisma and PostgreSQL",
-          sunliveGroup: "Not applicable",
-        },
-        {
-          label: "Authentication",
-          farmaciaSantaCasa: "JWT, HTTP-only cookies and roles",
-          sunliveGroup: "Public navigation",
-        },
-        {
-          label: "Database",
-          farmaciaSantaCasa: "PostgreSQL with Prisma",
-          sunliveGroup: "Not applicable",
-        },
-        {
-          label: "Deployment",
-          farmaciaSantaCasa: "Staging on Render",
-          sunliveGroup: "Vercel",
-        },
-        {
-          label: "Quality",
-          farmaciaSantaCasa: "Tests, validation and technical documentation",
-          sunliveGroup:
-            "Visual refactoring, responsiveness and component organisation",
-        },
-        {
-          label: "Value demonstrated",
-          farmaciaSantaCasa:
-            "Ability to deliver a full-stack product with real business logic",
-          sunliveGroup:
-            "Ability to structure a scalable, visually consistent frontend",
-        },
-      ],
-    },
-
     cta: {
       title: "Have a project that needs to get off the ground?",
       description:
@@ -563,6 +506,25 @@ const englishTranslations = {
     linkedinAriaLabel: "Open João Costa's LinkedIn profile",
     backToTopLabel: "Back to top ↑",
     backToTopAriaLabel: "Back to the top of the page",
+  },
+
+  loading: {
+    label: "Loading...",
+  },
+
+  errorPage: {
+    eyebrow: "Error",
+    title: "Something went wrong",
+    description:
+      "This page could not be loaded. Try again or go back to the homepage.",
+    actionLabel: "Back to homepage",
+  },
+
+  notFoundPage: {
+    eyebrow: "404",
+    title: "Page not found",
+    description: "The page you are looking for does not exist or has been moved.",
+    actionLabel: "Back to homepage",
   },
 };
 

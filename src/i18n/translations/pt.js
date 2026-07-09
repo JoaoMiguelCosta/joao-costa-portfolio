@@ -23,19 +23,19 @@ const portugueseTranslations = {
     navigationItems: [
       {
         label: "Projetos",
-        href: "/#projetos",
+        anchorKey: "projects",
       },
       {
         label: "Sobre",
-        href: "/#sobre",
+        anchorKey: "about",
       },
       {
         label: "Competências",
-        href: "/#competencias",
+        anchorKey: "skills",
       },
       {
         label: "Contacto",
-        href: "/#contacto",
+        anchorKey: "contact",
       },
     ],
   },
@@ -50,12 +50,12 @@ const portugueseTranslations = {
     actions: [
       {
         label: "Ver projetos",
-        href: "#projetos",
+        anchorKey: "projects",
         variant: "primary",
       },
       {
         label: "Entrar em contacto",
-        href: "#contacto",
+        anchorKey: "contact",
         variant: "secondary",
       },
     ],
@@ -69,6 +69,8 @@ const portugueseTranslations = {
 
     featuredTitle: "Projetos em destaque",
     otherTitle: "Outros projetos",
+
+    caseStudiesCtaLabel: "Ver case studies completos",
 
     responsibilityLabel: "Responsabilidade",
 
@@ -340,7 +342,6 @@ const portugueseTranslations = {
     navigation: {
       farmaciaSantaCasaLabel: "Farmácia Santa Casa",
       sunliveGroupLabel: "Sunlive Group",
-      technicalComparisonLabel: "Comparação técnica",
     },
 
     caseStudies: {
@@ -489,64 +490,6 @@ const portugueseTranslations = {
       },
     },
 
-    technicalComparison: {
-      title: "Visão técnica comparada",
-      description:
-        "Os dois projetos mostram competências diferentes: um aprofunda lógica full-stack e processos internos; o outro evidencia arquitetura frontend, consistência visual e organização multi-brand.",
-
-      rows: [
-        {
-          label: "Tipo de projeto",
-          farmaciaSantaCasa: "Aplicação full-stack operacional",
-          sunliveGroup: "SPA institucional multi-brand",
-        },
-        {
-          label: "Principal foco",
-          farmaciaSantaCasa:
-            "Processos internos, regras de negócio e permissões",
-          sunliveGroup: "Comunicação, navegação e consistência visual",
-        },
-        {
-          label: "Frontend",
-          farmaciaSantaCasa: "React, Vite e CSS Modules",
-          sunliveGroup: "React, Vite e CSS Modules",
-        },
-        {
-          label: "Backend",
-          farmaciaSantaCasa: "Node.js, Express, Prisma e PostgreSQL",
-          sunliveGroup: "Não aplicável",
-        },
-        {
-          label: "Autenticação",
-          farmaciaSantaCasa: "JWT, cookies HTTP-only e roles",
-          sunliveGroup: "Navegação pública",
-        },
-        {
-          label: "Base de dados",
-          farmaciaSantaCasa: "PostgreSQL com Prisma",
-          sunliveGroup: "Não aplicável",
-        },
-        {
-          label: "Deploy",
-          farmaciaSantaCasa: "Staging em Render",
-          sunliveGroup: "Vercel",
-        },
-        {
-          label: "Qualidade",
-          farmaciaSantaCasa: "Testes, validações e documentação técnica",
-          sunliveGroup:
-            "Refatoração visual, responsividade e organização por componentes",
-        },
-        {
-          label: "Valor demonstrado",
-          farmaciaSantaCasa:
-            "Capacidade de entregar produto full-stack com lógica real",
-          sunliveGroup:
-            "Capacidade de estruturar frontend escalável e visualmente consistente",
-        },
-      ],
-    },
-
     cta: {
       title: "Tens um projeto que precisa de sair do papel?",
       description:
@@ -566,6 +509,25 @@ const portugueseTranslations = {
     linkedinAriaLabel: "Abrir perfil de LinkedIn de João Costa",
     backToTopLabel: "Voltar ao topo ↑",
     backToTopAriaLabel: "Voltar ao início da página",
+  },
+
+  loading: {
+    label: "A carregar...",
+  },
+
+  errorPage: {
+    eyebrow: "Erro",
+    title: "Ocorreu um erro inesperado",
+    description:
+      "Não foi possível carregar esta página. Tenta novamente ou volta à página inicial.",
+    actionLabel: "Voltar à página inicial",
+  },
+
+  notFoundPage: {
+    eyebrow: "404",
+    title: "Página não encontrada",
+    description: "A página que procuras não existe ou foi movida.",
+    actionLabel: "Voltar à página inicial",
   },
 };
 

@@ -19,7 +19,7 @@ export const projectsData = [
     links: {
       website: "https://farmacia-santacasa-frontend-staging.onrender.com/",
       repository: "https://github.com/JoaoMiguelCosta/farmacia-santa-casa-app",
-      caseStudy: null,
+      caseStudy: true,
     },
 
     image: {
@@ -47,7 +47,7 @@ export const projectsData = [
     links: {
       website: "https://sunlive-group.vercel.app/sunlive-group",
       repository: "https://github.com/JoaoMiguelCosta/Sunlive-Group",
-      caseStudy: null,
+      caseStudy: true,
     },
 
     image: {

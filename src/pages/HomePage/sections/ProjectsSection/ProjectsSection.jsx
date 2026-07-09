@@ -1,5 +1,5 @@
 import Container from "../../../../shared/ui/Container/Container.jsx";
-import SectionHeader from "../../components/SectionHeader/SectionHeader.jsx";
+import SectionHeader from "../../../../shared/ui/SectionHeader/SectionHeader.jsx";
 
 import ProjectCard from "./components/ProjectCard/ProjectCard.jsx";
 
@@ -9,7 +9,7 @@ export default function ProjectsSection({ content }) {
   return (
     <section
       className={styles.section}
-      id="projetos"
+      id={content.sectionId}
       aria-labelledby="projects-title"
     >
       <Container>
@@ -63,6 +63,12 @@ export default function ProjectsSection({ content }) {
                 ))}
               </div>
             </section>
+          </div>
+
+          <div className={styles.ctaRow}>
+            <a className={styles.ctaLink} href={content.caseStudiesCta.href}>
+              {content.caseStudiesCta.label}
+            </a>
           </div>
         </div>
       </Container>

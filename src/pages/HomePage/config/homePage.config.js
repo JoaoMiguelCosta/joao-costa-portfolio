@@ -2,13 +2,20 @@ import { personalData } from "../../../data/personal.data.js";
 import { projectsData } from "../../../data/projects.data.js";
 import { skillsData } from "../../../data/skills.data.js";
 import { LANGUAGE_CODES } from "../../../i18n/language.constants.js";
+import {
+  ANCHOR_KEYS,
+  ROUTE_KEYS,
+  getAnchorHref,
+  getAnchorId,
+  getRoutePath,
+} from "../../../i18n/routes.js";
 import { getTranslations } from "../../../i18n/translations/index.js";
 
 const GITHUB_ICON = "/icons/technologies/github.svg";
 const LINKEDIN_ICON = "/icons/social/linkedin.svg";
 const PDF_ICON = "/icons/documents/pdf.svg";
 
-function getLocalizedProjects(translations) {
+function getLocalizedProjects(translations, language) {
   return projectsData
     .map((project) => {
       const translatedProject = translations.projects.items[project.id];
@@ -23,6 +30,13 @@ function getLocalizedProjects(translations) {
         },
 
         technologiesAriaLabel: `${translations.projects.technologiesAriaLabel} ${project.title}`,
+
+        links: {
+          ...project.links,
+          caseStudy: project.links.caseStudy
+            ? `${getRoutePath(ROUTE_KEYS.PROJECTS_PAGE, language)}#${project.id}`
+            : null,
+        },
       };
     })
     .sort(
@@ -38,10 +52,25 @@ function groupProjects(projects) {
   };
 }
 
-function getAboutConfig(translations) {
+function getHeroConfig(translations, language) {
+  const hero = translations.hero;
+
+  return {
+    ...hero,
+    actions: hero.actions.map((action) => ({
+      label: action.label,
+      href: getAnchorHref(action.anchorKey, language),
+      variant: action.variant,
+    })),
+  };
+}
+
+function getAboutConfig(translations, language) {
   const editCertificate = personalData.certificates.editFullStackBootcamp;
 
   return {
+    sectionId: getAnchorId(ANCHOR_KEYS.ABOUT, language),
+
     eyebrow: translations.about.eyebrow,
     title: translations.about.title,
     description: translations.about.description,
@@ -129,6 +158,8 @@ function getContactConfig(translations, language) {
   ].filter((link) => Boolean(link.href));
 
   return {
+    sectionId: getAnchorId(ANCHOR_KEYS.CONTACT, language),
+
     eyebrow: translations.contact.eyebrow,
     title: translations.contact.title,
     description: translations.contact.description,
@@ -201,13 +232,15 @@ function getLocalizedSkillGroups(skillGroups, translations) {
 
 export function getHomePageConfig(language) {
   const translations = getTranslations(language);
-  const localizedProjects = getLocalizedProjects(translations);
+  const localizedProjects = getLocalizedProjects(translations, language);
   const groupedProjects = groupProjects(localizedProjects);
 
   return {
-    hero: translations.hero,
+    hero: getHeroConfig(translations, language),
 
     projects: {
+      sectionId: getAnchorId(ANCHOR_KEYS.PROJECTS, language),
+
       eyebrow: translations.projects.eyebrow,
       title: translations.projects.title,
       description: translations.projects.description,
@@ -220,12 +253,19 @@ export function getHomePageConfig(language) {
         links: translations.projects.links,
       },
 
+      caseStudiesCta: {
+        label: translations.projects.caseStudiesCtaLabel,
+        href: getRoutePath(ROUTE_KEYS.PROJECTS_PAGE, language),
+      },
+
       ...groupedProjects,
     },
 
-    about: getAboutConfig(translations),
+    about: getAboutConfig(translations, language),
 
     skills: {
+      sectionId: getAnchorId(ANCHOR_KEYS.SKILLS, language),
+
       eyebrow: translations.skills.eyebrow,
       title: translations.skills.title,
       description: translations.skills.description,

@@ -20,12 +20,29 @@ export default function SiteHeader({
   const { isMenuOpen, closeMenu, toggleMenu, triggerRef, panelRef } =
     useMobileMenu();
 
+  const hasNavigationItems = navigationItems.length > 0;
+
   const menuPanelClassName = [
     styles.menuPanel,
     isMenuOpen ? styles.menuPanelOpen : "",
   ]
     .filter(Boolean)
     .join(" ");
+
+  const utilityControls = (
+    <div className={styles.utilityControls}>
+      <LanguageSwitcher
+        ariaLabel={languageSwitcher.ariaLabel}
+        portugueseLabel={languageSwitcher.portugueseLabel}
+        englishLabel={languageSwitcher.englishLabel}
+      />
+
+      <ThemeToggle
+        enableLightThemeLabel={themeToggle.enableLightThemeLabel}
+        enableDarkThemeLabel={themeToggle.enableDarkThemeLabel}
+      />
+    </div>
+  );
 
   return (
     <>
@@ -45,45 +62,40 @@ export default function SiteHeader({
               {brand.name}
             </a>
 
-            <MenuToggle
-              isOpen={isMenuOpen}
-              controlsId={NAVIGATION_ID}
-              openLabel={mobileMenu.openLabel}
-              closeLabel={mobileMenu.closeLabel}
-              onToggle={toggleMenu}
-              triggerRef={triggerRef}
-            />
-
-            <div
-              className={menuPanelClassName}
-              id={NAVIGATION_ID}
-              ref={panelRef}
-            >
-              <nav aria-label={accessibility.navigationAriaLabel}>
-                <ul className={styles.navigationList}>
-                  {navigationItems.map((item) => (
-                    <li key={item.href}>
-                      <a href={item.href} onClick={closeMenu}>
-                        {item.label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-
-              <div className={styles.utilityControls}>
-                <LanguageSwitcher
-                  ariaLabel={languageSwitcher.ariaLabel}
-                  portugueseLabel={languageSwitcher.portugueseLabel}
-                  englishLabel={languageSwitcher.englishLabel}
+            {hasNavigationItems ? (
+              <>
+                <MenuToggle
+                  isOpen={isMenuOpen}
+                  controlsId={NAVIGATION_ID}
+                  openLabel={mobileMenu.openLabel}
+                  closeLabel={mobileMenu.closeLabel}
+                  onToggle={toggleMenu}
+                  triggerRef={triggerRef}
                 />
 
-                <ThemeToggle
-                  enableLightThemeLabel={themeToggle.enableLightThemeLabel}
-                  enableDarkThemeLabel={themeToggle.enableDarkThemeLabel}
-                />
-              </div>
-            </div>
+                <div
+                  className={menuPanelClassName}
+                  id={NAVIGATION_ID}
+                  ref={panelRef}
+                >
+                  <nav aria-label={accessibility.navigationAriaLabel}>
+                    <ul className={styles.navigationList}>
+                      {navigationItems.map((item) => (
+                        <li key={item.href}>
+                          <a href={item.href} onClick={closeMenu}>
+                            {item.label}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </nav>
+
+                  {utilityControls}
+                </div>
+              </>
+            ) : (
+              utilityControls
+            )}
           </div>
         </Container>
       </header>

@@ -1,5 +1,5 @@
 import Container from "../../../../shared/ui/Container/Container.jsx";
-import SectionHeader from "../../components/SectionHeader/SectionHeader.jsx";
+import SectionHeader from "../../../../shared/ui/SectionHeader/SectionHeader.jsx";
 
 import SkillCard from "./components/SkillCard/SkillCard.jsx";
 
@@ -9,7 +9,7 @@ export default function SkillsSection({ content }) {
   return (
     <section
       className={styles.section}
-      id="competencias"
+      id={content.sectionId}
       aria-labelledby="skills-title"
     >
       <Container>

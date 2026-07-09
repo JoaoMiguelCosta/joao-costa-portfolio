@@ -1,5 +1,5 @@
 import Container from "../../../../shared/ui/Container/Container.jsx";
-import SectionHeader from "../../components/SectionHeader/SectionHeader.jsx";
+import SectionHeader from "../../../../shared/ui/SectionHeader/SectionHeader.jsx";
 
 import styles from "./AboutSection.module.css";
 
@@ -9,7 +9,7 @@ export default function AboutSection({ content }) {
   return (
     <section
       className={styles.section}
-      id="sobre"
+      id={content.sectionId}
       aria-labelledby="about-title"
     >
       <Container>

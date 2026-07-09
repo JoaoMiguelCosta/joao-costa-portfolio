@@ -1,18 +1,38 @@
 import { personalData } from "../../../../data/personal.data.js";
+import {
+  ANCHOR_KEYS,
+  ROUTE_KEYS,
+  getAllRoutePaths,
+  getHomeAnchorHref,
+} from "../../../../i18n/routes.js";
 import { getTranslations } from "../../../../i18n/translations/index.js";
 
 const GITHUB_ICON = "/icons/technologies/github.svg";
 const LINKEDIN_ICON = "/icons/social/linkedin.svg";
 
-function getHeaderConfig(translations) {
+function getNavigationItems(translations, pathname, language) {
+  const projectsPagePaths = getAllRoutePaths(ROUTE_KEYS.PROJECTS_PAGE);
+  const hasHomeNavigation = !projectsPagePaths.includes(pathname);
+
+  if (!hasHomeNavigation) {
+    return [];
+  }
+
+  return translations.header.navigationItems.map((item) => ({
+    label: item.label,
+    href: getHomeAnchorHref(item.anchorKey, language),
+  }));
+}
+
+function getHeaderConfig(translations, pathname, language) {
   return {
     brand: {
       name: personalData.name,
-      href: "/#inicio",
+      href: getHomeAnchorHref(ANCHOR_KEYS.START, language),
       ariaLabel: translations.header.brandAriaLabel,
     },
 
-    navigationItems: translations.header.navigationItems,
+    navigationItems: getNavigationItems(translations, pathname, language),
     languageSwitcher: translations.header.languageSwitcher,
     themeToggle: translations.header.themeToggle,
     mobileMenu: translations.header.mobileMenu,
@@ -24,9 +44,10 @@ function getHeaderConfig(translations) {
   };
 }
 
-function getFooterConfig(translations) {
+function getFooterConfig(translations, language) {
   return {
     owner: personalData.name,
+    ownerHref: getHomeAnchorHref(ANCHOR_KEYS.START, language),
     role: translations.footer.role,
     rights: translations.footer.rights,
     navigationAriaLabel: translations.footer.navigationAriaLabel,
@@ -51,18 +72,18 @@ function getFooterConfig(translations) {
         id: "back-to-top",
         label: translations.footer.backToTopLabel,
         ariaLabel: translations.footer.backToTopAriaLabel,
-        href: "/#inicio",
+        href: "#main-content",
         external: false,
       },
     ],
   };
 }
 
-export function getRootLayoutConfig(language) {
+export function getRootLayoutConfig(language, pathname) {
   const translations = getTranslations(language);
 
   return {
-    header: getHeaderConfig(translations),
-    footer: getFooterConfig(translations),
+    header: getHeaderConfig(translations, pathname, language),
+    footer: getFooterConfig(translations, language),
   };
 }

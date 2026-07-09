@@ -48,7 +48,7 @@ export default function ContactSection({ content }) {
   return (
     <section
       className={styles.section}
-      id="contacto"
+      id={content.sectionId}
       aria-labelledby="contact-title"
     >
       <Container>
