@@ -1,4 +1,5 @@
 import Container from "../../../../shared/ui/Container/Container.jsx";
+import IconFrame from "../../../../shared/ui/IconFrame/IconFrame.jsx";
 import SectionHeader from "../../../../shared/ui/SectionHeader/SectionHeader.jsx";
 
 import styles from "./AboutSection.module.css";
@@ -89,17 +90,7 @@ export default function AboutSection({ content }) {
                 rel="noopener noreferrer"
                 aria-label={education.certificate.ariaLabel}
               >
-                <span className={styles.educationLinkIconFrame} aria-hidden="true">
-                  <img
-                    className={styles.educationLinkIcon}
-                    src={education.certificate.icon}
-                    alt=""
-                    width="20"
-                    height="20"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </span>
+                <IconFrame src={education.certificate.icon} size={20} />
 
                 <span>{education.certificate.label}</span>
               </a>

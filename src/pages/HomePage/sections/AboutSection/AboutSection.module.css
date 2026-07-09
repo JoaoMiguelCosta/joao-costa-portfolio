@@ -171,26 +171,6 @@
     border-color: var(--color-text-secondary);
 }
 
-.educationLinkIconFrame {
-    display: flex;
-    width: 1.75rem;
-    height: 1.75rem;
-    flex-shrink: 0;
-    align-items: center;
-    justify-content: center;
-    padding: 0.25rem;
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius-sm);
-    background-color: #ffffff;
-}
-
-.educationLinkIcon {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
 @media (max-width: 72rem) {
     .layout {
         grid-template-columns: minmax(14rem, 18rem) minmax(0, 1fr);

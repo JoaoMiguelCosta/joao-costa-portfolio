@@ -1,24 +1,9 @@
 import Container from "../../ui/Container/Container.jsx";
+import IconFrame from "../../ui/IconFrame/IconFrame.jsx";
 
 import styles from "./SiteFooter.module.css";
 
 const currentYear = new Date().getFullYear();
-
-function FooterLinkIcon({ src }) {
-  return (
-    <span className={styles.linkIconFrame} aria-hidden="true">
-      <img
-        className={styles.linkIcon}
-        src={src}
-        alt=""
-        width="16"
-        height="16"
-        loading="lazy"
-        decoding="async"
-      />
-    </span>
-  );
-}
 
 export default function SiteFooter({ content }) {
   return (
@@ -52,7 +37,7 @@ export default function SiteFooter({ content }) {
                 key={link.id}
                 aria-label={link.ariaLabel}
               >
-                {link.icon ? <FooterLinkIcon src={link.icon} /> : null}
+                {link.icon ? <IconFrame src={link.icon} size={16} /> : null}
                 <span>{link.label}</span>
               </a>
             ))}

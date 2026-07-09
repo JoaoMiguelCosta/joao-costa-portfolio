@@ -1,22 +1,7 @@
 import Container from "../../../../shared/ui/Container/Container.jsx";
+import IconFrame from "../../../../shared/ui/IconFrame/IconFrame.jsx";
 
 import styles from "./ContactSection.module.css";
-
-function ResourceIcon({ src }) {
-  return (
-    <span className={styles.resourceIconFrame} aria-hidden="true">
-      <img
-        className={styles.resourceIcon}
-        src={src}
-        alt=""
-        width="20"
-        height="20"
-        loading="lazy"
-        decoding="async"
-      />
-    </span>
-  );
-}
 
 function ResourceGroup({ title, links, isExternal = false }) {
   return (
@@ -34,7 +19,7 @@ function ResourceGroup({ title, links, isExternal = false }) {
             key={link.id}
             aria-label={link.ariaLabel}
           >
-            <ResourceIcon src={link.icon} />
+            <IconFrame src={link.icon} size={20} />
 
             <span className={styles.resourceLinkLabel}>{link.label}</span>
           </a>
