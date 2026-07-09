@@ -5,7 +5,7 @@ import {
   ROUTE_KEYS,
   getAllRoutePaths,
   getHomeAnchorHref,
-} from "../../../../i18n/routes.js";
+} from "../../../../i18n/routing/index.js";
 import { getTranslations } from "../../../../i18n/translations/index.js";
 
 const GITHUB_ICON = "/icons/technologies/github.svg";

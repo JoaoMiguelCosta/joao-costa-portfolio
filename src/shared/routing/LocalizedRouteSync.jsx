@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-import { getLocalizedHash, getLocalizedPathname } from "../../i18n/routes.js";
+import { getLocalizedHash, getLocalizedPathname } from "../../i18n/routing/index.js";
 import useLanguage from "../../i18n/useLanguage.js";
 import { suppressNextHashScroll } from "./hashScrollSuppression.js";
 

@@ -1,5 +1,5 @@
 import { projectsData } from "../../../data/projects.data.js";
-import { ANCHOR_KEYS, getHomeAnchorHref } from "../../../i18n/routes.js";
+import { ANCHOR_KEYS, getHomeAnchorHref } from "../../../i18n/routing/index.js";
 import { getTranslations } from "../../../i18n/translations/index.js";
 
 const CASE_STUDY_ORDER = ["farmacia-santa-casa", "sunlive-group"];

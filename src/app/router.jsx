@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 
-import { ROUTE_KEYS, getAllRoutePaths } from "../i18n/routes.js";
+import { ROUTE_KEYS, getAllRoutePaths } from "../i18n/routing/index.js";
 import RootLayout from "../shared/layouts/RootLayout/RootLayout.jsx";
 import ErrorPage from "../pages/ErrorPage/ErrorPage.jsx";
 
