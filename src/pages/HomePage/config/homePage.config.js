@@ -205,24 +205,6 @@ export function getHomePageConfig(language) {
   const groupedProjects = groupProjects(localizedProjects);
 
   return {
-    header: {
-      brand: {
-        name: personalData.name,
-        href: "#inicio",
-        ariaLabel: translations.header.brandAriaLabel,
-      },
-
-      navigationItems: translations.header.navigationItems,
-      languageSwitcher: translations.header.languageSwitcher,
-      themeToggle: translations.header.themeToggle,
-      mobileMenu: translations.header.mobileMenu,
-
-      accessibility: {
-        skipLink: translations.header.skipLink,
-        navigationAriaLabel: translations.header.navigationAriaLabel,
-      },
-    },
-
     hero: translations.hero,
 
     projects: {
@@ -265,37 +247,5 @@ export function getHomePageConfig(language) {
     },
 
     contact: getContactConfig(translations, language),
-
-    footer: {
-      owner: personalData.name,
-      role: translations.footer.role,
-      rights: translations.footer.rights,
-      navigationAriaLabel: translations.footer.navigationAriaLabel,
-      links: [
-        {
-          id: "github",
-          label: translations.footer.githubLabel,
-          ariaLabel: translations.footer.githubAriaLabel,
-          href: personalData.socialLinks.github,
-          icon: GITHUB_ICON,
-          external: true,
-        },
-        {
-          id: "linkedin",
-          label: translations.footer.linkedinLabel,
-          ariaLabel: translations.footer.linkedinAriaLabel,
-          href: personalData.socialLinks.linkedin,
-          icon: LINKEDIN_ICON,
-          external: true,
-        },
-        {
-          id: "back-to-top",
-          label: translations.footer.backToTopLabel,
-          ariaLabel: translations.footer.backToTopAriaLabel,
-          href: "#inicio",
-          external: false,
-        },
-      ],
-    },
   };
 }

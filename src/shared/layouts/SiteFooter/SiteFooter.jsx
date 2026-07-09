@@ -27,7 +27,7 @@ export default function SiteFooter({ content }) {
         <div className={styles.inner}>
           <div className={styles.summary}>
             <div className={styles.identity}>
-              <a className={styles.owner} href="#inicio">
+              <a className={styles.owner} href="/#inicio">
                 {content.owner}
               </a>
 

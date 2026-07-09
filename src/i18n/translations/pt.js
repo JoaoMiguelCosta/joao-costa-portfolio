@@ -23,19 +23,19 @@ const portugueseTranslations = {
     navigationItems: [
       {
         label: "Projetos",
-        href: "#projetos",
+        href: "/#projetos",
       },
       {
         label: "Sobre",
-        href: "#sobre",
+        href: "/#sobre",
       },
       {
         label: "Competências",
-        href: "#competencias",
+        href: "/#competencias",
       },
       {
         label: "Contacto",
-        href: "#contacto",
+        href: "/#contacto",
       },
     ],
   },
@@ -315,6 +315,13 @@ const portugueseTranslations = {
       linkedinLabel: "LinkedIn",
       linkedinAriaLabel: "Abrir perfil de LinkedIn de João Costa",
     },
+  },
+
+  projectsPage: {
+    eyebrow: "Case studies",
+    title: "Projetos em destaque",
+    description:
+      "Esta página vai reunir os principais case studies do portefólio: Sunlive Group e Farmácia Santa Casa.",
   },
 
   footer: {

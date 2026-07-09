@@ -23,19 +23,19 @@ const englishTranslations = {
     navigationItems: [
       {
         label: "Projects",
-        href: "#projetos",
+        href: "/#projetos",
       },
       {
         label: "About",
-        href: "#sobre",
+        href: "/#sobre",
       },
       {
         label: "Skills",
-        href: "#competencias",
+        href: "/#competencias",
       },
       {
         label: "Contact",
-        href: "#contacto",
+        href: "/#contacto",
       },
     ],
   },
@@ -312,6 +312,13 @@ const englishTranslations = {
       linkedinLabel: "LinkedIn",
       linkedinAriaLabel: "Open João Costa's LinkedIn profile",
     },
+  },
+
+  projectsPage: {
+    eyebrow: "Case studies",
+    title: "Featured projects",
+    description:
+      "This page will bring together the main portfolio case studies: Sunlive Group and Farmácia Santa Casa.",
   },
 
   footer: {

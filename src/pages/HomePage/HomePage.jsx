@@ -1,8 +1,6 @@
 import { useMemo } from "react";
 
 import useLanguage from "../../i18n/useLanguage.js";
-import SiteFooter from "../../shared/layouts/SiteFooter/SiteFooter.jsx";
-import SiteHeader from "../../shared/layouts/SiteHeader/SiteHeader.jsx";
 
 import AboutSection from "./sections/AboutSection/AboutSection.jsx";
 import ContactSection from "./sections/ContactSection/ContactSection.jsx";
@@ -19,17 +17,11 @@ export default function HomePage() {
 
   return (
     <>
-      <SiteHeader {...homePageConfig.header} />
-
-      <main id="main-content">
-        <HeroSection content={homePageConfig.hero} />
-        <ProjectsSection content={homePageConfig.projects} />
-        <AboutSection content={homePageConfig.about} />
-        <SkillsSection content={homePageConfig.skills} />
-        <ContactSection content={homePageConfig.contact} />
-      </main>
-
-      <SiteFooter content={homePageConfig.footer} />
+      <HeroSection content={homePageConfig.hero} />
+      <ProjectsSection content={homePageConfig.projects} />
+      <AboutSection content={homePageConfig.about} />
+      <SkillsSection content={homePageConfig.skills} />
+      <ContactSection content={homePageConfig.contact} />
     </>
   );
 }
