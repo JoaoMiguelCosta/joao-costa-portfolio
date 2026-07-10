@@ -23,7 +23,7 @@ export const projectsData = [
     },
 
     image: {
-      src: "/images/projects/farmacia-santacasa.webp",
+      src: "/images/projects/farmacia-santa-casa.webp",
       width: 1672,
       height: 941,
     },
@@ -73,7 +73,7 @@ export const projectsData = [
     },
 
     image: {
-      src: "/images/projects/ria-canal.webp",
+      src: "/images/projects/ria-canal-hair-design.webp",
       width: 1672,
       height: 941,
     },
@@ -96,7 +96,7 @@ export const projectsData = [
     },
 
     image: {
-      src: "/images/projects/sunlive-wag.webp",
+      src: "/images/projects/wag-training-camp.webp",
       width: 1672,
       height: 941,
     },
@@ -118,7 +118,7 @@ export const projectsData = [
     },
 
     image: {
-      src: "/images/projects/sunlive-continental.webp",
+      src: "/images/projects/continental-cup.webp",
       width: 1672,
       height: 941,
     },
