@@ -5,6 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
+    <script>
+      (() => {
+        const storageKey = "portfolio-theme";
+        const darkThemeQuery = "(prefers-color-scheme: dark)";
+
+        try {
+          const storedTheme = window.localStorage.getItem(storageKey);
+          const theme =
+            storedTheme === "light" || storedTheme === "dark"
+              ? storedTheme
+              : window.matchMedia(darkThemeQuery).matches
+                ? "dark"
+                : "light";
+
+          document.documentElement.dataset.theme = theme;
+        } catch {
+          const theme =
+            typeof window.matchMedia === "function" &&
+            window.matchMedia(darkThemeQuery).matches
+              ? "dark"
+              : "light";
+
+          document.documentElement.dataset.theme = theme;
+        }
+      })();
+    </script>
+
     <meta
       name="description"
       content="Portefólio de João Costa, programador web full-stack. Desenvolvo soluções digitais para necessidades reais de negócio."
