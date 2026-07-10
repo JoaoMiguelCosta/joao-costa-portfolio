@@ -1,7 +1,6 @@
 html {
   background-color: var(--color-background);
   color-scheme: light;
-  scroll-behavior: smooth;
 }
 
 html[data-theme="dark"] {
@@ -30,6 +29,10 @@ body {
 }
 
 @media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     transition:
       background-color 180ms ease,
