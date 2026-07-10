@@ -2,9 +2,9 @@ import Container from "../../../../shared/ui/Container/Container.jsx";
 
 import styles from "./ProjectsNavigation.module.css";
 
-export default function ProjectsNavigation({ items }) {
+export default function ProjectsNavigation({ items, ariaLabel }) {
   return (
-    <nav className={styles.nav}>
+    <nav className={styles.nav} aria-label={ariaLabel}>
       <Container>
         <ul className={styles.list}>
           {items.map((item) => (

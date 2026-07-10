@@ -19,7 +19,10 @@ export default function ProjectsPage() {
     <>
       <ProjectsHeroSection content={page.hero} />
       <ProjectsIntroSection content={page.intro} />
-      <ProjectsNavigation items={page.navigation} />
+      <ProjectsNavigation
+        items={page.navigation.items}
+        ariaLabel={page.navigation.ariaLabel}
+      />
 
       {page.caseStudies.map((caseStudy) => (
         <CaseStudySection key={caseStudy.id} data={caseStudy} />
