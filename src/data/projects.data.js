@@ -18,8 +18,24 @@ export const projectsData = [
 
     links: {
       website: "https://farmacia-santacasa-frontend-staging.onrender.com/",
+      websiteEnvironment: "demo",
       repository: "https://github.com/JoaoMiguelCosta/farmacia-santa-casa-app",
       caseStudy: true,
+    },
+
+    demoAccess: {
+      accounts: [
+        {
+          id: "santacasa",
+          username: "demo.santacasa@sistema.local",
+          password: "123456789123456789",
+        },
+        {
+          id: "farmacia",
+          username: "demo.farmacia@sistema.local",
+          password: "123456789123456789",
+        },
+      ],
     },
 
     image: {

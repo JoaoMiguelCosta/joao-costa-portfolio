@@ -7,6 +7,9 @@ const caseStudies = {
       summary:
         "Projeto desenvolvido para centralizar processos, reduzir trabalho manual e dar mais controlo às operações entre diferentes perfis de utilizador.",
 
+      demoNote:
+        "Ambiente de demonstração. O primeiro carregamento pode demorar alguns segundos.",
+
       context: {
         title: "Contexto",
         body:
@@ -140,6 +143,16 @@ const caseStudies = {
         body:
           "O resultado é uma SPA institucional escalável, com múltiplas áreas de negócio organizadas numa base de código consistente. O projeto demonstra capacidade de estruturar frontend, aplicar design system, responder a feedback visual e preparar uma aplicação para crescimento.",
       },
+    },
+  },
+
+  demoAccess: {
+    title: "Acesso à demonstração",
+    usernameLabel: "Utilizador",
+    passwordLabel: "Palavra-passe",
+    accountNames: {
+      santacasa: "Santa Casa",
+      farmacia: "Farmácia",
     },
   },
 };

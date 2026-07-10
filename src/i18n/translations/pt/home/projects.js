@@ -15,6 +15,10 @@ const projects = {
     website: "Visitar website",
     repository: "Ver código no GitHub",
     caseStudy: "Ver caso de estudo",
+    demo: {
+      label: "Ver demo",
+      ariaLabel: "Abrir demonstração da Farmácia Santa Casa",
+    },
   },
 
   technologiesAriaLabel: "Tecnologias utilizadas no projeto",

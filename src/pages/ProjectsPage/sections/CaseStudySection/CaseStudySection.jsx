@@ -25,7 +25,7 @@ function ListBlock({ title, items }) {
   );
 }
 
-function CaseStudyLink({ href, label }) {
+function CaseStudyLink({ href, label, ariaLabel }) {
   if (!href) {
     return null;
   }
@@ -34,6 +34,7 @@ function CaseStudyLink({ href, label }) {
     <a
       className={`${styles.link} u-surface-link`}
       href={href}
+      aria-label={ariaLabel}
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -44,6 +45,7 @@ function CaseStudyLink({ href, label }) {
 
 export default function CaseStudySection({ data }) {
   const hasLinks = Boolean(data.links.website) || Boolean(data.links.repository);
+  const demoAccessTitleId = `${data.id}-demo-access-title`;
 
   return (
     <section
@@ -101,12 +103,48 @@ export default function CaseStudySection({ data }) {
               <CaseStudyLink
                 href={data.links.website}
                 label={data.linkLabels.website}
+                ariaLabel={data.websiteLinkAriaLabel}
               />
               <CaseStudyLink
                 href={data.links.repository}
                 label={data.linkLabels.repository}
               />
             </div>
+          ) : null}
+
+          {data.demoNote ? (
+            <p className={styles.demoNote}>{data.demoNote}</p>
+          ) : null}
+
+          {data.demoAccess ? (
+            <section
+              className={styles.demoAccess}
+              aria-labelledby={demoAccessTitleId}
+            >
+              <h4 className={styles.demoAccessTitle} id={demoAccessTitleId}>
+                {data.demoAccess.title}
+              </h4>
+
+              <div className={styles.demoAccounts}>
+                {data.demoAccess.accounts.map((account) => (
+                  <article className={styles.demoAccount} key={account.id}>
+                    <h5 className={styles.demoAccountTitle}>{account.name}</h5>
+
+                    <dl className={styles.demoCredentials}>
+                      <div className={styles.demoCredential}>
+                        <dt>{data.demoAccess.usernameLabel}</dt>
+                        <dd>{account.username}</dd>
+                      </div>
+
+                      <div className={styles.demoCredential}>
+                        <dt>{data.demoAccess.passwordLabel}</dt>
+                        <dd>{account.password}</dd>
+                      </div>
+                    </dl>
+                  </article>
+                ))}
+              </div>
+            </section>
           ) : null}
         </div>
       </Container>

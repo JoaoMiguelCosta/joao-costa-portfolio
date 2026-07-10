@@ -10,6 +10,7 @@ function getLocalizedProjects(translations, language) {
   return projectsData
     .map((project) => {
       const translatedProject = translations.projects.items[project.id];
+      const isDemoWebsite = project.links.websiteEnvironment === "demo";
 
       return {
         ...project,
@@ -21,6 +22,13 @@ function getLocalizedProjects(translations, language) {
         },
 
         technologiesAriaLabel: `${translations.projects.technologiesAriaLabel} ${project.title}`,
+
+        websiteLinkLabel: isDemoWebsite
+          ? translations.projects.links.demo.label
+          : translations.projects.links.website,
+        websiteLinkAriaLabel: isDemoWebsite
+          ? translations.projects.links.demo.ariaLabel
+          : undefined,
 
         links: {
           ...project.links,

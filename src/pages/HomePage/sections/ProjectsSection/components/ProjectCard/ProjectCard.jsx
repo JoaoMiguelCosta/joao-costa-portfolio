@@ -1,6 +1,13 @@
 import styles from "./ProjectCard.module.css";
 
-function ProjectLink({ href, label, projectTitle, variant, external = false }) {
+function ProjectLink({
+  href,
+  label,
+  projectTitle,
+  variant,
+  external = false,
+  ariaLabel,
+}) {
   if (!href) {
     return null;
   }
@@ -9,7 +16,7 @@ function ProjectLink({ href, label, projectTitle, variant, external = false }) {
     <a
       className={`${styles.link} ${styles[variant]}`}
       href={href}
-      aria-label={`${label}: ${projectTitle}`}
+      aria-label={ariaLabel ?? `${label}: ${projectTitle}`}
       target={external ? "_blank" : undefined}
       rel={external ? "noopener noreferrer" : undefined}
     >
@@ -66,7 +73,8 @@ export default function ProjectCard({ project, variant, labels }) {
         <div className={styles.links}>
           <ProjectLink
             href={project.links.website}
-            label={labels.links.website}
+            label={project.websiteLinkLabel}
+            ariaLabel={project.websiteLinkAriaLabel}
             projectTitle={project.title}
             variant="primaryLink"
             external
