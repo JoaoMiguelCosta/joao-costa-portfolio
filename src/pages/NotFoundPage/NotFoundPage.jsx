@@ -1,6 +1,6 @@
 import { getTranslations } from "../../i18n/translations/index.js";
 import useLanguage from "../../i18n/language/useLanguage.js";
-import Container from "../../shared/ui/Container/Container.jsx";
+import FeedbackPage from "../../shared/ui/FeedbackPage/FeedbackPage.jsx";
 
 import styles from "./NotFoundPage.module.css";
 
@@ -11,21 +11,14 @@ export default function NotFoundPage() {
 
   return (
     <section className={styles.section} aria-labelledby="not-found-title">
-      <Container>
-        <div className={styles.content}>
-          <p className="u-eyebrow">{eyebrow}</p>
-
-          <h1 className={styles.title} id="not-found-title">
-            {title}
-          </h1>
-
-          <p className={styles.description}>{description}</p>
-
-          <a className={styles.action} href="/">
-            {actionLabel}
-          </a>
-        </div>
-      </Container>
+      <FeedbackPage
+        eyebrow={eyebrow}
+        title={title}
+        description={description}
+        actionLabel={actionLabel}
+        actionHref="/"
+        titleId="not-found-title"
+      />
     </section>
   );
 }
