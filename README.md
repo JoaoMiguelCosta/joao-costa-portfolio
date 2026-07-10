@@ -1,7 +1,7 @@
 <p align="center">
   <img
-    src="./public/images/social/og-image.png"
-    alt="Portefólio profissional de João Costa, programador web Full Stack"
+    src="./docs/images/portfolio-homepage.webp"
+    alt="Página inicial do portefólio profissional de João Costa"
     width="960"
   />
 </p>
