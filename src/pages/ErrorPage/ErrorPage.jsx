@@ -8,8 +8,8 @@ export default function ErrorPage() {
   const errorPage = useErrorPage();
 
   return (
-    <div className={styles.page}>
+    <section className={styles.page} aria-labelledby="error-title">
       <FeedbackPage {...errorPage} />
-    </div>
+    </section>
   );
 }

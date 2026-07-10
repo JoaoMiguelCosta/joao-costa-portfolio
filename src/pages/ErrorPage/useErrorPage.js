@@ -27,5 +27,6 @@ export default function useErrorPage() {
     description,
     actionLabel,
     actionHref: "/",
+    titleId: "error-title",
   };
 }
