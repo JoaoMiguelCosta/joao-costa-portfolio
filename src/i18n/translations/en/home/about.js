@@ -26,8 +26,8 @@ const about = {
     description:
       "Intensive training in frontend and backend web development, with practical application of modern technologies and project development.",
     certificate: {
-      label: "Download Full Stack certificate",
-      ariaLabel: "Download Full Stack Development certificate as PDF",
+      label: "Full Stack certificate (PDF)",
+      ariaLabel: "Download the Full Stack certificate as a PDF",
     },
   },
 };

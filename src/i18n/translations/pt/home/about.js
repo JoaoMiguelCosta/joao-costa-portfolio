@@ -26,8 +26,8 @@ const about = {
     description:
       "Formação intensiva em desenvolvimento web frontend e backend, com aplicação prática de tecnologias modernas e desenvolvimento de projetos.",
     certificate: {
-      label: "Descarregar certificado Full Stack",
-      ariaLabel: "Descarregar certificado de Desenvolvimento Full Stack em PDF",
+      label: "Certificado Full Stack (PDF)",
+      ariaLabel: "Descarregar certificado Full Stack em formato PDF",
     },
   },
 };

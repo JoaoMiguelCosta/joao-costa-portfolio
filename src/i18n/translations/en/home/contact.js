@@ -17,10 +17,10 @@ const contact = {
 
   documents: {
     title: "Documents",
-    cvPortugueseLabel: "Download CV in Portuguese",
-    cvPortugueseAriaLabel: "Download João Costa's CV in Portuguese",
-    cvEnglishLabel: "Download CV",
-    cvEnglishAriaLabel: "Download João Costa's CV in English",
+    cvPortugueseLabel: "CV in Portuguese (PDF)",
+    cvPortugueseAriaLabel: "Download the Portuguese CV as a PDF",
+    cvEnglishLabel: "CV in English (PDF)",
+    cvEnglishAriaLabel: "Download the English CV as a PDF",
   },
 
   profiles: {

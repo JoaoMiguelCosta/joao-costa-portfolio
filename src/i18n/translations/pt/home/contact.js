@@ -17,10 +17,10 @@ const contact = {
 
   documents: {
     title: "Documentos",
-    cvPortugueseLabel: "Descarregar CV",
-    cvPortugueseAriaLabel: "Descarregar currículo de João Costa em português",
-    cvEnglishLabel: "Descarregar CV em inglês",
-    cvEnglishAriaLabel: "Descarregar currículo de João Costa em inglês",
+    cvPortugueseLabel: "CV em português (PDF)",
+    cvPortugueseAriaLabel: "Descarregar CV em português em formato PDF",
+    cvEnglishLabel: "CV em inglês (PDF)",
+    cvEnglishAriaLabel: "Descarregar CV em inglês em formato PDF",
   },
 
   profiles: {
