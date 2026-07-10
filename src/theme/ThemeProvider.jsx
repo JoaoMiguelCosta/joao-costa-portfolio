@@ -2,50 +2,14 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 
 import { ThemeContext } from "./ThemeContext.js";
 import {
-  DEFAULT_THEME,
   SYSTEM_DARK_THEME_QUERY,
   THEME_CODES,
-  THEME_STORAGE_KEY,
-  isSupportedTheme,
-} from "./theme.constants.js";
-
-function getStoredTheme() {
-  if (typeof window === "undefined") {
-    return null;
-  }
-
-  try {
-    const storedTheme = window.localStorage.getItem(THEME_STORAGE_KEY);
-
-    return isSupportedTheme(storedTheme) ? storedTheme : null;
-  } catch {
-    return null;
-  }
-}
-
-function getSystemTheme() {
-  if (
-    typeof window === "undefined" ||
-    typeof window.matchMedia !== "function"
-  ) {
-    return DEFAULT_THEME;
-  }
-
-  return window.matchMedia(SYSTEM_DARK_THEME_QUERY).matches
-    ? THEME_CODES.DARK
-    : THEME_CODES.LIGHT;
-}
+} from "./constants.js";
+import { getSystemTheme, isSupportedTheme } from "./helpers.js";
+import { getStoredTheme, storeTheme } from "./storage.js";
 
 function getInitialTheme() {
   return getStoredTheme() ?? getSystemTheme();
-}
-
-function storeTheme(theme) {
-  try {
-    window.localStorage.setItem(THEME_STORAGE_KEY, theme);
-  } catch {
-    // A aplicação continua funcional sem acesso ao localStorage.
-  }
 }
 
 export default function ThemeProvider({ children }) {
