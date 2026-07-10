@@ -38,6 +38,7 @@ export default function SiteHeader({
       />
 
       <ThemeToggle
+        label={themeToggle.label}
         enableLightThemeLabel={themeToggle.enableLightThemeLabel}
         enableDarkThemeLabel={themeToggle.enableDarkThemeLabel}
       />

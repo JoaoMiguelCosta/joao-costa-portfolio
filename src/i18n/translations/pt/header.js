@@ -10,6 +10,7 @@ const header = {
   },
 
   themeToggle: {
+    label: "Tema escuro",
     enableLightThemeLabel: "Ativar modo claro",
     enableDarkThemeLabel: "Ativar modo escuro",
   },

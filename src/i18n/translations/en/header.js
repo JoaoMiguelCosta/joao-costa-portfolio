@@ -10,6 +10,7 @@ const header = {
   },
 
   themeToggle: {
+    label: "Dark theme",
     enableLightThemeLabel: "Enable light mode",
     enableDarkThemeLabel: "Enable dark mode",
   },

@@ -6,12 +6,13 @@ import SunIcon from "./icons/SunIcon.jsx";
 import styles from "./ThemeToggle.module.css";
 
 export default function ThemeToggle({
+  label,
   enableLightThemeLabel,
   enableDarkThemeLabel,
 }) {
   const { isDarkTheme, toggleTheme } = useTheme();
 
-  const accessibleLabel = isDarkTheme
+  const actionLabel = isDarkTheme
     ? enableLightThemeLabel
     : enableDarkThemeLabel;
 
@@ -19,8 +20,9 @@ export default function ThemeToggle({
     <button
       className={styles.button}
       type="button"
-      aria-label={accessibleLabel}
-      title={accessibleLabel}
+      aria-label={label}
+      aria-pressed={isDarkTheme}
+      title={actionLabel}
       onClick={toggleTheme}
     >
       {isDarkTheme ? (
