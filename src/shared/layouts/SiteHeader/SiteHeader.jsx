@@ -3,7 +3,7 @@ import LanguageSwitcher from "../../ui/LanguageSwitcher/LanguageSwitcher.jsx";
 import MenuToggle from "../../ui/MenuToggle/MenuToggle.jsx";
 import ThemeToggle from "../../ui/ThemeToggle/ThemeToggle.jsx";
 
-import useMobileMenu from "./hooks/useMobileMenu.js";
+import useMobileMenu from "./useMobileMenu.js";
 
 import styles from "./SiteHeader.module.css";
 
