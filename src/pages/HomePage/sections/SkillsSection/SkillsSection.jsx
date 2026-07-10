@@ -24,10 +24,7 @@ export default function SkillsSection({ content }) {
           </div>
 
           <div className={styles.groups}>
-            <section
-              className={styles.group}
-              aria-labelledby="applied-skills-title"
-            >
+            <section aria-labelledby="applied-skills-title">
               <div className={styles.groupHeader}>
                 <h3 className={styles.groupTitle} id="applied-skills-title">
                   {content.appliedTitle}
@@ -49,10 +46,7 @@ export default function SkillsSection({ content }) {
               </div>
             </section>
 
-            <section
-              className={styles.learningSection}
-              aria-labelledby="learning-skills-title"
-            >
+            <section aria-labelledby="learning-skills-title">
               <div className={styles.groupHeader}>
                 <h3 className={styles.groupTitle} id="learning-skills-title">
                   {content.learningTitle}
