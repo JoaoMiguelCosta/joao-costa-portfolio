@@ -6,8 +6,8 @@ import useLanguage from "../../../i18n/language/useLanguage.js";
 import SiteFooter from "../SiteFooter/SiteFooter.jsx";
 import SiteHeader from "../SiteHeader/SiteHeader.jsx";
 
-import DocumentTitleHandler from "../../routing/DocumentTitleHandler.jsx";
-import HashScrollHandler from "../../routing/HashScrollHandler.jsx";
+import DocumentTitleHandler from "../../routing/documentTitle/DocumentTitleHandler.jsx";
+import HashScrollHandler from "../../routing/hashScroll/HashScrollHandler.jsx";
 import LocalizedRouteSync from "../../routing/LocalizedRouteSync.jsx";
 import Loading from "../../ui/Loading/Loading.jsx";
 

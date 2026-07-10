@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 import { getLocalizedHash, getLocalizedPathname } from "../../i18n/routing/index.js";
 import useLanguage from "../../i18n/language/useLanguage.js";
-import { suppressNextHashScroll } from "./hashScrollSuppression.js";
+import { suppressNextHashScroll } from "./hashScroll/hashScrollSuppression.js";
 
 export default function LocalizedRouteSync() {
   const { language } = useLanguage();

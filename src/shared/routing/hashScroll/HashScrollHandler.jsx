@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-import { hashTargetAliases } from "../../i18n/routing/index.js";
+import { hashTargetAliases } from "../../../i18n/routing/index.js";
 import { shouldSuppressHashScroll } from "./hashScrollSuppression.js";
 
 export default function HashScrollHandler() {

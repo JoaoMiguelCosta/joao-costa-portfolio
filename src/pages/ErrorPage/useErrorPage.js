@@ -3,7 +3,7 @@ import { isRouteErrorResponse, useRouteError } from "react-router-dom";
 
 import { getTranslations } from "../../i18n/translations/index.js";
 import useLanguage from "../../i18n/language/useLanguage.js";
-import { getPageTitle } from "../../shared/routing/pageTitles.js";
+import { getPageTitle } from "../../shared/routing/documentTitle/pageTitles.js";
 
 export default function useErrorPage() {
   const { language } = useLanguage();

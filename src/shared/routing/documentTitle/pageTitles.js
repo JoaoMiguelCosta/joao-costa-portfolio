@@ -1,6 +1,5 @@
-import { personalData } from "../../data/personal.data.js";
-import { DEFAULT_LANGUAGE, LANGUAGE_CODES } from "../../i18n/language/constants.js";
-import { ROUTE_KEYS, getAllRoutePaths } from "../../i18n/routing/index.js";
+import { personalData } from "../../../data/personal.data.js";
+import { DEFAULT_LANGUAGE, LANGUAGE_CODES } from "../../../i18n/language/constants.js";
 
 const PAGE_TITLES_BY_LANGUAGE = {
   [LANGUAGE_CODES.PORTUGUESE]: {
@@ -22,16 +21,4 @@ export function getPageTitle(pageKey, language) {
     PAGE_TITLES_BY_LANGUAGE[language] ?? PAGE_TITLES_BY_LANGUAGE[DEFAULT_LANGUAGE];
 
   return titles[pageKey] ?? titles.home;
-}
-
-export function getPageKeyFromPathname(pathname) {
-  if (pathname === "/") {
-    return "home";
-  }
-
-  if (getAllRoutePaths(ROUTE_KEYS.PROJECTS_PAGE).includes(pathname)) {
-    return "projects";
-  }
-
-  return "notFound";
 }
