@@ -1,3 +1,7 @@
+import { useState } from "react";
+
+import DemoAccessModal from "../DemoAccessModal/DemoAccessModal.jsx";
+
 import styles from "./ProjectCard.module.css";
 
 function ProjectLink({
@@ -26,6 +30,8 @@ function ProjectLink({
 }
 
 export default function ProjectCard({ project, variant, labels }) {
+  const [isDemoAccessOpen, setDemoAccessOpen] = useState(false);
+
   const cardClassName = [
     styles.card,
     variant === "featured" ? styles.featured : styles.compact,
@@ -88,14 +94,27 @@ export default function ProjectCard({ project, variant, labels }) {
             external
           />
 
-          <ProjectLink
-            href={project.links.caseStudy}
-            label={labels.links.caseStudy}
-            projectTitle={project.title}
-            variant="secondaryLink"
-          />
+          {project.demoAccess ? (
+            <button
+              type="button"
+              className={`${styles.link} ${styles.secondaryLink} ${styles.linkButton} ${styles.demoAccessLink}`}
+              onClick={() => setDemoAccessOpen(true)}
+            >
+              {labels.links.demoAccess}
+            </button>
+          ) : null}
         </div>
       </div>
+
+      {project.demoAccess ? (
+        <DemoAccessModal
+          open={isDemoAccessOpen}
+          onClose={() => setDemoAccessOpen(false)}
+          demoUrl={project.demoAccess.demoUrl}
+          accounts={project.demoAccess.accounts}
+          labels={labels.demoAccessModal}
+        />
+      ) : null}
     </article>
   );
 }

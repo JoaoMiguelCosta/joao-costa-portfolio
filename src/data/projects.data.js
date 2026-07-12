@@ -20,7 +20,6 @@ export const projectsData = [
       website: "https://farmacia-santacasa-frontend-staging.onrender.com/",
       websiteEnvironment: "demo",
       repository: "https://github.com/JoaoMiguelCosta/farmacia-santa-casa-app",
-      caseStudy: true,
     },
 
     demoAccess: {
@@ -63,7 +62,6 @@ export const projectsData = [
     links: {
       website: "https://sunlive-group.vercel.app/sunlive-group",
       repository: "https://github.com/JoaoMiguelCosta/Sunlive-Group",
-      caseStudy: true,
     },
 
     image: {
@@ -85,7 +83,6 @@ export const projectsData = [
     links: {
       website: "https://www.riacanalhairdesign.pt/",
       repository: "https://github.com/JoaoMiguelCosta/RiaCanalHairDesign",
-      caseStudy: null,
     },
 
     image: {
@@ -108,7 +105,6 @@ export const projectsData = [
       website: "https://www.wagtrainingcamp.sunlive.pt/",
       repository:
         "https://github.com/JoaoMiguelCosta/wag-training-camp-sunlive",
-      caseStudy: null,
     },
 
     image: {
@@ -130,7 +126,6 @@ export const projectsData = [
     links: {
       website: "https://continentalcup.sunlive.pt/",
       repository: "https://github.com/JoaoMiguelCosta/continental-cup-sunlive",
-      caseStudy: null,
     },
 
     image: {

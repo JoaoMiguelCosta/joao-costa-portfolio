@@ -1,26 +1,17 @@
 import { personalData } from "../../../../data/personal.data.js";
 import {
   ANCHOR_KEYS,
-  ROUTE_KEYS,
-  getAllRoutePaths,
   getHomeAnchorHref,
 } from "../../../../i18n/routing/index.js";
 
-function getNavigationItems(translations, pathname, language) {
-  const projectsPagePaths = getAllRoutePaths(ROUTE_KEYS.PROJECTS_PAGE);
-  const hasHomeNavigation = !projectsPagePaths.includes(pathname);
-
-  if (!hasHomeNavigation) {
-    return [];
-  }
-
+function getNavigationItems(translations, language) {
   return translations.header.navigationItems.map((item) => ({
     label: item.label,
     href: getHomeAnchorHref(item.anchorKey, language),
   }));
 }
 
-export function getHeaderConfig(translations, pathname, language) {
+export function getHeaderConfig(translations, language) {
   return {
     brand: {
       name: personalData.name,
@@ -28,7 +19,7 @@ export function getHeaderConfig(translations, pathname, language) {
       ariaLabel: translations.header.brandAriaLabel,
     },
 
-    navigationItems: getNavigationItems(translations, pathname, language),
+    navigationItems: getNavigationItems(translations, language),
     languageSwitcher: translations.header.languageSwitcher,
     themeToggle: translations.header.themeToggle,
     mobileMenu: translations.header.mobileMenu,

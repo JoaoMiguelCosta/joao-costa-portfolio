@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-import { getLocalizedHash, getLocalizedPathname } from "../../i18n/routing/index.js";
+import { getLocalizedHash } from "../../i18n/routing/index.js";
 import useLanguage from "../../i18n/language/useLanguage.js";
 import { suppressNextHashScroll } from "./hashScroll/hashScrollSuppression.js";
 
@@ -11,10 +11,9 @@ export default function LocalizedRouteSync() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const localizedPathname = getLocalizedPathname(pathname, language) ?? pathname;
     const localizedHash = getLocalizedHash(hash, language) ?? hash;
 
-    if (localizedPathname === pathname && localizedHash === hash) {
+    if (localizedHash === hash) {
       return;
     }
 
@@ -22,7 +21,7 @@ export default function LocalizedRouteSync() {
     // intencional do utilizador, por isso não deve provocar scroll.
     suppressNextHashScroll(localizedHash);
 
-    navigate(`${localizedPathname}${search}${localizedHash}`, {
+    navigate(`${pathname}${search}${localizedHash}`, {
       replace: true,
     });
   }, [language, pathname, search, hash, navigate]);

@@ -1,5 +1,5 @@
 import { Suspense, useMemo } from "react";
-import { Outlet, useLocation } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 import useLanguage from "../../../i18n/language/useLanguage.js";
 
@@ -15,11 +15,10 @@ import { getRootLayoutConfig } from "./config/rootLayout.config.js";
 
 export default function RootLayout() {
   const { language } = useLanguage();
-  const { pathname } = useLocation();
 
   const rootLayoutConfig = useMemo(
-    () => getRootLayoutConfig(language, pathname),
-    [language, pathname],
+    () => getRootLayoutConfig(language),
+    [language],
   );
 
   return (

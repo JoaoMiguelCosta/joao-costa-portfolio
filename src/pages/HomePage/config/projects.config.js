@@ -1,12 +1,23 @@
 import { projectsData } from "../../../data/projects.data.js";
-import {
-  ANCHOR_KEYS,
-  ROUTE_KEYS,
-  getAnchorId,
-  getRoutePath,
-} from "../../../i18n/routing/index.js";
+import { ANCHOR_KEYS, getAnchorId } from "../../../i18n/routing/index.js";
 
-function getLocalizedProjects(translations, language) {
+function getLocalizedDemoAccess(project, translations) {
+  if (!project.demoAccess) {
+    return null;
+  }
+
+  const accountNames = translations.projects.demoAccessModal.accountNames;
+
+  return {
+    demoUrl: project.links.website,
+    accounts: project.demoAccess.accounts.map((account) => ({
+      ...account,
+      name: accountNames[account.id],
+    })),
+  };
+}
+
+function getLocalizedProjects(translations) {
   return projectsData
     .map((project) => {
       const translatedProject = translations.projects.items[project.id];
@@ -30,12 +41,7 @@ function getLocalizedProjects(translations, language) {
           ? translations.projects.links.demo.ariaLabel
           : undefined,
 
-        links: {
-          ...project.links,
-          caseStudy: project.links.caseStudy
-            ? `${getRoutePath(ROUTE_KEYS.PROJECTS_PAGE, language)}#${project.id}`
-            : null,
-        },
+        demoAccess: getLocalizedDemoAccess(project, translations),
       };
     })
     .sort(
@@ -52,7 +58,7 @@ function groupProjects(projects) {
 }
 
 export function getProjectsConfig(translations, language) {
-  const localizedProjects = getLocalizedProjects(translations, language);
+  const localizedProjects = getLocalizedProjects(translations);
   const groupedProjects = groupProjects(localizedProjects);
 
   return {
@@ -68,11 +74,7 @@ export function getProjectsConfig(translations, language) {
     cardLabels: {
       responsibility: translations.projects.responsibilityLabel,
       links: translations.projects.links,
-    },
-
-    caseStudiesCta: {
-      label: translations.projects.caseStudiesCtaLabel,
-      href: getRoutePath(ROUTE_KEYS.PROJECTS_PAGE, language),
+      demoAccessModal: translations.projects.demoAccessModal,
     },
 
     ...groupedProjects,

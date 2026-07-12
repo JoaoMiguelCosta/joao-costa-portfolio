@@ -32,6 +32,33 @@
     --tags-min-block-size: 2.75rem;
 }
 
+/*
+ * From 48.0625rem, featured cards sit side by side in ProjectsSection's
+ * featuredGrid, which declares 7 shared row tracks (media, meta, title,
+ * description, responsibility, tags, links). Each card subgrids into
+ * those rows, so a row's height is the max of what both cards need —
+ * the action buttons start at the same height in both cards no matter
+ * how their tag counts or text lengths differ, without guessing pixel
+ * values for any single section.
+ */
+@media (min-width: 48.0625rem) {
+    .featured {
+        display: grid;
+        grid-template-rows: subgrid;
+        grid-row: span 7;
+    }
+
+    .featured .media {
+        grid-row: 1;
+    }
+
+    .featured .content {
+        display: grid;
+        grid-row: 2 / span 6;
+        grid-template-rows: subgrid;
+    }
+}
+
 .media {
     flex-shrink: 0;
     aspect-ratio: 2 / 1;
@@ -150,8 +177,34 @@
     grid-template-columns:
         repeat(auto-fit,
             minmax(min(100%, 12rem), 1fr));
+    align-content: start;
     gap: var(--space-3);
-    margin-top: auto;
+}
+
+/*
+ * auto-fit sizes columns purely from available width, so once a card
+ * gets wide enough to fit a 3rd 12rem track it reserves that track for
+ * the full-width demoAccessLink row, leaving the primary/secondary
+ * buttons squeezed into 2 of 3 columns instead of using the full row.
+ * Featured cards only ever have 2 primary actions, so give that row a
+ * fixed 2-column track instead of guessing from width.
+ */
+@media (min-width: 36.0625rem) and (max-width: 48rem) {
+    .featured .links {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 48.0625rem) {
+    .featured .links {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 59.9375rem) {
+    .featured .links {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 .link {
@@ -186,10 +239,33 @@
     border-color: var(--color-text-secondary);
 }
 
-@media (min-width: 52rem) and (max-width: 57rem) {
+.linkButton {
+    font: inherit;
+    cursor: pointer;
+}
+
+.demoAccessLink {
+    grid-column: 1 / -1;
+}
+
+@media (min-width: 48rem) and (max-width: 64rem) {
     .featured {
         --description-min-block-size: 4lh;
         --responsibility-min-block-size: 3lh;
+    }
+}
+
+@media (min-width: 59.9375rem) {
+    /*
+     * "Ver demo" / "Ver código no GitHub" are side by side again here
+     * (2-column track re-declared above), so demoAccessLink wraps to
+     * its own row. Center it at one column's share of the row width —
+     * matching the two buttons above it — instead of letting it stretch
+     * full width or fall left into column 1.
+     */
+    .demoAccessLink {
+        justify-self: center;
+        width: calc((100% - var(--space-3)) / 2);
     }
 }
 

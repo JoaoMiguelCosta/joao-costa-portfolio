@@ -7,18 +7,32 @@ const projects = {
   featuredTitle: "Featured projects",
   otherTitle: "Other projects",
 
-  caseStudiesCtaLabel: "View full case studies",
-
   responsibilityLabel: "Responsibility",
 
   links: {
     website: "Visit website",
     repository: "View code on GitHub",
-    caseStudy: "View case study",
     demo: {
       label: "View demo",
       ariaLabel: "Open the Farmácia Santa Casa demo",
     },
+    demoAccess: "Demo access",
+  },
+
+  demoAccessModal: {
+    title: "Demo access",
+    description: "Choose the profile you want to use to test the application.",
+    usernameLabel: "Username",
+    passwordLabel: "Password",
+    accountNames: {
+      santacasa: "Santa Casa",
+      farmacia: "Pharmacy",
+    },
+    copyLabel: "Copy",
+    copiedLabel: "Copied",
+    openDemoLabel: "Open demo",
+    closeLabel: "Close",
+    note: "These accounts use demonstration data only.",
   },
 
   technologiesAriaLabel: "Technologies used in the project",

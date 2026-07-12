@@ -64,12 +64,6 @@ export default function ProjectsSection({ content }) {
               </div>
             </section>
           </div>
-
-          <div className={styles.ctaRow}>
-            <a className={`${styles.ctaLink} u-surface-link`} href={content.caseStudiesCta.href}>
-              {content.caseStudiesCta.label}
-            </a>
-          </div>
         </div>
       </Container>
     </section>

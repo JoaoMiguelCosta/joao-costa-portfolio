@@ -7,18 +7,33 @@ const projects = {
   featuredTitle: "Projetos em destaque",
   otherTitle: "Outros projetos",
 
-  caseStudiesCtaLabel: "Ver case studies completos",
-
   responsibilityLabel: "Responsabilidade",
 
   links: {
     website: "Visitar website",
     repository: "Ver código no GitHub",
-    caseStudy: "Ver caso de estudo",
     demo: {
       label: "Ver demo",
       ariaLabel: "Abrir demonstração da Farmácia Santa Casa",
     },
+    demoAccess: "Dados de acesso",
+  },
+
+  demoAccessModal: {
+    title: "Acesso à demonstração",
+    description:
+      "Escolhe o perfil que pretendes utilizar para testar a aplicação.",
+    usernameLabel: "Utilizador",
+    passwordLabel: "Palavra-passe",
+    accountNames: {
+      santacasa: "Santa Casa",
+      farmacia: "Farmácia",
+    },
+    copyLabel: "Copiar",
+    copiedLabel: "Copiado",
+    openDemoLabel: "Abrir demonstração",
+    closeLabel: "Fechar",
+    note: "Estas contas utilizam apenas dados de demonstração.",
   },
 
   technologiesAriaLabel: "Tecnologias utilizadas no projeto",
