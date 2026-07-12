@@ -14,31 +14,45 @@
 
 ### João Costa — Programador Web Full Stack
 
-Desenvolvo aplicações web que transformam necessidades reais de negócio em produtos funcionais, acompanhando todo o processo desde a primeira conversa de levantamento de requisitos até ao desenvolvimento frontend e backend, publicação, manutenção e suporte. Este repositório é o código-fonte do meu portefólio profissional, onde apresento esse trabalho em detalhe.
+Desenvolvo aplicações web que transformam necessidades reais de negócio em produtos funcionais, acompanhando todo o processo desde a primeira conversa de levantamento de requisitos até ao desenvolvimento frontend e backend, publicação, manutenção e suporte. Este repositório é o código-fonte do meu portefólio profissional, onde apresento esse trabalho.
 
-O próprio portefólio está disponível em português e em inglês, com rotas e conteúdo totalmente localizados.
+O portefólio é uma single-page application em React, disponível em português e em inglês, com tema claro/escuro e layout responsivo.
 
 [GitHub](https://github.com/JoaoMiguelCosta) · [LinkedIn](https://www.linkedin.com/in/jo%C3%A3o-miguel-costa1/) · [Email](mailto:joaoxxmiguel@hotmail.com)
 
-### Visão geral
+### Live demo
 
-Este é um portefólio profissional criado para apresentar experiência prática, projetos reais e uma forma de trabalhar consistente. Destina-se a recrutadores, potenciais clientes e a outros programadores que analisem o código. Para além de uma galeria de projetos, inclui estudos de caso detalhados que cobrem contexto, responsabilidades, decisões técnicas e resultados dos dois projetos principais.
+[joao-costa-portfolio-one.vercel.app](https://joao-costa-portfolio-one.vercel.app/)
+
+O domínio ainda não é o domínio final do portefólio: enquanto isso, o site está marcado como `noindex` (visível e navegável, mas não indexado pelos motores de busca) no `index.html`.
+
+### Funcionalidades principais
+
+- Homepage única com secções: Hero, Projetos, Sobre, Competências e Contacto, com navegação por âncoras.
+- Português e inglês, com deteção do idioma do browser, persistência em `localStorage` e troca sem recarregar a página.
+- Tema claro e escuro, com persistência em `localStorage`, deteção da preferência do sistema e script inline no `index.html` que aplica o tema antes da primeira renderização (evita flash de tema errado).
+- Cartões de projeto com tecnologias, responsabilidade no projeto e ligações para o website e o repositório.
+- Modal de "Dados de acesso" para o projeto Farmácia Santa Casa, com credenciais de demonstração (contas não administrativas) e botão de copiar para cada campo.
+- Página 404 e página de erro de routing, ambas com texto localizado.
+- Menu mobile acessível: fecha com Escape, fecha ao clicar fora e devolve o foco ao botão que o abriu.
 
 ### Projetos em destaque
 
+Os dois projetos assinalados como destaque no portefólio (`featured: true` em `src/data/projects.data.js`):
+
 #### Farmácia Santa Casa
 
-Aplicação web Full Stack para gestão operacional entre uma instituição (Santa Casa), uma farmácia e uma área de Sistema/Admin. Trata utentes, receitas, pedidos, regularizações e alertas, com permissões por perfil e autenticação JWT armazenada num cookie HTTP-only.
+Aplicação web full stack para gestão operacional entre uma instituição (Santa Casa), uma farmácia e uma área de sistema/admin, cobrindo utentes, receitas, pedidos, regularizações e alertas.
 
-O frontend foi construído com React e Vite; o backend com Node.js, Express, Prisma e PostgreSQL.
-
-Está disponível um ambiente público de demonstração. Por estar alojado numa instância gratuita do Render, o primeiro carregamento pode demorar alguns segundos. As credenciais de acesso estão disponíveis no estudo de caso do portefólio e correspondem apenas a contas não administrativas.
+Frontend em React e Vite; backend em Node.js, Express, Prisma e PostgreSQL.
 
 [Ver demonstração](https://farmacia-santacasa-frontend-staging.onrender.com/) · [Repositório](https://github.com/JoaoMiguelCosta/farmacia-santa-casa-app)
 
+O primeiro carregamento pode demorar alguns segundos por estar alojado numa instância gratuita do Render. As credenciais de acesso de demonstração estão disponíveis diretamente no cartão do projeto, através do botão "Dados de acesso".
+
 #### Sunlive Group
 
-Aplicação institucional SPA multi-marca que reúne várias áreas de negócio — Group, Travel, Sports e Hotel — numa única base de código, cada uma com identidade visual própria e navegação consistente. O trabalho abrangeu arquitetura frontend, componentes partilhados, navegação responsiva para desktop/mobile e um sistema visual baseado em design tokens.
+Aplicação institucional multi-marca (Group, Travel, Sports e Hotel) construída sobre uma única base de código, com identidade visual própria por marca e navegação consistente.
 
 [Website](https://sunlive-group.vercel.app/sunlive-group) · [Repositório](https://github.com/JoaoMiguelCosta/Sunlive-Group)
 
@@ -50,18 +64,7 @@ Aplicação institucional SPA multi-marca que reúne várias áreas de negócio 
 | WAG Training Camp | Website de evento | Promoção e inscrições de camps internacionais de ginástica | [Website](https://www.wagtrainingcamp.sunlive.pt/) · [Repositório](https://github.com/JoaoMiguelCosta/wag-training-camp-sunlive) |
 | International Continental Cup | Website de competição | Informação do evento, alojamento e inscrições | [Website](https://continentalcup.sunlive.pt/) · [Repositório](https://github.com/JoaoMiguelCosta/continental-cup-sunlive) |
 
-### O que este portefólio demonstra
-
-- Desenvolvimento de interfaces responsivas, revistas manualmente em diferentes breakpoints.
-- Localização completa em português e inglês, incluindo rotas de projeto e âncoras internas localizadas.
-- Temas claro e escuro, com persistência da preferência do utilizador e fallback para a preferência do sistema.
-- Navegação acessível: landmarks semânticos, skip link, foco visível pelo teclado e controlos identificados com estado programático (como botões de alternância).
-- Suporte a movimento reduzido para utilizadores que o preferem.
-- Conteúdo estruturado em componentes reutilizáveis e de responsabilidade única, em vez de ficheiros de página extensos.
-- Estudos de caso detalhados, distintos dos cartões compactos de projeto na página inicial.
-- Descarregamento de CV (português e inglês) e certificado, cada um identificado com documento, idioma e formato.
-- Metadados Open Graph e Twitter Card, URL canónico e imagem social para partilha de links.
-- Organização de assets e build preparada para publicação em produção na Vercel.
+Estes cartões de projeto vivem apenas na homepage — o portefólio não tem páginas dedicadas de detalhe/case study por projeto. As rotas antigas `/projetos` e `/projects` (de uma versão anterior do site) continuam a existir e redirecionam para as respetivas âncoras na homepage.
 
 ### Tecnologias
 
@@ -76,11 +79,41 @@ Aplicação institucional SPA multi-marca que reúne várias áreas de negócio 
 
 Esta tabela descreve a stack do próprio portefólio. Os projetos individuais, como a Farmácia Santa Casa, usam tecnologias adicionais descritas nas respetivas secções acima.
 
-### Abordagem de desenvolvimento
+### Arquitetura e organização
 
-O código separa conteúdo, configuração e apresentação: os dados residem em `src/data`, cada página combina esses dados com as traduções através da sua própria camada de configuração, e os componentes mantêm-se focados na apresentação. As páginas estão organizadas por secção, com UI partilhada em `src/shared` apenas quando mais do que uma parte da aplicação precisa efetivamente dela.
+O código separa conteúdo, configuração e apresentação:
 
-A internacionalização está dividida por idioma e por domínio de conteúdo, em vez de um único ficheiro de traduções extenso, e o routing localizado está isolado do resto da aplicação. O tema segue a mesma lógica: um único módulo autónomo é responsável pelo estado do tema, pelo armazenamento e pela deteção da preferência do sistema. Ao longo do projeto, as abstrações só foram introduzidas quando resolviam um problema concreto de duplicação ou de responsabilidade, não por definição.
+- `src/data` guarda o conteúdo em bruto (perfil, projetos, competências), sem texto de interface.
+- `src/i18n` guarda o idioma ativo, o routing localizado (âncoras traduzidas) e as traduções, divididas por idioma e por domínio de conteúdo (`header`, `footer`, `feedback`, `home/*`) em vez de um único ficheiro extenso.
+- Cada página combina `src/data` com as traduções através da sua própria camada `config` (por exemplo, `src/pages/HomePage/config/projects.config.js`), produzindo os dados já prontos a renderizar.
+- `src/pages` contém as páginas, organizadas por secção quando aplicável (ex.: `HomePage/sections/ProjectsSection`).
+- `src/shared` reúne layouts, UI partilhada e helpers de routing usados por mais do que uma parte da aplicação.
+- `src/theme` isola por completo o estado do tema, o armazenamento e a deteção da preferência do sistema.
+
+### Internacionalização
+
+- Idiomas suportados: português (`pt`, valor por omissão) e inglês (`en`).
+- Idioma inicial: valor guardado em `localStorage` (`portfolio-language`) ou, na ausência deste, o idioma do browser (`navigator.language`), com fallback para português.
+- `document.documentElement.lang` é atualizado para `pt-PT` ou `en` sempre que o idioma muda.
+- As âncoras internas (`#projetos`/`#projects`, `#sobre`/`#about`, etc.) são traduzidas por idioma; o componente `LocalizedRouteSync` corrige automaticamente o hash da URL se este não corresponder ao idioma atual.
+- Os títulos de página (`document.title`) e os textos de interface são traduzidos; o CV descarregável também difere por idioma (`joao-costa-cv-pt.pdf` / `joao-costa-cv-en.pdf`).
+
+### Tema claro e escuro
+
+- Tema inicial: valor guardado em `localStorage` (`portfolio-theme`) ou, na ausência deste, `prefers-color-scheme` do sistema.
+- Um script inline no `<head>` do `index.html` aplica o atributo `data-theme` ao elemento `<html>` antes da primeira renderização React, para evitar um flash do tema errado.
+- Enquanto não existir preferência guardada, uma alteração da preferência do sistema atualiza o tema automaticamente.
+- As cores estão centralizadas em custom properties (`src/styles/tokens.css`), com um bloco `:root[data-theme="dark"]` a sobrepor os valores para o tema escuro.
+
+### Responsividade e acessibilidade
+
+- Layout responsivo com breakpoints dedicados em `rem` em cada módulo CSS (header, hero, cartões de projeto, competências, contacto, footer), incluindo uma estratégia de CSS subgrid para alinhar as secções dos dois cartões de projeto em destaque lado a lado.
+- Skip link para o conteúdo principal, landmarks semânticos (`header`, `nav`, `main`, `footer`, `section`/`aside` com `aria-label`/`aria-labelledby`).
+- Menu mobile com `aria-expanded`, `aria-controls`, fecho com Escape, fecho ao clicar fora e foco devolvido ao botão que o abriu.
+- Toggles de tema e idioma com `aria-pressed`/`aria-label` a refletir o estado atual.
+- Modal de dados de acesso construído sobre o elemento nativo `<dialog>`, com foco movido para o botão de fechar ao abrir e região `aria-live` para feedback de "copiado".
+- Suporte a `prefers-reduced-motion` (scroll suave, transições de cor e a animação de hover das imagens dos cartões são desativadas quando o utilizador prefere menos movimento).
+- Esta auditoria não inclui uma validação visual automatizada em múltiplas larguras nem um teste formal de conformidade WCAG — os pontos acima refletem o que está implementado no código, não uma certificação de acessibilidade.
 
 ### Estrutura do projeto
 
@@ -107,20 +140,23 @@ O servidor de desenvolvimento arranca por defeito em `http://localhost:5173`.
 
 ### Scripts disponíveis
 
-- `npm run dev` — inicia o servidor de desenvolvimento do Vite com hot module reload.
+Scripts definidos em `package.json`:
+
+- `npm run dev` — inicia o servidor de desenvolvimento do Vite.
+- `npm run build` — cria uma build de produção em `dist/`.
 - `npm run lint` — executa o ESLint em todo o projeto.
-- `npm run build` — cria uma build de produção otimizada em `dist/`.
-- `npm run preview` — serve localmente a build de produção para verificação.
+- `npm run preview` — serve localmente a build de produção já gerada.
 
-### Qualidade, acessibilidade e SEO
+Não existe atualmente nenhum script de testes automatizados nem variáveis de ambiente necessárias para correr o projeto.
 
-O projeto inclui uma base orientada à acessibilidade, mas não reivindica certificação formal de conformidade com as WCAG. Na prática, isto significa landmarks semânticos, um skip link para o conteúdo principal, foco visível pelo teclado, navegação identificada, estados acessíveis nos toggles e suporte a movimento reduzido, além de alternativas textuais relevantes para as imagens.
+### Build e publicação
 
-Ao nível de SEO e metadados, o site inclui etiquetas Open Graph e Twitter Card, um URL canónico, um favicon e uma imagem social dedicada. A qualidade de código é garantida através do ESLint, e cada alteração é validada com uma build de produção antes de ser considerada concluída.
+O repositório está preparado para publicação na Vercel. O ficheiro `vercel.json` reescreve todos os pedidos para `index.html`, para que uma atualização direta numa rota como `/projetos` ou `/projects` seja corretamente resolvida pela SPA em vez de devolver 404.
 
-### Publicação
+### Estado atual do projeto
 
-O repositório está preparado para publicação na Vercel. O ficheiro `vercel.json` inclui a configuração de rewrite necessária para uma aplicação de página única (SPA), para que atualizações diretas em rotas localizadas como `/projetos` e `/projects` sejam corretamente resolvidas em vez de devolverem um erro 404. O domínio de produção previsto é `joao-miguel-costa.pt`.
+- O site está publicado e funcional na URL do live demo acima.
+- Indexação por motores de busca está temporariamente desativada (`noindex`) até o domínio definitivo estar ligado; o site continua totalmente navegável.
 
 ### Contacto
 
@@ -132,35 +168,49 @@ Estou disponível para projetos freelance, colaboração part-time e parcerias t
 
 ### João Costa — Full-Stack Web Developer
 
-I build web applications that turn real business needs into working products, from the first requirements conversation through frontend and backend development, deployment, maintenance and support. This repository is the source code of my professional portfolio, where I present that work in detail.
+I build web applications that turn real business needs into working products, from the first requirements conversation through frontend and backend development, deployment, maintenance and support. This repository is the source code of my professional portfolio, where I present that work.
 
-The portfolio itself is available in Portuguese and English, with fully localised routes and content.
+The portfolio is a React single-page application, available in Portuguese and English, with light/dark theming and a responsive layout.
 
 [GitHub](https://github.com/JoaoMiguelCosta) · [LinkedIn](https://www.linkedin.com/in/jo%C3%A3o-miguel-costa1/) · [Email](mailto:joaoxxmiguel@hotmail.com)
 
-### Overview
+### Live demo
 
-This is a professional portfolio built to present practical experience, real projects and a consistent way of working. It is aimed at recruiters, potential clients and other developers reviewing the code. Beyond a project gallery, it includes detailed case studies covering context, responsibilities, technical decisions and outcomes for the two main projects.
+[joao-costa-portfolio-one.vercel.app](https://joao-costa-portfolio-one.vercel.app/)
 
-### Selected Work
+This is not yet the portfolio's final domain: in the meantime, the site is marked `noindex` (visible and browsable, but not indexed by search engines) in `index.html`.
+
+### Key features
+
+- Single homepage with Hero, Projects, About, Skills and Contact sections, navigated via in-page anchors.
+- Portuguese and English, with browser-language detection, `localStorage` persistence and switching without a page reload.
+- Light and dark theme, persisted in `localStorage`, with system-preference detection and an inline script in `index.html` that applies the theme before the first React render (avoids a flash of the wrong theme).
+- Project cards showing technologies, my responsibility on the project, and links to the live website and repository.
+- A "Demo access" modal for the Farmácia Santa Casa project, with demo credentials (non-administrative accounts) and a copy button for each field.
+- A 404 page and a routing error page, both fully localised.
+- An accessible mobile menu: closes on Escape, closes on outside click, and returns focus to the button that opened it.
+
+### Selected work
+
+The two projects flagged as featured in the portfolio data (`featured: true` in `src/data/projects.data.js`):
 
 #### Farmácia Santa Casa
 
-A full-stack web application for operational management between an institution (Santa Casa), a pharmacy and a system/admin area. It handles residents, prescriptions, orders, regularisations and alerts, with role-based permissions and JWT authentication stored in an HTTP-only cookie.
+A full-stack web application for operational management between an institution (Santa Casa), a pharmacy and a system/admin area, covering residents, prescriptions, orders, regularisations and alerts.
 
-The frontend is built with React and Vite; the backend with Node.js, Express, Prisma and PostgreSQL.
-
-A public demo environment is available. As it runs on a free Render instance, the first load can take a few seconds. Demo credentials are provided in the case study on the portfolio and are intentionally scoped to non-administrative accounts.
+Frontend built with React and Vite; backend with Node.js, Express, Prisma and PostgreSQL.
 
 [Demo](https://farmacia-santacasa-frontend-staging.onrender.com/) · [Repository](https://github.com/JoaoMiguelCosta/farmacia-santa-casa-app)
 
+The first load can take a few seconds since it runs on a free Render instance. Demo credentials are available directly on the project card via the "Demo access" button.
+
 #### Sunlive Group
 
-A multi-brand institutional single-page application bringing together several business areas — Group, Travel, Sports and Hotel — under one codebase, each with its own visual identity and consistent navigation. The work covered frontend architecture, shared components, responsive desktop/mobile navigation and a visual system based on design tokens.
+A multi-brand institutional application (Group, Travel, Sports and Hotel) built on a single codebase, with its own visual identity per brand and consistent navigation.
 
 [Website](https://sunlive-group.vercel.app/sunlive-group) · [Repository](https://github.com/JoaoMiguelCosta/Sunlive-Group)
 
-#### Other Projects
+#### Other projects
 
 | Project | Type | Main focus | Links |
 |---|---|---|---|
@@ -168,18 +218,7 @@ A multi-brand institutional single-page application bringing together several bu
 | WAG Training Camp | Event website | International gymnastics camp promotion and registration | [Website](https://www.wagtrainingcamp.sunlive.pt/) · [Repository](https://github.com/JoaoMiguelCosta/wag-training-camp-sunlive) |
 | International Continental Cup | Competition website | Event information, accommodation and registration | [Website](https://continentalcup.sunlive.pt/) · [Repository](https://github.com/JoaoMiguelCosta/continental-cup-sunlive) |
 
-### What This Portfolio Demonstrates
-
-- Responsive interface development, reviewed manually across breakpoints.
-- Full Portuguese and English localisation, including localised project routes and in-page anchors.
-- Light and dark themes with a persisted user preference and a fallback to system settings.
-- Accessible navigation: semantic landmarks, a skip link, visible keyboard focus and labelled controls with programmatic state (such as toggle buttons).
-- Reduced-motion support for users who prefer it.
-- Structured content with reusable, single-purpose components rather than large page-level files.
-- Detailed project case studies, separate from the compact project cards on the homepage.
-- Downloadable CV (Portuguese and English) and certificate, each clearly labelled with document, language and format.
-- Open Graph and Twitter Card metadata, a canonical URL and a social preview image for link sharing.
-- An asset and build setup organised for a production deployment on Vercel.
+These project cards live on the homepage only — the portfolio has no dedicated per-project detail/case-study pages. The old `/projetos` and `/projects` routes (from an earlier version of the site) still exist and redirect to the corresponding homepage anchors.
 
 ### Technology
 
@@ -194,13 +233,43 @@ A multi-brand institutional single-page application bringing together several bu
 
 This table describes the portfolio's own stack. Individual projects, such as Farmácia Santa Casa, use additional technologies described in their own sections above.
 
-### Engineering Approach
+### Architecture and organisation
 
-The codebase separates content, configuration and presentation: raw data lives in `src/data`, each page combines that data with translations through its own configuration layer, and components stay focused on rendering. Pages are organised by section, with shared UI kept in `src/shared` only when more than one part of the app actually needs it.
+The codebase separates content, configuration and presentation:
 
-Internationalisation is split by language and by content domain instead of a single large translation file, and localised routing is isolated from the rest of the application. Theming follows the same idea: a single, self-contained module owns theme state, storage and system-preference detection. Throughout the project, abstractions were introduced only where they solved a concrete duplication or responsibility problem, not by default.
+- `src/data` holds raw content (profile, projects, skills), with no UI copy.
+- `src/i18n` holds the active language, localised routing (translated anchors) and translations, split by language and by content domain (`header`, `footer`, `feedback`, `home/*`) instead of one large file.
+- Each page combines `src/data` with translations through its own `config` layer (e.g. `src/pages/HomePage/config/projects.config.js`), producing render-ready data.
+- `src/pages` contains the pages, organised into sections where relevant (e.g. `HomePage/sections/ProjectsSection`).
+- `src/shared` holds layouts, shared UI and routing helpers used by more than one part of the app.
+- `src/theme` fully isolates theme state, storage and system-preference detection.
 
-### Project Structure
+### Internationalisation
+
+- Supported languages: Portuguese (`pt`, default) and English (`en`).
+- Initial language: the value stored in `localStorage` (`portfolio-language`), or the browser's language (`navigator.language`) when nothing is stored, falling back to Portuguese.
+- `document.documentElement.lang` is updated to `pt-PT` or `en` whenever the language changes.
+- In-page anchors (`#projetos`/`#projects`, `#sobre`/`#about`, etc.) are translated per language; the `LocalizedRouteSync` component automatically corrects the URL hash if it doesn't match the current language.
+- Page titles (`document.title`) and UI copy are translated; the downloadable CV also differs by language (`joao-costa-cv-pt.pdf` / `joao-costa-cv-en.pdf`).
+
+### Light and dark theme
+
+- Initial theme: the value stored in `localStorage` (`portfolio-theme`), or the system's `prefers-color-scheme` when nothing is stored.
+- An inline script in the `index.html` `<head>` sets the `data-theme` attribute on `<html>` before the first React render, avoiding a flash of the wrong theme.
+- While no preference is stored, a change in the system preference updates the theme automatically.
+- Colours are centralised as custom properties (`src/styles/tokens.css`), with a `:root[data-theme="dark"]` block overriding values for the dark theme.
+
+### Responsiveness and accessibility
+
+- Responsive layout with dedicated `rem`-based breakpoints in each CSS module (header, hero, project cards, skills, contact, footer), including a CSS subgrid strategy that aligns the two featured project cards' internal sections side by side.
+- Skip link to the main content, semantic landmarks (`header`, `nav`, `main`, `footer`, `section`/`aside` with `aria-label`/`aria-labelledby`).
+- Mobile menu with `aria-expanded`, `aria-controls`, closes on Escape, closes on outside click, and returns focus to the button that opened it.
+- Theme and language toggles with `aria-pressed`/`aria-label` reflecting current state.
+- The demo access modal is built on the native `<dialog>` element, moving focus to the close button on open and using an `aria-live` region for "copied" feedback.
+- `prefers-reduced-motion` support (smooth scrolling, colour transitions and the project card image hover animation are disabled when the user prefers reduced motion).
+- This audit did not include automated visual validation across multiple viewport widths or a formal WCAG conformance test — the points above reflect what is implemented in the code, not an accessibility certification.
+
+### Project structure
 
 ```
 src/
@@ -214,7 +283,7 @@ src/
 public/      # static assets: images, icons and documents
 ```
 
-### Local Development
+### Local development
 
 ```
 npm install
@@ -223,22 +292,25 @@ npm run dev
 
 The development server runs at `http://localhost:5173` by default.
 
-### Available Scripts
+### Available scripts
 
-- `npm run dev` — starts the Vite development server with hot module reload.
+Scripts defined in `package.json`:
+
+- `npm run dev` — starts the Vite development server.
+- `npm run build` — creates a production build in `dist/`.
 - `npm run lint` — runs ESLint across the project.
-- `npm run build` — creates an optimised production build in `dist/`.
-- `npm run preview` — serves the production build locally for verification.
+- `npm run preview` — serves the already-built production build locally.
 
-### Quality, Accessibility and SEO
+There is currently no automated test script and no environment variables required to run the project.
 
-The project includes an accessibility-focused foundation, but it does not claim formal WCAG certification. In practice, this means semantic landmarks, a skip-to-content link, visible keyboard focus, labelled navigation, accessible toggle states and support for reduced motion, alongside meaningful alternative text for images.
+### Build and deployment
 
-On the SEO and metadata side, the site ships with Open Graph and Twitter Card tags, a canonical URL, a favicon and a dedicated social preview image. Code quality is enforced through ESLint, and every change is validated against a production build before being considered complete.
+The repository is prepared for deployment on Vercel. `vercel.json` rewrites all requests to `index.html`, so that a direct refresh on a route such as `/projetos` or `/projects` is correctly resolved by the SPA instead of returning a 404.
 
-### Deployment
+### Current project status
 
-The repository is prepared for deployment on Vercel. `vercel.json` includes the rewrite configuration required for a single-page application, so that direct refreshes on localised routes such as `/projetos` and `/projects` resolve correctly instead of returning a 404. The planned production domain is `joao-miguel-costa.pt`.
+- The site is deployed and functional at the live demo URL above.
+- Search engine indexing is temporarily disabled (`noindex`) until the final domain is connected; the site remains fully browsable.
 
 ### Contact
 
