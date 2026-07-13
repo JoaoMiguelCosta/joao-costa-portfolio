@@ -27,7 +27,10 @@ export default function ContactSection({ content }) {
               </div>
 
               <div className={styles.contactRow}>
-                <a className={styles.primaryAction} href={content.email.href}>
+                <a
+                  className={`${styles.primaryAction} u-action-link`}
+                  href={content.email.href}
+                >
                   {content.email.actionLabel}
                 </a>
 
