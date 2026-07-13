@@ -1,4 +1,5 @@
 import Container from "../../../../shared/ui/Container/Container.jsx";
+import ScrollReveal from "../../../../shared/ui/ScrollReveal/ScrollReveal.jsx";
 import SectionHeader from "../../../../shared/ui/SectionHeader/SectionHeader.jsx";
 
 import SkillCard from "./components/SkillCard/SkillCard.jsx";
@@ -14,7 +15,7 @@ export default function SkillsSection({ content }) {
     >
       <Container>
         <div className={styles.inner}>
-          <div className={styles.sectionHeader}>
+          <ScrollReveal className={styles.sectionHeader}>
             <SectionHeader
               eyebrow={content.eyebrow}
               title={content.title}
@@ -22,10 +23,10 @@ export default function SkillsSection({ content }) {
               description={content.description}
               eyebrowAccent
             />
-          </div>
+          </ScrollReveal>
 
           <div className={styles.groups}>
-            <section aria-labelledby="applied-skills-title">
+            <ScrollReveal as="section" aria-labelledby="applied-skills-title" delay={80}>
               <div className={styles.groupHeader}>
                 <h3 className={styles.groupTitle} id="applied-skills-title">
                   {content.appliedTitle}
@@ -45,9 +46,9 @@ export default function SkillsSection({ content }) {
                   />
                 ))}
               </div>
-            </section>
+            </ScrollReveal>
 
-            <section aria-labelledby="learning-skills-title">
+            <ScrollReveal as="section" aria-labelledby="learning-skills-title" delay={160}>
               <div className={styles.groupHeader}>
                 <h3 className={styles.groupTitle} id="learning-skills-title">
                   {content.learningTitle}
@@ -68,7 +69,7 @@ export default function SkillsSection({ content }) {
                   />
                 ))}
               </div>
-            </section>
+            </ScrollReveal>
           </div>
         </div>
       </Container>

@@ -1,4 +1,5 @@
 import Container from "../../../../shared/ui/Container/Container.jsx";
+import ScrollReveal from "../../../../shared/ui/ScrollReveal/ScrollReveal.jsx";
 import SectionHeader from "../../../../shared/ui/SectionHeader/SectionHeader.jsx";
 
 import AboutEducation from "./components/AboutEducation/AboutEducation.jsx";
@@ -29,7 +30,7 @@ export default function AboutSection({ content }) {
           </div>
 
           <div className={styles.intro}>
-            <div className={styles.sectionHeader}>
+            <ScrollReveal className={styles.sectionHeader}>
               <SectionHeader
                 eyebrow={content.eyebrow}
                 title={content.title}
@@ -37,13 +38,13 @@ export default function AboutSection({ content }) {
                 description={content.description}
                 eyebrowAccent
               />
-            </div>
+            </ScrollReveal>
 
-            <div className={styles.paragraphs}>
+            <ScrollReveal className={styles.paragraphs} delay={80}>
               {content.paragraphs.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
-            </div>
+            </ScrollReveal>
           </div>
 
           <dl className={styles.facts}>

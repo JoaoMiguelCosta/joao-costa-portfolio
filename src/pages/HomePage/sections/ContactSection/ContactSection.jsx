@@ -1,4 +1,5 @@
 import Container from "../../../../shared/ui/Container/Container.jsx";
+import ScrollReveal from "../../../../shared/ui/ScrollReveal/ScrollReveal.jsx";
 
 import ResourceGroup from "./components/ResourceGroup/ResourceGroup.jsx";
 
@@ -13,10 +14,12 @@ export default function ContactSection({ content }) {
     >
       <Container>
         <div className={styles.inner}>
-          <p className={`${styles.eyebrow} u-eyebrow`}>{content.eyebrow}</p>
+          <ScrollReveal as="p" className={`${styles.eyebrow} u-eyebrow`}>
+            {content.eyebrow}
+          </ScrollReveal>
 
           <div className={styles.panel}>
-            <div className={styles.intro}>
+            <ScrollReveal className={styles.intro}>
               <h2 className={styles.title} id="contact-title">
                 {content.title}
               </h2>
@@ -44,11 +47,13 @@ export default function ContactSection({ content }) {
                   </a>
                 </p>
               </div>
-            </div>
+            </ScrollReveal>
 
-            <aside
+            <ScrollReveal
+              as="aside"
               className={styles.sidebar}
               aria-label={content.detailsAriaLabel}
+              delay={80}
             >
               <dl className={styles.details}>
                 {content.details.map((detail) => (
@@ -71,7 +76,7 @@ export default function ContactSection({ content }) {
                   isExternal
                 />
               </div>
-            </aside>
+            </ScrollReveal>
           </div>
         </div>
       </Container>

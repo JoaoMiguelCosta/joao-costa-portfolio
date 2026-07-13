@@ -1,4 +1,5 @@
 import Container from "../../../../shared/ui/Container/Container.jsx";
+import ScrollReveal from "../../../../shared/ui/ScrollReveal/ScrollReveal.jsx";
 import SectionHeader from "../../../../shared/ui/SectionHeader/SectionHeader.jsx";
 
 import ProjectCard from "./components/ProjectCard/ProjectCard.jsx";
@@ -14,7 +15,7 @@ export default function ProjectsSection({ content }) {
     >
       <Container>
         <div className={styles.inner}>
-          <div className={styles.sectionHeader}>
+          <ScrollReveal className={styles.sectionHeader}>
             <SectionHeader
               eyebrow={content.eyebrow}
               title={content.title}
@@ -22,7 +23,7 @@ export default function ProjectsSection({ content }) {
               description={content.description}
               eyebrowAccent
             />
-          </div>
+          </ScrollReveal>
 
           <div className={styles.groups}>
             <section
@@ -33,7 +34,10 @@ export default function ProjectsSection({ content }) {
                 {content.featuredTitle}
               </h3>
 
-              <div className={`${styles.projectGrid} ${styles.featuredGrid}`}>
+              <ScrollReveal
+                className={`${styles.projectGrid} ${styles.featuredGrid}`}
+                delay={80}
+              >
                 {content.featuredItems.map((project) => (
                   <ProjectCard
                     key={project.id}
@@ -42,7 +46,7 @@ export default function ProjectsSection({ content }) {
                     labels={content.cardLabels}
                   />
                 ))}
-              </div>
+              </ScrollReveal>
             </section>
 
             <section
@@ -53,7 +57,10 @@ export default function ProjectsSection({ content }) {
                 {content.otherTitle}
               </h3>
 
-              <div className={`${styles.projectGrid} ${styles.otherGrid}`}>
+              <ScrollReveal
+                className={`${styles.projectGrid} ${styles.otherGrid}`}
+                delay={160}
+              >
                 {content.otherItems.map((project) => (
                   <ProjectCard
                     key={project.id}
@@ -62,7 +69,7 @@ export default function ProjectsSection({ content }) {
                     labels={content.cardLabels}
                   />
                 ))}
-              </div>
+              </ScrollReveal>
             </section>
           </div>
         </div>
