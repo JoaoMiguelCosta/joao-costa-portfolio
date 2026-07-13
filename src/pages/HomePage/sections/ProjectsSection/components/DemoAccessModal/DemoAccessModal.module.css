@@ -5,8 +5,9 @@
     max-height: min(34rem, calc(100dvh - var(--space-8)));
     padding: 0;
     border: 1px solid var(--color-border);
-    border-radius: var(--border-radius-md);
-    background-color: var(--color-surface);
+    border-radius: var(--border-radius-xl);
+    background-color: var(--color-surface-elevated);
+    box-shadow: var(--shadow-md);
     color: var(--color-text-primary);
 }
 
@@ -28,6 +29,8 @@
     align-items: flex-start;
     justify-content: space-between;
     gap: var(--space-3);
+    padding-bottom: var(--space-4);
+    border-bottom: 1px solid var(--color-border);
 }
 
 .headerText {
@@ -57,10 +60,19 @@
     font-size: var(--font-size-lg);
     line-height: 1;
     cursor: pointer;
+    transition:
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast),
+        transform var(--transition-fast);
 }
 
 .closeButton:hover {
     border-color: var(--color-text-secondary);
+    box-shadow: var(--shadow-sm);
+}
+
+.closeButton:active {
+    transform: translateY(1px);
 }
 
 .description {
@@ -133,10 +145,19 @@
     font-weight: var(--font-weight-semibold);
     padding: var(--space-2) var(--space-3);
     cursor: pointer;
+    transition:
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast),
+        transform var(--transition-fast);
 }
 
 .copyButton:hover {
     border-color: var(--color-text-secondary);
+    box-shadow: var(--shadow-sm);
+}
+
+.copyButton:active {
+    transform: translateY(1px);
 }
 
 .note {
@@ -174,6 +195,16 @@
     font-weight: var(--font-weight-semibold);
     text-align: center;
     cursor: pointer;
+    transition:
+        background-color var(--transition-fast),
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.openDemo:active,
+.closeAction:active {
+    transform: translateY(1px);
 }
 
 .openDemo {
@@ -183,6 +214,7 @@
 
 .openDemo:hover {
     background-color: var(--color-accent-hover);
+    box-shadow: var(--shadow-sm);
 }
 
 .closeAction {
@@ -193,6 +225,7 @@
 
 .closeAction:hover {
     border-color: var(--color-text-secondary);
+    box-shadow: var(--shadow-sm);
 }
 
 @media (max-width: 30rem) {
@@ -234,5 +267,14 @@
     .credentialValue {
         white-space: nowrap;
         font-size: var(--font-size-sm);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .closeButton,
+    .copyButton,
+    .openDemo,
+    .closeAction {
+        transition: none;
     }
 }
