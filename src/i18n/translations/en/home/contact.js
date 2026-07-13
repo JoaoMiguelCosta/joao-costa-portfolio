@@ -17,9 +17,9 @@ const contact = {
 
   documents: {
     title: "Documents",
-    cvPortugueseLabel: "CV in Portuguese (PDF)",
+    cvPortugueseLabel: "CV (PDF)",
     cvPortugueseAriaLabel: "Download the Portuguese CV as a PDF",
-    cvEnglishLabel: "CV in English (PDF)",
+    cvEnglishLabel: "CV (PDF)",
     cvEnglishAriaLabel: "Download the English CV as a PDF",
   },
 
