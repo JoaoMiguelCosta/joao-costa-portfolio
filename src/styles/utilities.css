@@ -52,3 +52,10 @@
 .u-surface-link:active {
     transform: translateY(1px);
 }
+
+@media (prefers-reduced-motion: reduce) {
+    .u-action-link,
+    .u-surface-link {
+        transition: none;
+    }
+}
