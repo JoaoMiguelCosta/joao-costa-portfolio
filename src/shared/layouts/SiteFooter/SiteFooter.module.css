@@ -1,6 +1,8 @@
 .footer {
     color: var(--color-text-secondary);
     font-size: var(--font-size-sm);
+    background-color: var(--color-surface-secondary);
+    border-top: 1px solid var(--color-border);
 }
 
 .inner {
@@ -10,7 +12,6 @@
     justify-content: space-between;
     gap: var(--space-3) var(--space-6);
     padding-block: var(--space-6);
-    border-top: 1px solid var(--color-border);
 }
 
 .summary {
@@ -32,6 +33,11 @@
 .owner {
     color: var(--color-text-primary);
     font-weight: var(--font-weight-semibold);
+    transition: color var(--transition-fast);
+}
+
+.owner:hover {
+    color: var(--color-accent);
 }
 
 .role {
@@ -62,10 +68,18 @@
     gap: var(--space-2);
     color: var(--color-text-secondary);
     font-weight: var(--font-weight-medium);
+    transition: color var(--transition-fast);
 }
 
 .link:hover {
     color: var(--color-text-primary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .owner,
+    .link {
+        transition: none;
+    }
 }
 
 @media (max-width: 64rem) {
