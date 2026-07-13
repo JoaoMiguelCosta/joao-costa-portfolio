@@ -1,24 +1,61 @@
 :root {
     /* Theme colors — light */
-    --color-background: #f8fafc;
+    --color-background: #f5f7fb;
     --color-surface: #ffffff;
-    --color-surface-secondary: #f1f5f9;
+    --color-surface-secondary: #edf2f8;
+    --color-surface-elevated: #ffffff;
+    --color-surface-accent: #eef2ff;
 
-    --color-text-primary: #0f172a;
-    --color-text-secondary: #475569;
+    --color-text-primary: #101828;
+    --color-text-secondary: #526174;
 
-    --color-border: #d8e1ec;
+    --color-border: #d5deea;
 
-    --color-accent: #2563eb;
-    --color-accent-hover: #1d4ed8;
-    --color-accent-soft: #dbeafe;
+    --color-accent: #4f46e5;
+    --color-accent-hover: #4338ca;
+    --color-accent-soft: #e0e7ff;
     --color-on-accent: #ffffff;
-    --color-focus: #2563eb;
+
+    --color-accent-secondary: #0f766e;
+    --color-accent-secondary-hover: #115e59;
+    --color-accent-secondary-soft: #ccfbf1;
+
+    --color-highlight: #d97706;
+    --color-focus: #4f46e5;
 
     /* Ícones de marca (GitHub, LinkedIn, PDF) são desenhados para fundo
        claro — este token mantém-se igual em light e dark, por isso não é
        redefinido no bloco de dark mode. */
     --color-icon-frame-background: #ffffff;
+
+    /* Elevation */
+    --shadow-sm:
+        0 1px 2px rgb(16 24 40 / 0.06),
+        0 2px 6px rgb(16 24 40 / 0.08);
+
+    --shadow-md:
+        0 12px 30px rgb(16 24 40 / 0.12);
+
+    /* Gradients */
+    --gradient-hero:
+        radial-gradient(
+            circle at 85% 15%,
+            rgb(79 70 229 / 0.18),
+            transparent 36%
+        ),
+        radial-gradient(
+            circle at 65% 82%,
+            rgb(15 118 110 / 0.1),
+            transparent 34%
+        );
+
+    --gradient-contact:
+        linear-gradient(
+            135deg,
+            #111827 0%,
+            #312e81 58%,
+            #0f766e 130%
+        );
 
     /* Typography */
     --font-family-sans:
@@ -61,25 +98,68 @@
     /* Layout */
     --content-width: 72rem;
     --text-width: 44rem;
+    --site-header-height: 4.5rem;
 
     /* Borders */
     --border-radius-sm: 0.5rem;
     --border-radius-md: 0.75rem;
+    --border-radius-lg: 1rem;
+    --border-radius-xl: 1.5rem;
+
+    /* Motion */
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-fast: 140ms var(--ease-out);
+    --transition-base: 220ms var(--ease-out);
 }
 
 :root[data-theme="dark"] {
-    --color-background: #0b1120;
-    --color-surface: #111827;
-    --color-surface-secondary: #172033;
+    --color-background: #080d17;
+    --color-surface: #0f1726;
+    --color-surface-secondary: #162238;
+    --color-surface-elevated: #19263b;
+    --color-surface-accent: #171b3f;
 
     --color-text-primary: #f8fafc;
-    --color-text-secondary: #a7b3c6;
+    --color-text-secondary: #aab7c9;
 
-    --color-border: #273449;
+    --color-border: #2b3b52;
 
-    --color-accent: #60a5fa;
-    --color-accent-hover: #93c5fd;
-    --color-accent-soft: #172554;
-    --color-on-accent: #0b1120;
-    --color-focus: #60a5fa;
+    --color-accent: #8b9cff;
+    --color-accent-hover: #a8b5ff;
+    --color-accent-soft: #252d61;
+    --color-on-accent: #080d17;
+
+    --color-accent-secondary: #5eead4;
+    --color-accent-secondary-hover: #99f6e4;
+    --color-accent-secondary-soft: #123c3b;
+
+    --color-highlight: #fbbf24;
+    --color-focus: #8b9cff;
+
+    --shadow-sm:
+        0 1px 2px rgb(0 0 0 / 0.2),
+        0 2px 8px rgb(0 0 0 / 0.22);
+
+    --shadow-md:
+        0 16px 36px rgb(0 0 0 / 0.32);
+
+    --gradient-hero:
+        radial-gradient(
+            circle at 85% 15%,
+            rgb(139 156 255 / 0.2),
+            transparent 38%
+        ),
+        radial-gradient(
+            circle at 65% 82%,
+            rgb(94 234 212 / 0.1),
+            transparent 36%
+        );
+
+    --gradient-contact:
+        linear-gradient(
+            135deg,
+            #111b2e 0%,
+            #2e326f 58%,
+            #115e59 135%
+        );
 }

@@ -16,6 +16,16 @@
     border-radius: var(--border-radius-sm);
     font-weight: var(--font-weight-semibold);
     text-align: center;
+    transition:
+        background-color var(--transition-fast),
+        border-color var(--transition-fast),
+        color var(--transition-fast),
+        box-shadow var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.u-action-link:active {
+    transform: translateY(1px);
 }
 
 .u-surface-link {
@@ -26,8 +36,19 @@
     background-color: var(--color-surface);
     color: var(--color-text-primary);
     font-weight: var(--font-weight-semibold);
+    transition:
+        background-color var(--transition-fast),
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast),
+        transform var(--transition-fast);
 }
 
 .u-surface-link:hover {
     border-color: var(--color-text-secondary);
+    background-color: var(--color-surface-elevated);
+    box-shadow: var(--shadow-sm);
+}
+
+.u-surface-link:active {
+    transform: translateY(1px);
 }
