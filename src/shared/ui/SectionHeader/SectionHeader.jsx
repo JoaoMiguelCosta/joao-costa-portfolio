@@ -5,12 +5,19 @@ export default function SectionHeader({
   title,
   titleId,
   description,
+  eyebrowAccent = false,
 }) {
+  const eyebrowClassName = [
+    styles.eyebrow,
+    "u-eyebrow",
+    eyebrowAccent ? "u-eyebrow-accent" : null,
+  ]
+    .filter(Boolean)
+    .join(" ");
+
   return (
     <header className={styles.header}>
-      {eyebrow ? (
-        <p className={`${styles.eyebrow} u-eyebrow`}>{eyebrow}</p>
-      ) : null}
+      {eyebrow ? <p className={eyebrowClassName}>{eyebrow}</p> : null}
 
       <h2 className={styles.title} id={titleId}>
         {title}

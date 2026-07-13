@@ -20,6 +20,7 @@ export default function ProjectsSection({ content }) {
               title={content.title}
               titleId="projects-title"
               description={content.description}
+              eyebrowAccent
             />
           </div>
 

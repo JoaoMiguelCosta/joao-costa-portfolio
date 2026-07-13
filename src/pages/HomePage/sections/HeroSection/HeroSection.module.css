@@ -14,12 +14,10 @@
     justify-items: start;
 }
 
-.hero .eyebrow {
+.eyebrow {
+    composes: u-eyebrow-accent from global;
     max-width: 100%;
     margin-bottom: var(--space-4);
-    padding-left: var(--space-3);
-    border-left: 2px solid var(--color-accent-secondary);
-    color: var(--color-accent-secondary);
 }
 
 .title {

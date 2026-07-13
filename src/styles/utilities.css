@@ -6,6 +6,12 @@
     text-transform: uppercase;
 }
 
+.u-eyebrow-accent {
+    padding-left: var(--space-3);
+    border-left: 2px solid var(--color-accent-secondary);
+    color: var(--color-accent-secondary);
+}
+
 .u-action-link {
     display: inline-flex;
     min-height: 3rem;
