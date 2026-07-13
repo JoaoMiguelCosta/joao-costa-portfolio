@@ -11,9 +11,9 @@ const projects = {
 
   links: {
     website: "Visit website",
-    repository: "View code on GitHub",
+    repository: "View project on GitHub",
     demo: {
-      label: "View demo",
+      label: "View Demo",
       ariaLabel: "Open the Farmácia Santa Casa demo",
     },
     demoAccess: "Demo access",
