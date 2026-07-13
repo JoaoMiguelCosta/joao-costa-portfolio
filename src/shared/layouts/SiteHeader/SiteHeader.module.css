@@ -20,15 +20,31 @@
     top: 0;
     z-index: 10;
     background-color: var(--color-background);
+    border-bottom: 1px solid var(--color-border);
+}
+
+@supports (background: color-mix(in srgb, white, transparent)) {
+    .header {
+        background-color: color-mix(
+            in srgb,
+            var(--color-background) 88%,
+            transparent
+        );
+    }
+}
+
+@supports (backdrop-filter: blur(1rem)) {
+    .header {
+        backdrop-filter: blur(1rem);
+    }
 }
 
 .inner {
     display: flex;
-    min-height: 4.5rem;
+    min-height: var(--site-header-height);
     align-items: center;
     justify-content: space-between;
     gap: var(--space-6);
-    border-bottom: 1px solid var(--color-border);
 }
 
 .brand {
@@ -36,6 +52,11 @@
     font-size: var(--font-size-lg);
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-tight);
+    transition: color var(--transition-fast);
+}
+
+.brand:hover {
+    color: var(--color-accent);
 }
 
 .menuPanel {
@@ -55,13 +76,39 @@
 }
 
 .navigationList a {
+    position: relative;
     color: var(--color-text-secondary);
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-semibold);
+    transition: color var(--transition-fast);
 }
 
-.navigationList a:hover {
+.navigationList a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.375rem;
+    height: 2px;
+    border-radius: 999px;
+    background-color: var(--color-accent);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform var(--transition-fast);
+}
+
+.navigationList a:hover,
+.navigationList a:focus-visible {
     color: var(--color-text-primary);
+}
+
+.navigationList a:hover::after,
+.navigationList a:focus-visible::after {
+    transform: scaleX(1);
+}
+
+.navigationList a:active {
+    color: var(--color-accent);
 }
 
 .utilityControls {
@@ -109,8 +156,9 @@
         gap: var(--space-3);
         padding: var(--space-4);
         border: 1px solid var(--color-border);
-        border-radius: var(--border-radius-sm);
-        background-color: var(--color-surface);
+        border-radius: var(--border-radius-lg);
+        background-color: var(--color-surface-elevated);
+        box-shadow: var(--shadow-md);
     }
 
     .menuPanelOpen {
@@ -133,6 +181,10 @@
         font-size: var(--font-size-base);
     }
 
+    .navigationList a::after {
+        content: none;
+    }
+
     .navigationList a:hover {
         border-color: var(--color-text-secondary);
         background-color: var(--color-background);
@@ -147,5 +199,13 @@
     .navigationList {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .brand,
+    .navigationList a,
+    .navigationList a::after {
+        transition: none;
     }
 }
