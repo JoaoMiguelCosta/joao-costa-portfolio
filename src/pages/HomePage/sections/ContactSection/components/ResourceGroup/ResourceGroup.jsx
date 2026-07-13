@@ -13,8 +13,8 @@ export default function ResourceGroup({ title, links, isExternal = false }) {
             className={`${styles.resourceLink} u-surface-link`}
             href={link.href}
             download={link.download || undefined}
-            target={isExternal ? "_blank" : undefined}
-            rel={isExternal ? "noopener noreferrer" : undefined}
+            target={link.target ?? (isExternal ? "_blank" : undefined)}
+            rel={link.rel ?? (isExternal ? "noopener noreferrer" : undefined)}
             key={link.id}
             aria-label={link.ariaLabel}
           >

@@ -36,7 +36,8 @@ function getCertificateLink(translations) {
     label: translations.about.education.certificate.label,
     ariaLabel: translations.about.education.certificate.ariaLabel,
     href: editCertificate.href,
-    download: "joao-costa-certificado-full-stack.pdf",
+    target: "_blank",
+    rel: "noopener noreferrer",
     icon: PDF_ICON,
   };
 }
