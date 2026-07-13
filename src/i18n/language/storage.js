@@ -15,20 +15,8 @@ function getStoredLanguage() {
   }
 }
 
-function getBrowserLanguage() {
-  if (typeof navigator === "undefined") {
-    return DEFAULT_LANGUAGE;
-  }
-
-  const browserLanguage = navigator.language.toLowerCase().split("-")[0];
-
-  return isSupportedLanguage(browserLanguage)
-    ? browserLanguage
-    : DEFAULT_LANGUAGE;
-}
-
 export function getInitialLanguage() {
-  return getStoredLanguage() ?? getBrowserLanguage();
+  return getStoredLanguage() ?? DEFAULT_LANGUAGE;
 }
 
 export function storeLanguage(language) {

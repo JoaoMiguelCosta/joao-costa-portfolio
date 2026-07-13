@@ -1,15 +1,12 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 
 import { ThemeContext } from "./ThemeContext.js";
-import {
-  SYSTEM_DARK_THEME_QUERY,
-  THEME_CODES,
-} from "./constants.js";
-import { getSystemTheme, isSupportedTheme } from "./helpers.js";
+import { DEFAULT_THEME, THEME_CODES } from "./constants.js";
+import { isSupportedTheme } from "./helpers.js";
 import { getStoredTheme, storeTheme } from "./storage.js";
 
 function getInitialTheme() {
-  return getStoredTheme() ?? getSystemTheme();
+  return getStoredTheme() ?? DEFAULT_THEME;
 }
 
 export default function ThemeProvider({ children }) {
@@ -40,30 +37,6 @@ export default function ThemeProvider({ children }) {
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
   }, [theme]);
-
-  useEffect(() => {
-    if (typeof window.matchMedia !== "function") {
-      return undefined;
-    }
-
-    const mediaQuery = window.matchMedia(SYSTEM_DARK_THEME_QUERY);
-
-    function handleSystemThemeChange(event) {
-      const hasStoredPreference = Boolean(getStoredTheme());
-
-      if (hasStoredPreference) {
-        return;
-      }
-
-      setCurrentTheme(event.matches ? THEME_CODES.DARK : THEME_CODES.LIGHT);
-    }
-
-    mediaQuery.addEventListener("change", handleSystemThemeChange);
-
-    return () => {
-      mediaQuery.removeEventListener("change", handleSystemThemeChange);
-    };
-  }, []);
 
   const contextValue = useMemo(
     () => ({
