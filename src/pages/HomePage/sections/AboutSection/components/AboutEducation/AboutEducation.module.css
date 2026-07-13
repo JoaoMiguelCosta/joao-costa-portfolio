@@ -7,6 +7,7 @@
 
 .educationTitle {
     font-size: clamp(var(--font-size-lg), 2vw, var(--font-size-xl));
+    font-weight: var(--font-weight-bold);
     line-height: var(--line-height-tight);
 }
 

@@ -35,6 +35,7 @@ export default function AboutSection({ content }) {
                 title={content.title}
                 titleId="about-title"
                 description={content.description}
+                eyebrowAccent
               />
             </div>
 
