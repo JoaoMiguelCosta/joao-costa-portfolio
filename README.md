@@ -22,9 +22,7 @@ O portefólio é uma single-page application em React, disponível em português
 
 ### Live demo
 
-[joao-costa-portfolio-one.vercel.app](https://joao-costa-portfolio-one.vercel.app/)
-
-O domínio ainda não é o domínio final do portefólio: enquanto isso, o site está marcado como `noindex` (visível e navegável, mas não indexado pelos motores de busca) no `index.html`.
+[joaomiguelcosta.pt](https://joaomiguelcosta.pt/)
 
 ### Funcionalidades principais
 
@@ -156,7 +154,6 @@ O repositório está preparado para publicação na Vercel. O ficheiro `vercel.j
 ### Estado atual do projeto
 
 - O site está publicado e funcional na URL do live demo acima.
-- Indexação por motores de busca está temporariamente desativada (`noindex`) até o domínio definitivo estar ligado; o site continua totalmente navegável.
 
 ### Contacto
 
@@ -176,9 +173,7 @@ The portfolio is a React single-page application, available in Portuguese and En
 
 ### Live demo
 
-[joao-costa-portfolio-one.vercel.app](https://joao-costa-portfolio-one.vercel.app/)
-
-This is not yet the portfolio's final domain: in the meantime, the site is marked `noindex` (visible and browsable, but not indexed by search engines) in `index.html`.
+[joaomiguelcosta.pt](https://joaomiguelcosta.pt/)
 
 ### Key features
 
@@ -310,7 +305,6 @@ The repository is prepared for deployment on Vercel. `vercel.json` rewrites all 
 ### Current project status
 
 - The site is deployed and functional at the live demo URL above.
-- Search engine indexing is temporarily disabled (`noindex`) until the final domain is connected; the site remains fully browsable.
 
 ### Contact
 
