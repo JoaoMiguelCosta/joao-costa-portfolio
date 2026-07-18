@@ -20,7 +20,7 @@ O portefólio é uma single-page application em React, disponível em português
 
 [GitHub](https://github.com/JoaoMiguelCosta) · [LinkedIn](https://www.linkedin.com/in/jo%C3%A3o-miguel-costa1/) · [Email](mailto:joaoxxmiguel@hotmail.com)
 
-### Live demo
+### Site oficial
 
 [joaomiguelcosta.pt](https://joaomiguelcosta.pt/)
 
@@ -171,7 +171,7 @@ The portfolio is a React single-page application, available in Portuguese and En
 
 [GitHub](https://github.com/JoaoMiguelCosta) · [LinkedIn](https://www.linkedin.com/in/jo%C3%A3o-miguel-costa1/) · [Email](mailto:joaoxxmiguel@hotmail.com)
 
-### Live demo
+### Official website
 
 [joaomiguelcosta.pt](https://joaomiguelcosta.pt/)
 
