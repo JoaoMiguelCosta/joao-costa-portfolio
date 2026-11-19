@@ -49,16 +49,6 @@ const projects = {
         "Farmácia Santa Casa application interface showing resident management",
     },
 
-    "sunlive-group": {
-      type: "Multi-brand corporate platform",
-      status: "Published",
-      description:
-        "A corporate web platform bringing together several brands, each with its own visual identity, content, structure and navigation experience.",
-      responsibility:
-        "Research, requirements gathering, architecture definition, development, deployment and support.",
-      imageAlt: "Sunlive Group website homepage with its corporate identity",
-    },
-
     "ria-canal-hair-design": {
       type: "Corporate website",
       status: "Published",
@@ -67,27 +57,6 @@ const projects = {
       responsibility:
         "Research, client communication, solution definition, development, deployment and support.",
       imageAlt: "Ria Canal Hair Design website homepage",
-    },
-
-    "wag-training-camp": {
-      type: "Event website",
-      status: "Published",
-      description:
-        "A website promoting international gymnastics camps in Malta and Anadia, including programmes, staff, locations, partners and registration access.",
-      responsibility:
-        "Research, client communication, development, deployment and support.",
-      imageAlt: "Sunlive International WAG Training Camp institutional page",
-    },
-
-    "continental-cup": {
-      type: "Competition website",
-      status: "Published",
-      description:
-        "The official website for an international gymnastics competition, with event, venue, accommodation, registration and documentation information.",
-      responsibility:
-        "Research, client communication, development, deployment and support.",
-      imageAlt:
-        "International Continental Cup homepage showing event participants",
     },
   },
 };

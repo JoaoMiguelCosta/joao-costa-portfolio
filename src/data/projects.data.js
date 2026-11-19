@@ -45,38 +45,11 @@ export const projectsData = [
   },
 
   {
-    id: "sunlive-group",
-    slug: "sunlive-group",
-    title: "Sunlive Group",
-    featured: true,
-    priority: 2,
-
-    technologies: [
-      "React",
-      "Vite",
-      "JavaScript",
-      "CSS Modules",
-      "React Router",
-    ],
-
-    links: {
-      website: "https://sunlive-group.vercel.app/sunlive-group",
-      repository: "https://github.com/JoaoMiguelCosta/Sunlive-Group",
-    },
-
-    image: {
-      src: "/images/projects/sunlive-group.webp",
-      width: 1672,
-      height: 941,
-    },
-  },
-
-  {
     id: "ria-canal-hair-design",
     slug: "ria-canal-hair-design",
     title: "Ria Canal Hair Design",
-    featured: false,
-    priority: 3,
+    featured: true,
+    priority: 2,
 
     technologies: ["React", "Vite", "JavaScript", "CSS Modules"],
 
@@ -87,49 +60,6 @@ export const projectsData = [
 
     image: {
       src: "/images/projects/ria-canal-hair-design.webp",
-      width: 1672,
-      height: 941,
-    },
-  },
-
-  {
-    id: "wag-training-camp",
-    slug: "wag-training-camp",
-    title: "WAG Training Camp",
-    featured: false,
-    priority: 4,
-
-    technologies: ["React", "Vite", "JavaScript", "CSS Modules"],
-
-    links: {
-      website: "https://www.wagtrainingcamp.sunlive.pt/",
-      repository:
-        "https://github.com/JoaoMiguelCosta/wag-training-camp-sunlive",
-    },
-
-    image: {
-      src: "/images/projects/wag-training-camp.webp",
-      width: 1672,
-      height: 941,
-    },
-  },
-
-  {
-    id: "continental-cup",
-    slug: "continental-cup",
-    title: "International Continental Cup",
-    featured: false,
-    priority: 5,
-
-    technologies: ["React", "Vite", "JavaScript", "CSS Modules"],
-
-    links: {
-      website: "https://continentalcup.sunlive.pt/",
-      repository: "https://github.com/JoaoMiguelCosta/continental-cup-sunlive",
-    },
-
-    image: {
-      src: "/images/projects/continental-cup.webp",
       width: 1672,
       height: 941,
     },

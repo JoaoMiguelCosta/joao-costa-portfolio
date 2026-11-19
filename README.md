@@ -48,19 +48,11 @@ Frontend em React e Vite; backend em Node.js, Express, Prisma e PostgreSQL.
 
 O primeiro carregamento pode demorar alguns segundos por estar alojado numa instância gratuita do Render. As credenciais de acesso de demonstração estão disponíveis diretamente no cartão do projeto, através do botão "Dados de acesso".
 
-#### Sunlive Group
+#### Ria Canal Hair Design
 
-Aplicação institucional multi-marca (Group, Travel, Sports e Hotel) construída sobre uma única base de código, com identidade visual própria por marca e navegação consistente.
+Website institucional responsivo para apresentação do salão, serviços, trabalhos, equipa, testemunhos e contactos.
 
-[Website](https://sunlive-group.vercel.app/sunlive-group) · [Repositório](https://github.com/JoaoMiguelCosta/Sunlive-Group)
-
-#### Outros projetos
-
-| Projeto | Tipo | Foco principal | Links |
-|---|---|---|---|
-| Ria Canal Hair Design | Website institucional | Apresentação do salão, serviços e testemunhos | [Website](https://www.riacanalhairdesign.pt/) · [Repositório](https://github.com/JoaoMiguelCosta/RiaCanalHairDesign) |
-| WAG Training Camp | Website de evento | Promoção e inscrições de camps internacionais de ginástica | [Website](https://www.wagtrainingcamp.sunlive.pt/) · [Repositório](https://github.com/JoaoMiguelCosta/wag-training-camp-sunlive) |
-| International Continental Cup | Website de competição | Informação do evento, alojamento e inscrições | [Website](https://continentalcup.sunlive.pt/) · [Repositório](https://github.com/JoaoMiguelCosta/continental-cup-sunlive) |
+[Website](https://www.riacanalhairdesign.pt/) · [Repositório](https://github.com/JoaoMiguelCosta/RiaCanalHairDesign)
 
 Estes cartões de projeto vivem apenas na homepage — o portefólio não tem páginas dedicadas de detalhe/case study por projeto. As rotas antigas `/projetos` e `/projects` (de uma versão anterior do site) continuam a existir e redirecionam para as respetivas âncoras na homepage.
 
@@ -199,19 +191,11 @@ Frontend built with React and Vite; backend with Node.js, Express, Prisma and Po
 
 The first load can take a few seconds since it runs on a free Render instance. Demo credentials are available directly on the project card via the "Demo access" button.
 
-#### Sunlive Group
+#### Ria Canal Hair Design
 
-A multi-brand institutional application (Group, Travel, Sports and Hotel) built on a single codebase, with its own visual identity per brand and consistent navigation.
+A responsive corporate website presenting the salon, services, work, team, testimonials and contact information.
 
-[Website](https://sunlive-group.vercel.app/sunlive-group) · [Repository](https://github.com/JoaoMiguelCosta/Sunlive-Group)
-
-#### Other projects
-
-| Project | Type | Main focus | Links |
-|---|---|---|---|
-| Ria Canal Hair Design | Corporate website | Salon presentation, services and testimonials | [Website](https://www.riacanalhairdesign.pt/) · [Repository](https://github.com/JoaoMiguelCosta/RiaCanalHairDesign) |
-| WAG Training Camp | Event website | International gymnastics camp promotion and registration | [Website](https://www.wagtrainingcamp.sunlive.pt/) · [Repository](https://github.com/JoaoMiguelCosta/wag-training-camp-sunlive) |
-| International Continental Cup | Competition website | Event information, accommodation and registration | [Website](https://continentalcup.sunlive.pt/) · [Repository](https://github.com/JoaoMiguelCosta/continental-cup-sunlive) |
+[Website](https://www.riacanalhairdesign.pt/) · [Repository](https://github.com/JoaoMiguelCosta/RiaCanalHairDesign)
 
 These project cards live on the homepage only — the portfolio has no dedicated per-project detail/case-study pages. The old `/projetos` and `/projects` routes (from an earlier version of the site) still exist and redirect to the corresponding homepage anchors.
 

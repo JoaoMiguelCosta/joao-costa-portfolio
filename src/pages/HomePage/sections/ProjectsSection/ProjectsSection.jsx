@@ -7,6 +7,25 @@ import ProjectCard from "./components/ProjectCard/ProjectCard.jsx";
 import styles from "./ProjectsSection.module.css";
 
 export default function ProjectsSection({ content }) {
+  // Group headings only make sense when both groups are present.
+  const hasOtherItems = content.otherItems.length > 0;
+
+  const featuredGrid = (
+    <ScrollReveal
+      className={`${styles.projectGrid} ${styles.featuredGrid}`}
+      delay={80}
+    >
+      {content.featuredItems.map((project) => (
+        <ProjectCard
+          key={project.id}
+          project={project}
+          variant="featured"
+          labels={content.cardLabels}
+        />
+      ))}
+    </ScrollReveal>
+  );
+
   return (
     <section
       className={styles.section}
@@ -25,53 +44,45 @@ export default function ProjectsSection({ content }) {
             />
           </ScrollReveal>
 
-          <div className={styles.groups}>
-            <section
-              className={styles.projectGroup}
-              aria-labelledby="featured-projects-title"
-            >
-              <h3 className={styles.groupTitle} id="featured-projects-title">
-                {content.featuredTitle}
-              </h3>
-
-              <ScrollReveal
-                className={`${styles.projectGrid} ${styles.featuredGrid}`}
-                delay={80}
+          {hasOtherItems ? (
+            <div className={styles.groups}>
+              <section
+                className={styles.projectGroup}
+                aria-labelledby="featured-projects-title"
               >
-                {content.featuredItems.map((project) => (
-                  <ProjectCard
-                    key={project.id}
-                    project={project}
-                    variant="featured"
-                    labels={content.cardLabels}
-                  />
-                ))}
-              </ScrollReveal>
-            </section>
+                <h3 className={styles.groupTitle} id="featured-projects-title">
+                  {content.featuredTitle}
+                </h3>
 
-            <section
-              className={styles.projectGroup}
-              aria-labelledby="other-projects-title"
-            >
-              <h3 className={styles.groupTitle} id="other-projects-title">
-                {content.otherTitle}
-              </h3>
+                {featuredGrid}
+              </section>
 
-              <ScrollReveal
-                className={`${styles.projectGrid} ${styles.otherGrid}`}
-                delay={160}
+              <section
+                className={styles.projectGroup}
+                aria-labelledby="other-projects-title"
               >
-                {content.otherItems.map((project) => (
-                  <ProjectCard
-                    key={project.id}
-                    project={project}
-                    variant="compact"
-                    labels={content.cardLabels}
-                  />
-                ))}
-              </ScrollReveal>
-            </section>
-          </div>
+                <h3 className={styles.groupTitle} id="other-projects-title">
+                  {content.otherTitle}
+                </h3>
+
+                <ScrollReveal
+                  className={`${styles.projectGrid} ${styles.otherGrid}`}
+                  delay={160}
+                >
+                  {content.otherItems.map((project) => (
+                    <ProjectCard
+                      key={project.id}
+                      project={project}
+                      variant="compact"
+                      labels={content.cardLabels}
+                    />
+                  ))}
+                </ScrollReveal>
+              </section>
+            </div>
+          ) : (
+            featuredGrid
+          )}
         </div>
       </Container>
     </section>
